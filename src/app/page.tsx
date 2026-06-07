@@ -88,7 +88,7 @@ const INTEGRATION_LOGOS = [
     node: (
       <div className="flex items-center gap-2.5 text-text-muted hover:text-white transition-colors duration-300 select-none group/logo">
         <img 
-          src="/logos/apollo.svg" 
+          src="/logos/apollo.png" 
           alt="Apollo" 
           className="h-5 w-auto brightness-0 invert opacity-60 group-hover/logo:opacity-100 transition-all duration-300 select-none shrink-0"
         />
@@ -102,7 +102,7 @@ const INTEGRATION_LOGOS = [
     node: (
       <div className="flex items-center gap-2.5 text-text-muted hover:text-white transition-colors duration-300 select-none group/logo">
         <img 
-          src="/logos/smartlead.svg" 
+          src="/logos/smartlead.png" 
           alt="Smartlead" 
           className="h-5 w-auto brightness-0 invert opacity-60 group-hover/logo:opacity-100 transition-all duration-300 select-none shrink-0"
         />
@@ -116,7 +116,7 @@ const INTEGRATION_LOGOS = [
     node: (
       <div className="flex items-center gap-2.5 text-text-muted hover:text-white transition-colors duration-300 select-none group/logo">
         <img 
-          src="/logos/instantly.svg" 
+          src="/logos/instantly.png" 
           alt="Instantly" 
           className="h-5 w-auto brightness-0 invert opacity-60 group-hover/logo:opacity-100 transition-all duration-300 select-none shrink-0"
         />
@@ -198,7 +198,7 @@ export default function Home() {
             "HYPER-PERSONALIZED OUTBOUND • REAL-TIME INTENT TRIGGERED • AUTO SYNC CRM FIELD DATA •"
           ]}
           velocity={40}
-          className="text-[6vw] md:text-[5rem] font-black tracking-tighter uppercase text-white/[0.03] font-sans selection:bg-transparent"
+          className="text-4xl md:text-[5rem] font-black tracking-tighter uppercase text-white/[0.04] md:text-white/[0.03] font-sans selection:bg-transparent"
         />
       </div>
 

@@ -87,7 +87,7 @@ export function CaseStudy() {
                 {/* Header */}
                 <div className="mb-16 lg:mb-20">
                     <p className="text-xs font-semibold text-accent-2 uppercase tracking-widest mb-4">Case Studies</p>
-                    <h2 className="text-3xl font-medium tracking-tight text-white md:text-4xl">
+                    <h2 className="text-2xl font-medium tracking-tight text-white md:text-4xl">
                         What we've delivered.
                     </h2>
                     <p className="mt-4 text-sm text-text-dim max-w-2xl">
@@ -105,7 +105,7 @@ export function CaseStudy() {
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.6, delay: idx * 0.15, ease: "easeOut" }}
                             whileHover={{ y: -6 }}
-                            className="flex flex-col bg-surface-1/20 border border-surface-subtle/40 rounded-2xl p-8 lg:p-10 hover:border-brand-400/25 transition-all duration-300 relative group overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.3)]"
+                            className="flex flex-col bg-surface-1/20 border border-surface-subtle/40 rounded-2xl p-5 sm:p-8 lg:p-10 hover:border-brand-400/25 transition-all duration-300 relative group overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.3)]"
                         >
                             {/* Card Hover Glow effect */}
                             <div className="absolute -inset-px bg-gradient-to-tr from-brand-500/10 via-transparent to-accent-1/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
@@ -135,7 +135,7 @@ export function CaseStudy() {
                             </div>
 
                             {/* Metrics Display */}
-                            <div className="grid grid-cols-3 gap-4 mb-8 bg-[#050818]/60 border border-surface-subtle/35 p-5 rounded-xl relative z-10">
+                            <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-8 bg-[#050818]/60 border border-surface-subtle/35 p-3.5 sm:p-5 rounded-xl relative z-10">
                                 {study.metrics.map((metric, mIdx) => {
                                     const Icon = metric.icon
                                     return (
@@ -172,7 +172,7 @@ export function CaseStudy() {
 
                             {/* Automated Workflows Checklist */}
                             {study.delivered && study.delivered.length > 0 && (
-                                <div className="mb-8 p-5 rounded-xl bg-surface-1/45 border border-surface-subtle/30 relative z-10">
+                                <div className="mb-8 p-4 sm:p-5 rounded-xl bg-surface-1/45 border border-surface-subtle/30 relative z-10">
                                     <h4 className="text-[10px] font-mono text-white uppercase tracking-widest font-semibold mb-3">
                                         Automated Infrastructure Built:
                                     </h4>

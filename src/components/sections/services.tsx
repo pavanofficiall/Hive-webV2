@@ -10,7 +10,7 @@ interface ServiceRowProps {
     title: string
     desc: string
     bullets: string[]
-    mockupType: "signals" | "crm" | "accounts"
+    mockupType: "signals" | "linkedin" | "whatsapp"
     isEven: boolean
 }
 
@@ -75,14 +75,14 @@ function ServiceRow({ rowIdx, tag, title, desc, bullets, mockupType, isEven }: S
                     whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
                     viewport={{ once: false, margin: "-100px" }}
                     transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
-                    className="relative rounded-3xl bg-gradient-to-tr from-[#FAF8F5] via-[#F6F4FB] to-[#F1EEF8] p-6 sm:p-10 shadow-sm border border-white/20 aspect-square w-full max-w-[480px] mx-auto flex items-center justify-center overflow-hidden"
+                    className="relative rounded-3xl bg-gradient-to-tr from-[#FAF8F5] via-[#F6F4FB] to-[#F1EEF8] p-4 sm:p-10 shadow-sm border border-white/20 aspect-auto md:aspect-square w-full max-w-[480px] mx-auto flex items-center justify-center overflow-hidden"
                 >
                     {/* Inner White Box wrapper enclosing items */}
-                    <div className="w-full bg-white rounded-2xl border border-[#F3F0EC] p-5 sm:p-6 shadow-[0_8px_30px_rgba(0,0,0,0.02)]">
+                    <div className="w-full bg-white rounded-2xl border border-[#F3F0EC] p-4 sm:p-6 shadow-[0_8px_30px_rgba(0,0,0,0.02)]">
                         {/* Mockup Type Rendering */}
                         {mockupType === "signals" && <SignalsMockup />}
-                        {mockupType === "crm" && <CrmMockup />}
-                        {mockupType === "accounts" && <AccountsMockup />}
+                        {mockupType === "linkedin" && <LinkedInMockup />}
+                        {mockupType === "whatsapp" && <WhatsAppMockup />}
                     </div>
                 </motion.div>
             </div>
@@ -96,16 +96,16 @@ function SignalsMockup() {
         <div className="w-full divide-y divide-[#F3F0EC]">
             {/* Signal Item 1: Series B */}
             <div className="pb-3.5 flex items-center justify-between">
-                <div className="flex items-center gap-3.5">
+                <div className="flex items-center gap-3.5 min-w-0">
                     {/* Dollar circle */}
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#E8F8F0] text-[#00A854] shrink-0">
                         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                     </div>
-                    <div>
-                        <p className="text-xs font-semibold text-gray-900">Series B: $28M raised</p>
-                        <p className="text-[10px] text-gray-400 mt-0.5">Acme</p>
+                    <div className="min-w-0">
+                        <p className="text-xs font-semibold text-gray-900 truncate">Series B: $28M raised</p>
+                        <p className="text-[10px] text-gray-400 mt-0.5 truncate">Acme</p>
                     </div>
                 </div>
                 {/* Lightning Badge */}
@@ -118,16 +118,16 @@ function SignalsMockup() {
 
             {/* Signal Item 2: VP Hired */}
             <div className="py-3.5 flex items-center justify-between">
-                <div className="flex items-center gap-3.5">
+                <div className="flex items-center gap-3.5 min-w-0">
                     {/* Person circle */}
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F3E8FF] text-[#7E22CE] shrink-0">
                         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                         </svg>
                     </div>
-                    <div>
-                        <p className="text-xs font-semibold text-gray-900">New VP Sales hired</p>
-                        <p className="text-[10px] text-gray-400 mt-0.5">TechFlow</p>
+                    <div className="min-w-0">
+                        <p className="text-xs font-semibold text-gray-900 truncate">New VP Sales hired</p>
+                        <p className="text-[10px] text-gray-400 mt-0.5 truncate">TechFlow</p>
                     </div>
                 </div>
                 {/* Lightning Badge */}
@@ -140,16 +140,16 @@ function SignalsMockup() {
 
             {/* Signal Item 3: Pricing Visited */}
             <div className="pt-3.5 flex items-center justify-between">
-                <div className="flex items-center gap-3.5">
+                <div className="flex items-center gap-3.5 min-w-0">
                     {/* Globe/Link circle */}
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#EFF6FF] text-[#1D4ED8] shrink-0">
                         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                         </svg>
                     </div>
-                    <div>
-                        <p className="text-xs font-semibold text-gray-900">Visited / pricing 3x</p>
-                        <p className="text-[10px] text-gray-400 mt-0.5">sarah@icloud.io via website</p>
+                    <div className="min-w-0">
+                        <p className="text-xs font-semibold text-gray-900 truncate">Visited / pricing 3x</p>
+                        <p className="text-[10px] text-gray-400 mt-0.5 truncate">sarah@icloud.io via website</p>
                     </div>
                 </div>
                 {/* Lightning Badge */}
@@ -163,78 +163,119 @@ function SignalsMockup() {
     )
 }
 
-/* ────────── CRM BADGE CARD MOCKUP ────────── */
-function CrmMockup() {
+/* ────────── LINKEDIN CAMPAIGN MOCKUP ────────── */
+function LinkedInMockup() {
     return (
-        <div className="flex items-center gap-4">
-            {/* SaaStr Event Badge */}
-            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#F3E8FF] text-[#7E22CE] border border-[#E9D5FF] shrink-0">
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-                </svg>
+        <div className="w-full divide-y divide-[#F3F0EC]">
+            {/* LinkedIn Item 1 */}
+            <div className="pb-3.5 flex items-center justify-between">
+                <div className="flex items-center gap-3.5 min-w-0">
+                    {/* LinkedIn branded circle */}
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#EBF5FC] text-[#0A66C2] shrink-0">
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </div>
+                    <div className="min-w-0">
+                        <p className="text-xs font-semibold text-gray-900 truncate">Connection accepted</p>
+                        <p className="text-[10px] text-gray-400 mt-0.5 truncate">Alex Carter • Founder & CEO at TechScale</p>
+                    </div>
+                </div>
+                {/* Status Badge */}
+                <span className="text-[9px] font-mono text-[#00A854] bg-[#E8F8F0] border border-[#B7EB8F]/40 px-2 py-0.5 rounded-full font-medium shrink-0">
+                    Connected
+                </span>
             </div>
-            <div className="flex-1">
-                <p className="text-xs sm:text-sm font-semibold text-gray-900">SaaStr 2026 attendee</p>
-                <p className="text-[10px] sm:text-xs text-gray-400 mt-0.5">james@acmecorp.com</p>
+
+            {/* LinkedIn Item 2 */}
+            <div className="py-3.5 flex items-center justify-between">
+                <div className="flex items-center gap-3.5 min-w-0">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#EBF5FC] text-[#0A66C2] shrink-0">
+                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                    </div>
+                    <div className="min-w-0">
+                        <p className="text-xs font-semibold text-gray-900 truncate">Intro message sent</p>
+                        <p className="text-[10px] text-gray-400 mt-0.5 truncate">"Thanks for connecting, Alex..."</p>
+                    </div>
+                </div>
+                <span className="text-[9px] font-mono text-gray-500 bg-gray-100 border border-gray-200 px-2 py-0.5 rounded-full font-medium shrink-0">
+                    Step 1 Sent
+                </span>
             </div>
-            {/* Purple Presence Dot */}
-            <div className="h-2.5 w-2.5 rounded-full bg-[#6366F1] shrink-0 shadow-[0_0_8px_rgba(99,102,241,0.6)]" />
+
+            {/* LinkedIn Item 3 */}
+            <div className="pt-3.5 flex items-center justify-between">
+                <div className="flex items-center gap-3.5 min-w-0">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F3E8FF] text-[#7E22CE] shrink-0">
+                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div className="min-w-0">
+                        <p className="text-xs font-semibold text-gray-900 truncate">Meeting booked via social link</p>
+                        <p className="text-[10px] text-gray-400 mt-0.5 truncate">Demo Scheduled: Thursday 3 PM</p>
+                    </div>
+                </div>
+                <span className="text-[9px] font-mono text-[#7E22CE] bg-[#F3E8FF] border border-[#D8B4FE]/40 px-2 py-0.5 rounded-full font-medium shrink-0">
+                    Converted
+                </span>
+            </div>
         </div>
     )
 }
 
-/* ────────── TEAM METRICS LIST MOCKUP ────────── */
-function AccountsMockup() {
-    const managers = [
-        {
-            name: "Henry Garcia",
-            role: "AE • owns 42 accounts",
-            avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces"
-        },
-        {
-            name: "Taylor Stone",
-            role: "AM • owns 28 accounts",
-            avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=faces"
-        },
-        {
-            name: "Kelly Smith",
-            role: "CSM • owns 34 accounts",
-            avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=faces"
-        }
-    ]
-
+/* ────────── WHATSAPP CONVERSATION MOCKUP ────────── */
+function WhatsAppMockup() {
     return (
-        <div className="w-full divide-y divide-[#F3F0EC]">
-            {managers.map((mgr, idx) => (
-                <div 
-                    key={mgr.name}
-                    className={`flex items-center justify-between ${idx === 0 ? "pb-3" : idx === 1 ? "py-3" : "pt-3"}`}
-                >
-                    <div className="flex items-center gap-3.5">
-                        {/* Image Avatar */}
-                        <div className="relative h-9 w-9 rounded-full overflow-hidden border border-[#EBE8E2] shrink-0">
-                            <Image 
-                                src={mgr.avatar} 
-                                alt={mgr.name}
-                                fill
-                                sizes="36px"
-                                className="object-cover"
-                                unoptimized
-                            />
-                        </div>
-                        <div>
-                            <p className="text-xs font-semibold text-gray-900">{mgr.name}</p>
-                            <p className="text-[10px] text-gray-400 mt-0.5">{mgr.role}</p>
-                        </div>
-                    </div>
-                    {/* Orange Mail/Envelope Alert */}
-                    <div className="flex h-7 w-7 items-center justify-center rounded-md bg-[#FFF7ED] text-[#EA580C] border border-[#FFEDD5] shrink-0">
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        <div className="w-full flex flex-col gap-3">
+            {/* WhatsApp Contact Header */}
+            <div className="flex items-center justify-between pb-3 border-b border-[#F3F0EC]">
+                <div className="flex items-center gap-3.5">
+                    {/* WhatsApp Green Icon */}
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#E6F7ED] text-[#25D366] shrink-0">
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.73-1.45L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.625 1.45 5.489 0 9.953-4.467 9.957-9.96.002-2.661-1.034-5.163-2.919-7.051C16.427 1.705 13.923.666 11.26.666 5.77 .666 1.306 5.13 1.302 10.62c-.001 1.77.464 3.5 1.347 5.03l-.883 3.228 3.3-.865c1.472.802 3.03 1.226 4.62 1.226h.001z" />
                         </svg>
                     </div>
+                    <div>
+                        <p className="text-xs font-semibold text-gray-900">WhatsApp Automation</p>
+                        <p className="text-[9px] text-[#25D366] font-medium flex items-center gap-1">
+                            <span className="h-1.5 w-1.5 rounded-full bg-[#25D366] inline-block animate-pulse" />
+                            Active Campaign: Lead Nurturing
+                        </p>
+                    </div>
                 </div>
-            ))}
+            </div>
+
+            {/* Chat Bubble 1 */}
+            <div className="flex flex-col gap-1 items-start max-w-[85%] self-start">
+                <span className="text-[8px] text-gray-400 font-mono ml-2">Lead Trigger: Visited Pricing</span>
+                <div className="bg-gray-100 text-gray-800 text-[10px] p-2.5 rounded-2xl rounded-tl-none border border-gray-200/50 shadow-sm leading-normal">
+                    Hey Sarah! Noticed you were checking out our pricing page. Had any quick questions about scale limits?
+                </div>
+                <span className="text-[8px] text-gray-400 ml-2">Sent via Hive</span>
+            </div>
+
+            {/* Chat Bubble 2 */}
+            <div className="flex flex-col gap-1 items-end max-w-[85%] self-end">
+                <div className="bg-[#E2F7CB] text-gray-800 text-[10px] p-2.5 rounded-2xl rounded-tr-none border border-[#D0ECC2] shadow-sm leading-normal">
+                    Hey! Yes actually, does the Enterprise tier include custom integrations?
+                </div>
+                <span className="text-[8px] text-gray-400 mr-2">Replied • Just now</span>
+            </div>
+
+            {/* Chat Bubble 3 */}
+            <div className="flex flex-col gap-1 items-start max-w-[85%] self-start">
+                <div className="bg-gray-100 text-gray-800 text-[10px] p-2.5 rounded-2xl rounded-tl-none border border-gray-200/50 shadow-sm leading-normal font-medium text-indigo-600 flex items-center gap-1.5">
+                    <svg className="w-3.5 h-3.5 animate-spin" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                    </svg>
+                    Auto-drafting response...
+                </div>
+            </div>
         </div>
     )
 }
@@ -242,36 +283,36 @@ function AccountsMockup() {
 const SERVICES_DATA = [
     {
         tag: "Services",
-        title: "Intent-driven cold outbound",
-        desc: "Ava sources leads, monitors real-time signals like funding rounds and hires, and runs personalized multi-channel campaigns. She actively tests and optimizes copy.",
+        title: "Automated Email Outreach",
+        desc: "Hive automates your entire cold email system. We build high-deliverability setups that monitor real-time signals, dynamically personalize copy, and manage your inbox rotation on autopilot.",
         bullets: [
             "Signal-triggered campaigns on autopilot",
-            "Multi-channel: email, social, phone",
-            "Continuous A/B testing"
+            "Automated multi-mailbox setups & rotation",
+            "Continuous AI copy personalization & A/B testing"
         ],
         mockupType: "signals" as const
     },
     {
         tag: "Services",
-        title: "Put your CRM to work",
-        desc: "MQLs, conference leads, closed-lost deals, churned accounts. Ava re-engages them all with fresh, personalized outreach using context from your CRM and enriched data.",
+        title: "LinkedIn Automation",
+        desc: "Scale your professional networking and social selling. We automate your profile visits, connection requests, personalized follow-ups, and message sequences directly from your active accounts.",
         bullets: [
-            "Works your MQLs and event leads",
-            "Reactivates closed-lost and churned accounts",
-            "Context-aware messaging from CRM data"
+            "Smart connection requests with personalized notes",
+            "Automated multi-step message sequences",
+            "Smart safety limits & active account protection"
         ],
-        mockupType: "crm" as const
+        mockupType: "linkedin" as const
     },
     {
         tag: "Services",
-        title: "Grow the accounts you already have",
-        desc: "Ava uses CRM and product usage data to get your AMs meetings with existing customers.",
+        title: "WhatsApp Automation",
+        desc: "Engage leads instantly with WhatsApp automation. Launch automated follow-ups, message alerts, and interactive quick-replies to keep prospects nurtured without manual work.",
         bullets: [
-            "Account-aware personalization",
-            "Runs upsell, expand, and add-on campaigns",
-            "Sends on behalf of each account owner"
+            "Instant signal-triggered WhatsApp messages",
+            "Automated conversation flows & quick-replies",
+            "Real-time reply tracking & CRM synchronization"
         ],
-        mockupType: "accounts" as const
+        mockupType: "whatsapp" as const
     }
 ]
 
@@ -282,7 +323,7 @@ export function Services() {
                 {/* Header */}
                 <div className="text-center max-w-3xl mx-auto mb-8 lg:mb-12">
                     <p className="text-xs font-semibold text-accent-2 uppercase tracking-widest mb-4">Services</p>
-                    <h2 className="text-3xl font-medium tracking-tight text-white md:text-4xl">
+                    <h2 className="text-2xl font-medium tracking-tight text-white md:text-4xl">
                         What we build for you.
                     </h2>
                 </div>

@@ -70,7 +70,7 @@ export function Hero({ onBookCall }: HeroProps) {
                         delay={60}
                         animateBy="words"
                         direction="bottom"
-                        className="mx-auto max-w-5xl font-sans text-5xl sm:text-[68px] font-semibold tracking-tight text-white leading-[1.12] justify-center"
+                        className="mx-auto max-w-5xl font-sans text-4xl sm:text-[68px] font-semibold tracking-tight text-white leading-[1.12] justify-center"
                         segments={[
                             "We",
                             { text: "Master", className: "italic font-serif font-medium text-blue-200" },
@@ -87,7 +87,7 @@ export function Hero({ onBookCall }: HeroProps) {
                         transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
                         className="mx-auto mt-8 max-w-2xl text-lg text-text-dim leading-relaxed"
                     >
-                        We help lead generation agencies save time and scale efficiently with simple, reliable workflows and optional AI-driven personalized outreach.
+                        We help lead generation agencies save time and scale efficiently with simple, reliable workflows and AI-driven personalized outreach.
                     </motion.p>
 
                     <motion.div
@@ -100,7 +100,12 @@ export function Hero({ onBookCall }: HeroProps) {
                             Book a Call
                             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </Button>
-                        <Button variant="outline" size="lg" className="h-12 px-7 text-base font-medium border-brand-500/20 bg-transparent text-white hover:bg-surface-1/50 hover:border-brand-400/50">
+                        <Button 
+                            variant="outline" 
+                            size="lg" 
+                            className="h-12 px-7 text-base font-medium border-brand-500/20 bg-transparent text-white hover:bg-surface-1/50 hover:border-brand-400/50"
+                            onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
+                        >
                             Learn More
                         </Button>
                     </motion.div>

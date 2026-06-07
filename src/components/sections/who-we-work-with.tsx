@@ -8,7 +8,7 @@ import { ThreeCrystals } from "@/components/ui/three-crystals"
 const POINTS = [
     {
         label: "Working Pipeline",
-        desc: "You already have ICP clarity and outreach copy that converts — you just can't scale the volume manually.",
+        desc: "You already have ICP clarity and outreach copy that converts you just can't scale the volume manually.",
         icon: GitBranch
     },
     {
@@ -64,7 +64,7 @@ export function WhoWeWorkWith() {
                         <p className="text-xs font-semibold text-accent-2 uppercase tracking-widest mb-5">
                             Who We Work With
                         </p>
-                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-white leading-[1.15] mb-8">
+                        <h2 className="text-2xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-white leading-[1.15] mb-8">
                             Lead gen agencies with pipelines that are ready to scale.
                         </h2>
                         <p className="text-base sm:text-lg text-text-dim leading-relaxed max-w-3xl mx-auto">

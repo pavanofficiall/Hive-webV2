@@ -68,7 +68,7 @@ export function FAQ() {
         <section id="faq" className="py-24 lg:py-32 bg-bg">
             <div className="mx-auto max-w-4xl px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl font-medium tracking-tight text-white mb-4">
+                    <h2 className="text-2xl font-medium tracking-tight text-white sm:text-3xl mb-4">
                         Frequently Asked Questions
                     </h2>
                     <p className="text-text-secondary">Everything you need to know about our automation services.</p>

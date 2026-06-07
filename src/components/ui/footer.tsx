@@ -64,7 +64,7 @@ export function Footer({ onBookCall }: FooterProps) {
                         baseRotation={3}
                         blurStrength={8}
                         containerClassName="mb-6"
-                        textClassName="text-3xl md:text-4xl font-medium tracking-tight text-white leading-[1.2]"
+                        textClassName="text-2xl md:text-4xl font-medium tracking-tight text-white leading-[1.2]"
                         segments={[
                             "Stop wasting time on manual tasks.",
                             { br: true, className: "hidden sm:block" },

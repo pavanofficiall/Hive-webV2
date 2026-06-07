@@ -220,7 +220,7 @@ export function ThreeCrystals({ layout = "hero" }: { layout?: "hero" | "who-we-w
                     geometry: crystalGeometry2,
                     material: electricBlueMat,
                     scale: [0.35, 0.525, 0.35],
-                    basePos: [2.3, -0.8, 0.5],
+                    basePos: [4.8, -0.6, 0.5],
                     rotSpeedX: 0.4,
                     rotSpeedY: -0.5,
                     bobSpeed: 1.3,
@@ -368,6 +368,7 @@ export function ThreeCrystals({ layout = "hero" }: { layout?: "hero" | "who-we-w
         // 6. Resizing & scroll state
         let targetScroll = 0
         let currentScroll = 0
+        let aspectX = Math.min(Math.max(width / height, 0.6), 1.8) / 1.3
 
         const handleScroll = () => {
             targetScroll = window.scrollY
@@ -384,10 +385,27 @@ export function ThreeCrystals({ layout = "hero" }: { layout?: "hero" | "who-we-w
             renderer.setSize(w, h)
 
             // Adjust mesh X spacing based on aspect ratio (so elements scale nicely on mobile)
-            const aspectX = Math.min(Math.max(w / h, 0.6), 1.8) / 1.3
+            aspectX = Math.min(Math.max(w / h, 0.6), 1.8) / 1.3
+
+            // Adjust crystal scales on mobile for performance and layout cleanups
+            const isMobile = w < 768
             meshes.forEach((mesh) => {
-                const basePos = mesh.userData.basePos
-                mesh.position.x = basePos[0] * aspectX
+                const data = mesh.userData
+                const baseScale = data.scale
+                if (isMobile) {
+                    // Hide foreground/large overlapping crystals on mobile to keep centered text clear
+                    if (
+                        layout === "case-studies-fg" ||
+                        layout === "who-we-work-with-right" ||
+                        data.basePos[2] > 0
+                    ) {
+                        mesh.scale.set(0, 0, 0)
+                    } else {
+                        mesh.scale.set(baseScale[0] * 0.55, baseScale[1] * 0.55, baseScale[2] * 0.55)
+                    }
+                } else {
+                    mesh.scale.set(baseScale[0], baseScale[1], baseScale[2])
+                }
             })
         }
         window.addEventListener("resize", handleResize)
@@ -440,7 +458,7 @@ export function ThreeCrystals({ layout = "hero" }: { layout?: "hero" | "who-we-w
                 const scrollOffset = scrollFraction * data.scrollShiftY
                 
                 mesh.position.y = data.basePos[1] + scrollOffset + bobOffset + mouseY * (data.basePos[2] < -1 ? 0.3 : 1)
-                mesh.position.x = data.basePos[0] * (width / height / 1.3) + mouseX * (data.basePos[2] < -1 ? 0.3 : 1)
+                mesh.position.x = data.basePos[0] * aspectX + mouseX * (data.basePos[2] < -1 ? 0.3 : 1)
             })
 
             renderer.render(scene, camera)

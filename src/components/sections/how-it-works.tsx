@@ -44,7 +44,7 @@ export function HowItWorks() {
     const active = PHASES[activeIndex]
 
     return (
-        <section id="how-it-works" className="bg-bg border-t border-surface-2 pt-24 pb-8 lg:pt-32 lg:pb-12">
+        <section id="how-it-works" className="bg-bg border-t border-surface-2 pt-24 pb-8 lg:pt-32 lg:pb-12 relative overflow-hidden">
             {/* Background radial glow */}
             <div className="absolute inset-0 z-0 pointer-events-none select-none">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.02)_0%,transparent_70%)] rounded-full blur-[130px]" />
@@ -55,7 +55,7 @@ export function HowItWorks() {
                 {/* Heading */}
                 <div className="mb-16 lg:mb-20">
                     <p className="text-xs font-semibold text-accent-2 uppercase tracking-widest mb-4">How It Works</p>
-                    <h2 className="text-3xl font-medium tracking-tight text-white md:text-4xl">
+                    <h2 className="text-2xl font-medium tracking-tight text-white md:text-4xl">
                         From audit to autopilot in 30 days.
                     </h2>
                 </div>
