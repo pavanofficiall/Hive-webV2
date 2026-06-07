@@ -21,9 +21,6 @@ const PHASES = [
     },
 ]
 
-// Distance from top of viewport where cards stick (below navbar)
-const STICKY_TOP = 96 // px
-
 export function HowItWorks() {
     const [activeIndex, setActiveIndex] = useState(0)
     const cardRefs = useRef<(HTMLDivElement | null)[]>([])
@@ -44,13 +41,14 @@ export function HowItWorks() {
     const active = PHASES[activeIndex]
 
     return (
-        <section id="how-it-works" className="bg-bg border-t border-surface-2 pt-24 pb-8 lg:pt-32 lg:pb-12 relative overflow-hidden">
-            {/* Background radial glow */}
-            <div className="absolute inset-0 z-0 pointer-events-none select-none">
+        // CRITICAL: NO overflow-hidden here — it breaks position:sticky on children
+        <section id="how-it-works" className="bg-bg border-t border-surface-2 pt-24 pb-8 lg:pt-32 lg:pb-12 relative">
+            {/* Background radial glow — pointer-events-none so it doesn't interfere */}
+            <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.02)_0%,transparent_70%)] rounded-full blur-[130px]" />
             </div>
 
-            <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
                 {/* Heading */}
                 <div className="mb-16 lg:mb-20">
@@ -61,21 +59,19 @@ export function HowItWorks() {
                 </div>
 
                 {/* ── DESKTOP ── */}
-                <div className="hidden md:grid md:grid-cols-12 md:gap-12 lg:gap-16 items-start">
+                <div className="hidden md:flex md:gap-12 lg:gap-16">
 
-                    {/* LEFT COLUMN — stacking sticky cards */}
-                    <div className="col-span-5 relative">
+                    {/* LEFT COLUMN — sticky cards stack as you scroll */}
+                    <div className="w-5/12 flex-shrink-0 self-start">
                         {PHASES.map((phase, i) => (
                             <div
                                 key={phase.week}
-                                className="relative"
-                                style={{ minHeight: i < PHASES.length - 1 ? "100vh" : "50vh" }}
+                                style={{ minHeight: i < PHASES.length - 1 ? "100vh" : "60vh" }}
                             >
                                 <div
                                     ref={el => { cardRefs.current[i] = el }}
-                                    className="sticky rounded-2xl border border-surface-subtle/40 p-8 shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
+                                    className="sticky top-24 rounded-2xl border border-surface-subtle/40 p-8 shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
                                     style={{
-                                        top: STICKY_TOP,
                                         zIndex: (i + 1) * 10,
                                         background: `rgba(9, 14, 36, ${0.9 + i * 0.03})`,
                                         backgroundImage: `radial-gradient(rgba(255,255,255,0.02) 1px, transparent 1px)`,
@@ -109,8 +105,8 @@ export function HowItWorks() {
                         ))}
                     </div>
 
-                    {/* RIGHT COLUMN — sticky text panel */}
-                    <div className="col-span-7 h-full">
+                    {/* RIGHT COLUMN — sticky detail panel (must stretch to match left column height) */}
+                    <div className="flex-1 min-w-0">
                         <div className="sticky top-24">
                             <AnimatePresence mode="wait">
                                 <motion.div
@@ -119,7 +115,7 @@ export function HowItWorks() {
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: -10 }}
                                     transition={{ duration: 0.35, ease: "easeOut" }}
-                                    className="relative rounded-2xl border border-surface-subtle/40 p-10 lg:p-12 min-h-[300px] flex items-center bg-surface-1/10 shadow-[0_8px_30px_rgba(0,0,0,0.3)] overflow-hidden"
+                                    className="relative rounded-2xl border border-surface-subtle/40 p-10 lg:p-12 min-h-[360px] flex items-center shadow-[0_8px_30px_rgba(0,0,0,0.3)]"
                                     style={{
                                         background: "rgba(9, 14, 36, 0.4)",
                                         backgroundImage: `radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px)`,
