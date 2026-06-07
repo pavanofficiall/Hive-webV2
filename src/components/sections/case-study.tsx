@@ -1,157 +1,216 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
-import { Building2, LineChart, Target, CalendarDays, ArrowRight } from "lucide-react"
+import Image from "next/image"
+import { CheckCircle2, TrendingUp, Sparkles, Zap, Quote } from "lucide-react"
+import { ThreeCrystals } from "@/components/ui/three-crystals"
+
+interface CaseStudyItem {
+    industry: string
+    clientName: string
+    tagline: string
+    logo?: string
+    metrics: {
+        value: string
+        label: string
+        icon: React.ComponentType<{ className?: string }>
+    }[]
+    problem: string
+    solution: string
+    delivered?: string[]
+    quote?: string
+    speaker?: {
+        name: string
+        role: string
+        avatarInitials: string
+    }
+}
+
+const CASE_STUDIES: CaseStudyItem[] = [
+    {
+        industry: "ENTERPRISE SAAS",
+        clientName: "YourCase AI",
+        tagline: "Autonomous Lead Research & Personalized Client Outreach",
+        logo: "/yourcase-logo.png",
+        metrics: [
+            { value: "8 hrs", label: "Saved Per Campaign", icon: Zap },
+            { value: "3.5x", label: "Revenue Generated", icon: TrendingUp },
+            { value: "99%", label: "Accuracy Rate", icon: Sparkles }
+        ],
+        problem: "YourCase AI was spending over 8 hours per campaign manually scraping databases, conducting prospect research, and drafting custom outreach to potential clients.",
+        solution: "We deployed custom AI agents that analyze their unique outreach style. The agents automatically research prospect backgrounds and write hyper-personalized emails that sound exactly like their team members, maintaining a human touch rather than sounding like a robot.",
+    },
+    {
+        industry: "ENTERPRISE OUTBOUND",
+        clientName: "Lead OS",
+        tagline: "Signal-Triggered CRM Re-engagement Engine",
+        metrics: [
+            { value: "34%", label: "Meeting Book Rate", icon: Zap },
+            { value: "82%", label: "Data Entry Saved", icon: TrendingUp },
+            { value: "4.2x", label: "AE Meeting Volume", icon: Sparkles }
+        ],
+        problem: "Lead OS had over 12,000 cold, closed-lost, and dormant contacts sitting in their HubSpot CRM, but lacked the operational bandwidth to segment and re-engage them.",
+        solution: "We built an automated 'intent radar' that monitors their CRM for fresh activities (such as repeat pricing page visits, VC funding events, or leadership hires) and triggers highly contextual, automated outbound campaigns on behalf of the account owners."
+    }
+]
 
 export function CaseStudy() {
-    return (
-        <section className="py-24 lg:py-32 bg-surface-elevated/20 border-y border-surface-subtle">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    const [mounted, setMounted] = useState(false)
 
-                <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-16">
-                    <div>
-                        <div className="inline-flex items-center gap-2 rounded-full border border-surface-subtle bg-surface-elevated/50 px-3 py-1 text-[11px] font-mono text-text-muted mb-4 tracking-wide uppercase">
-                            Early Pilot Result · Confidential Client
-                        </div>
-                        <h2 className="text-3xl font-medium tracking-tight text-white mb-2">
-                            Proof of Work
-                        </h2>
-                        <p className="text-text-secondary">
-                            We don't sell theories. We sell booked pipeline.
-                        </p>
-                    </div>
+    useEffect(() => {
+        setMounted(true)
+    }, [])
+
+    return (
+        <section id="case-studies" className="pt-4 pb-24 lg:pt-6 lg:pb-32 bg-[#030611] border-t border-surface-2/40 relative overflow-hidden">
+            {/* Background radial glow */}
+            <div className="absolute inset-0 z-0 pointer-events-none select-none">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.04)_0%,transparent_70%)] rounded-full blur-[120px]" />
+            </div>
+
+            {/* WebGL 3D Crystals Background Component */}
+            {mounted && (
+                <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+                    <ThreeCrystals layout="case-studies-bg" />
+                </div>
+            )}
+
+            {/* WebGL 3D Crystals Foreground Component */}
+            {mounted && (
+                <div className="absolute inset-0 z-30 pointer-events-none overflow-hidden">
+                    <ThreeCrystals layout="case-studies-fg" />
+                </div>
+            )}
+
+            <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
+                {/* Header */}
+                <div className="mb-16 lg:mb-20">
+                    <p className="text-xs font-semibold text-accent-2 uppercase tracking-widest mb-4">Case Studies</p>
+                    <h2 className="text-3xl font-medium tracking-tight text-white md:text-4xl">
+                        What we've delivered.
+                    </h2>
+                    <p className="mt-4 text-sm text-text-dim max-w-2xl">
+                        Real performance numbers and operational transformations from B2B lead generation agencies running on Hive automation.
+                    </p>
                 </div>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.7 }}
-                    className="rounded-2xl border border-surface-subtle bg-bg overflow-hidden"
-                >
-                    <div className="grid lg:grid-cols-2">
+                {/* Cards Grid */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    {CASE_STUDIES.map((study, idx) => (
+                        <motion.div
+                            key={study.clientName}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.6, delay: idx * 0.15, ease: "easeOut" }}
+                            whileHover={{ y: -6 }}
+                            className="flex flex-col bg-surface-1/20 border border-surface-subtle/40 rounded-2xl p-8 lg:p-10 hover:border-brand-400/25 transition-all duration-300 relative group overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.3)]"
+                        >
+                            {/* Card Hover Glow effect */}
+                            <div className="absolute -inset-px bg-gradient-to-tr from-brand-500/10 via-transparent to-accent-1/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-                        {/* Context & Signal Log */}
-                        <div className="p-10 lg:p-12 border-b lg:border-b-0 lg:border-r border-surface-subtle relative bg-surface-elevated/30">
-                            <div className="flex items-center gap-3 mb-8">
-                                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-surface-elevated border border-surface-subtle">
-                                    <Building2 className="h-6 w-6 text-text-muted" />
+                            {/* Client Header */}
+                            <div className="mb-8 pb-6 border-b border-surface-2/60 relative z-10">
+                                <div className="flex items-center justify-between mb-4">
+                                    <span className="text-[10px] font-mono text-accent-2 tracking-widest font-semibold uppercase bg-accent-1/10 px-2.5 py-1 rounded-md border border-accent-1/10">
+                                        {study.industry}
+                                    </span>
+                                    {study.logo ? (
+                                        <Image
+                                            src={study.logo}
+                                            alt={`${study.clientName} logo`}
+                                            width={36}
+                                            height={36}
+                                            className="invert opacity-85 group-hover:opacity-100 transition-all duration-300 object-contain max-h-[36px] w-auto"
+                                        />
+                                    ) : (
+                                        <span className="text-[10px] text-success bg-success/10 border border-success/20 px-2 py-0.5 rounded-full font-medium">
+                                            Delivered
+                                        </span>
+                                    )}
+                                </div>
+                                <h3 className="text-2xl font-semibold text-white tracking-tight">{study.clientName}</h3>
+                                <p className="text-xs text-text-dim mt-1.5 font-medium">{study.tagline}</p>
+                            </div>
+
+                            {/* Metrics Display */}
+                            <div className="grid grid-cols-3 gap-4 mb-8 bg-[#050818]/60 border border-surface-subtle/35 p-5 rounded-xl relative z-10">
+                                {study.metrics.map((metric, mIdx) => {
+                                    const Icon = metric.icon
+                                    return (
+                                        <div key={mIdx} className="text-center">
+                                            <div className="flex justify-center mb-1">
+                                                <Icon className="w-3.5 h-3.5 text-text-muted opacity-80" />
+                                            </div>
+                                            <p className="text-2xl md:text-3xl font-bold text-white tracking-tight leading-none mb-1">
+                                                {metric.value}
+                                            </p>
+                                            <p className="text-[9px] font-mono text-text-muted uppercase tracking-wider font-semibold">
+                                                {metric.label}
+                                            </p>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+
+                            {/* Details (Problem & Solution) */}
+                            <div className="space-y-4 mb-8 relative z-10 flex-1">
+                                <div>
+                                    <h4 className="text-xs font-mono text-text-muted uppercase tracking-wider mb-1">The Struggle</h4>
+                                    <p className="text-xs text-text-dim leading-relaxed">
+                                        {study.problem}
+                                    </p>
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-medium text-white">DevTools Startup</h3>
-                                    <p className="text-sm text-text-muted">Series A • Infrastructure SaaS</p>
+                                    <h4 className="text-xs font-mono text-text-muted uppercase tracking-wider mb-1">The Solution</h4>
+                                    <p className="text-xs text-text-dim leading-relaxed">
+                                        {study.solution}
+                                    </p>
                                 </div>
                             </div>
 
-                            <p className="text-text-secondary leading-relaxed mb-8">
-                                Their SDR team was burning leads sending generic sequences. We replaced cold volume with perfectly timed micro-audits triggered by specific network events.
-                            </p>
+                            {/* Automated Workflows Checklist */}
+                            {study.delivered && study.delivered.length > 0 && (
+                                <div className="mb-8 p-5 rounded-xl bg-surface-1/45 border border-surface-subtle/30 relative z-10">
+                                    <h4 className="text-[10px] font-mono text-white uppercase tracking-widest font-semibold mb-3">
+                                        Automated Infrastructure Built:
+                                    </h4>
+                                    <ul className="space-y-2">
+                                        {study.delivered.map((item, dIdx) => (
+                                            <li key={dIdx} className="flex items-start gap-2 text-xs text-text-dim">
+                                                <CheckCircle2 className="w-4 h-4 text-success mt-0.5 shrink-0" />
+                                                <span>{item}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )}
 
-                            <div className="space-y-4">
-                                <div className="text-sm font-medium text-white mb-2 border-b border-surface-subtle/50 pb-2">Signals Detected:</div>
-                                {[
-                                    { text: "VP Engineering hire detected", time: "Day 1" },
-                                    { text: "DevOps hiring spike (+4 roles)", time: "Day 3" },
-                                    { text: "Major product feature launch", time: "Day 7" }
-                                ].map((signal, idx) => (
-                                    <motion.div
-                                        key={idx}
-                                        initial={{ opacity: 0, x: -10 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        transition={{ delay: 0.3 + (idx * 0.1) }}
-                                        className="flex items-center gap-4 text-sm bg-[#0A0D11] p-3 rounded-lg border border-surface-subtle/30"
-                                    >
-                                        <div className="h-1.5 w-1.5 rounded-full bg-brand-500 shadow-[0_0_8px_var(--color-brand-glow)]" />
-                                        <span className="text-text-primary flex-1">{signal.text}</span>
-                                        <span className="text-text-muted font-mono text-xs">{signal.time}</span>
-                                    </motion.div>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Results Grid */}
-                        <div className="p-10 lg:p-12 bg-[#0A0D11] relative overflow-hidden">
-                            {/* Decorative background grid and glow */}
-                            <div className="absolute inset-0 bg-[url('https://transparenttextures.com/patterns/cubes.png')] bg-repeat opacity-[0.03]" />
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-brand-500/10 rounded-full blur-[100px] pointer-events-none" />
-
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 h-full content-center relative z-10">
-                                <motion.div
-                                    initial={{ opacity: 0, scale: 0.9 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    transition={{ delay: 0.5 }}
-                                    className="p-6 rounded-xl bg-bg border border-surface-subtle"
-                                >
-                                    <CalendarDays className="h-5 w-5 text-brand-400 mb-4" />
-                                    <div className="text-3xl font-semibold text-white mb-1">3</div>
-                                    <div className="text-sm text-text-secondary">Meetings Booked</div>
-                                </motion.div>
-
-                                <motion.div
-                                    initial={{ opacity: 0, scale: 0.9 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    transition={{ delay: 0.6 }}
-                                    className="p-6 rounded-xl bg-bg border border-surface-subtle"
-                                >
-                                    <Target className="h-5 w-5 text-green-400 mb-4" />
-                                    <div className="text-3xl font-semibold text-white mb-1">1</div>
-                                    <div className="text-sm text-text-secondary">Became SQL</div>
-                                </motion.div>
-
-                                <motion.div
-                                    initial={{ opacity: 0, scale: 0.9 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    transition={{ delay: 0.7 }}
-                                    className="sm:col-span-2 p-6 rounded-xl bg-gradient-to-br from-brand-500/20 to-surface-base border border-brand-500/30"
-                                >
-                                    <div className="flex items-center justify-between">
-                                        <div>
-                                            <LineChart className="h-5 w-5 text-brand-400 mb-4" />
-                                            <div className="text-3xl font-semibold text-white mb-1">$240k</div>
-                                            <div className="text-sm text-brand-200">Pipeline Created (30 days)</div>
+                            {/* Testimonial Quote */}
+                            {study.quote && study.speaker && (
+                                <div className="mt-auto pt-6 border-t border-surface-2/60 relative z-10">
+                                    <div className="flex gap-4">
+                                        <div className="shrink-0 flex h-10 w-10 items-center justify-center rounded-full bg-accent-1/10 text-accent-2 border border-accent-1/25 font-bold text-sm">
+                                            {study.speaker.avatarInitials}
                                         </div>
-                                        <div className="h-16 w-32 relative">
-                                            {/* Simple visual sparkline */}
-                                            <svg className="absolute inset-0 h-full w-full" preserveAspectRatio="none" viewBox="0 0 100 40">
-                                                <motion.path
-                                                    initial={{ pathLength: 0, opacity: 0 }}
-                                                    whileInView={{ pathLength: 1, opacity: 1 }}
-                                                    transition={{ duration: 1.5, ease: "easeOut" }}
-                                                    d="M0 35 Q 20 25, 40 30 T 70 15 T 100 5"
-                                                    fill="none"
-                                                    stroke="var(--color-brand-400)"
-                                                    strokeWidth="2"
-                                                    strokeLinecap="round"
-                                                />
-                                                <motion.path
-                                                    initial={{ opacity: 0 }}
-                                                    whileInView={{ opacity: 0.3 }}
-                                                    transition={{ duration: 1.5, delay: 0.5 }}
-                                                    d="M0 35 Q 20 25, 40 30 T 70 15 T 100 5 L 100 40 L 0 40 Z"
-                                                    fill="url(#sparkline-gradient)"
-                                                />
-                                                <defs>
-                                                    <linearGradient id="sparkline-gradient" x1="0" y1="0" x2="0" y2="1">
-                                                        <stop offset="0%" stopColor="var(--color-brand-400)" stopOpacity="1" />
-                                                        <stop offset="100%" stopColor="var(--color-brand-400)" stopOpacity="0" />
-                                                    </linearGradient>
-                                                </defs>
-                                            </svg>
+                                        <div>
+                                            <div className="relative">
+                                                <Quote className="absolute -top-1 -left-2 w-4 h-4 text-accent-1/15 rotate-180" />
+                                                <p className="text-xs text-text-dim italic leading-relaxed mb-3 pl-2.5">
+                                                    "{study.quote}"
+                                                </p>
+                                            </div>
+                                            <footer className="text-xs text-text-muted pl-2.5">
+                                                <strong className="text-white font-medium">{study.speaker.name}</strong> — {study.speaker.role}
+                                            </footer>
                                         </div>
                                     </div>
-                                </motion.div>
-                            </div>
-
-                            {/* Credibility footnote */}
-                            <div className="mt-4 pt-3 border-t border-surface-subtle/30 relative z-10">
-                                <p className="text-[10px] text-text-muted font-mono leading-relaxed">
-                                    Results from a 30-day pilot engagement. Client identity withheld under NDA. Verified pipeline value.
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-                </motion.div>
+                                </div>
+                            )}
+                        </motion.div>
+                    ))}
+                </div>
             </div>
         </section>
     )

@@ -154,28 +154,28 @@ export function Results() {
                     <MetricCard
                         icon={Target}
                         label="Meetings Booked"
-                        targetNum={28}
-                        value="28"
+                        targetNum={32}
+                        value="32"
                         change="+14% vs last month"
                         delay={0}
                     />
                     <MetricCard
                         icon={TrendingUp}
                         label="Response Rate"
-                        targetNum={14}
-                        value="14.8%"
-                        suffix=".8%"
-                        change="+4.2% vs industry avg"
+                        targetNum={18}
+                        value="18.4%"
+                        suffix=".4%"
+                        change="+5.2% vs industry avg"
                         delay={0.1}
                     />
                     <MetricCard
                         icon={DollarSign}
                         label="Pipeline Created"
-                        targetNum={450}
-                        value="$450k"
+                        targetNum={120}
+                        value="$120k"
                         prefix="$"
                         suffix="k"
-                        change="+$150k this quarter"
+                        change="+$40k this quarter"
                         delay={0.2}
                     />
                 </div>
@@ -300,9 +300,9 @@ export function Results() {
 
                                 <div className="flex-1 space-y-6">
                                     {[
-                                        { label: "Meetings / 1000 Leads", sf: 28, trad: 4, sfLabel: "28", tradLabel: "4" },
-                                        { label: "Response Rate", sf: 74, trad: 18, sfLabel: "14.8%", tradLabel: "2.1%" },
-                                        { label: "Cost per Meeting", sf: 15, trad: 85, sfLabel: "$48", tradLabel: "$320", invert: true },
+                                        { label: "Meetings / 1000 Leads", sf: 32, trad: 4, sfLabel: "32", tradLabel: "4" },
+                                        { label: "Response Rate", sf: 92, trad: 18, sfLabel: "18.4%", tradLabel: "2.1%" },
+                                        { label: "Cost per Meeting", sf: 75, trad: 30, sfLabel: "$38", tradLabel: "$420", invert: true },
                                     ].map((row, i) => (
                                         <div key={i} className="space-y-2">
                                             <div className="flex items-center justify-between text-xs">

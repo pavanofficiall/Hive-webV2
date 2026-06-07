@@ -6,20 +6,24 @@ import { ChevronDown } from "lucide-react"
 
 const faqs = [
     {
-        question: "Do you use AI for outreach?",
-        answer: "Yes, if you prefer. We can leverage AI to create highly personalized outreach messages, or we can use your existing proven templates. It's completely up to your agency's style."
+        question: "Who is HIVE built for?",
+        answer: "HIVE is built exclusively for lead generation and outreach agencies who already have validated campaigns and ready pipelines. If your strategy works but your team is buried under manual tasks like scraping, cleaning databases, rotating domains, and CRM entry, we automate it."
     },
     {
-        question: "What exactly do you automate?",
-        answer: "We automate the repetitive manual tasks in your lead generation pipeline: scraping, formatting, CRM data entry, and email sequencing. We take the robotic work out of your day."
+        question: "How long does the integration process take?",
+        answer: "We deploy your entire automated engine within 30 days. Week 1 is alignment and pipeline mapping. Weeks 2-3 are dedicated to technical development, API scripting, and CRM configurations. By Week 4, your campaigns are running on 100% autopilot."
     },
     {
-        question: "Is this for any business?",
-        answer: "No. We exclusively work with lead generation and vision agencies. We understand your specific workflows and build automations tailored specifically to your operational needs."
+        question: "What outreach platforms and tools do you support?",
+        answer: "We sync directly with your current stack. We regularly build integrations with Smartlead, Instantly, Lemlist, Clay, Apollo, HubSpot, Salesforce, Close, Slack, and custom webhooks."
     },
     {
-        question: "Will this replace my team?",
-        answer: "No. Our automation acts as a force multiplier for your team, allowing them to focus on high-value tasks like strategy, relationship building, and closing deals, rather than manual data entry."
+        question: "Do you write our outreach copy or design the strategy?",
+        answer: "No. We focus entirely on the engineering and operational systems. You keep your copy, templates, and targeting strategy. We build the technical infrastructure (enrichment, rotators, responders) underneath it to scale your volume."
+    },
+    {
+        question: "How do you protect domain health and email deliverability?",
+        answer: "We build self-healing deliverability infrastructure. Our systems continuously check cold-domain blacklists, monitor inbox health metrics, and automatically rotate flag-prone inboxes out of active sequences before they damage your overall reputation."
     }
 ]
 
@@ -65,9 +69,9 @@ export function FAQ() {
             <div className="mx-auto max-w-4xl px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl font-medium tracking-tight text-white mb-4">
-                        Common questions
+                        Frequently Asked Questions
                     </h2>
-                    <p className="text-text-secondary">Everything you need to know about the product.</p>
+                    <p className="text-text-secondary">Everything you need to know about our automation services.</p>
                 </div>
 
                 <div className="divide-y divide-surface-subtle border-y border-surface-subtle">

@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Sora } from "next/font/google";
 import "./globals.css";
+import { SmoothScroll } from "@/components/ui/smooth-scroll";
+import { WhatsAppButton } from "@/components/ui/whatsapp-button";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const sora = Sora({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "Premium Outbound Intelligence",
+  title: "HIVE",
   description: "Identify companies actively buying software and book qualified meetings.",
 };
-
-import { WhatsAppButton } from "@/components/ui/whatsapp-button";
 
 export default function RootLayout({
   children,
@@ -18,8 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.variable} font-sans antialiased bg-bg text-text-primary`}>
-        {children}
+      <body className={`${sora.variable} font-sans antialiased bg-bg text-text-primary`}>
+        {/* Aurora gradient background — fixed, behind everything */}
+        <div aria-hidden="true" className="aurora-bg" />
+        <SmoothScroll>
+          {children}
+        </SmoothScroll>
         <WhatsAppButton />
       </body>
     </html>
