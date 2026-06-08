@@ -6,7 +6,7 @@ import { GlimpseLogo } from "@/components/ui/glimpse-logo"
 import { loginAdmin } from "@/components/admin/admin-guard"
 import { Eye, EyeOff, Lock, Mail, AlertCircle } from "lucide-react"
 
-const ADMIN_EMAIL = "Pavan@hive.com"
+const ADMIN_EMAIL = "pavan@hive.com"
 const ADMIN_PASSWORD = "Pvn@77HivegoO"
 
 export default function AdminLoginPage() {

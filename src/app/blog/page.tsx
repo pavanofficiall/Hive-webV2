@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import type { Metadata } from "next"
 import Link from "next/link"
 import { supabase, Post } from "@/lib/supabase"
 import { BlogCard } from "@/components/blog/blog-card"
@@ -51,7 +52,7 @@ export default function BlogPage() {
         <div className="mx-auto max-w-3xl">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-500/30 bg-brand-500/10 text-xs font-mono text-brand-300 tracking-widest uppercase mb-6">
             <Rss className="w-3 h-3" />
-            Insights & Updates
+            Insights &amp; Updates
           </div>
           <h1 className="text-5xl md:text-6xl font-black tracking-tight text-white mb-6 leading-[1.05]">
             The{" "}
@@ -61,7 +62,7 @@ export default function BlogPage() {
             Blog
           </h1>
           <p className="text-lg text-text-muted max-w-xl mx-auto leading-relaxed">
-            Insights on outbound automation, lead generation, and scaling your agency's revenue pipeline.
+            Insights on outbound automation, lead generation, and scaling your agency&apos;s revenue pipeline.
           </p>
         </div>
       </section>
@@ -85,7 +86,7 @@ export default function BlogPage() {
               </svg>
             </div>
             <h2 className="text-xl font-semibold text-white/60 mb-2">No posts yet</h2>
-            <p className="text-sm text-text-muted">Check back soon — we're writing something great.</p>
+            <p className="text-sm text-text-muted">Check back soon — we&apos;re writing something great.</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -13,6 +13,54 @@ import { LogoLoop } from "@/components/ui/logo-loop";
 import { ScrollVelocity } from "@/components/ui/scroll-velocity";
 import { BookingModal } from "@/components/ui/booking-modal";
 
+// FAQ structured data for Google rich results
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Who is HIVE built for?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "HIVE is built exclusively for lead generation and outreach agencies who already have validated campaigns and ready pipelines. If your strategy works but your team is buried under manual tasks like scraping, cleaning databases, rotating domains, and CRM entry, we automate it.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does the integration process take?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We deploy your entire automated engine within 30 days. Week 1 is alignment and pipeline mapping. Weeks 2-3 are dedicated to technical development, API scripting, and CRM configurations. By Week 4, your campaigns are running on 100% autopilot.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What outreach platforms and tools do you support?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We sync directly with your current stack. We regularly build integrations with Smartlead, Instantly, Lemlist, Clay, Apollo, HubSpot, Salesforce, Close, Slack, and custom webhooks.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you write our outreach copy or design the strategy?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. We focus entirely on the engineering and operational systems. You keep your copy, templates, and targeting strategy. We build the technical infrastructure underneath it to scale your volume.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do you protect domain health and email deliverability?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We build self-healing deliverability infrastructure. Our systems continuously check cold-domain blacklists, monitor inbox health metrics, and automatically rotate flag-prone inboxes out of active sequences before they damage your overall reputation.",
+      },
+    },
+  ],
+};
+
 const INTEGRATION_LOGOS = [
   {
     node: (
@@ -208,6 +256,13 @@ export default function Home() {
       <FAQ />
       <Footer />
       <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
+
+      {/* FAQ Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
     </main>
   );
 }
+
