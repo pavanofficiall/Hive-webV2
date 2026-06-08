@@ -3,6 +3,7 @@ import { Sora } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/ui/smooth-scroll";
 import { WhatsAppButton } from "@/components/ui/whatsapp-button";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const sora = Sora({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -140,6 +141,7 @@ export default function RootLayout({
           {children}
         </SmoothScroll>
         <WhatsAppButton />
+        <GoogleAnalytics gaId="G-YD34N1NRVL" />
       </body>
     </html>
   );
