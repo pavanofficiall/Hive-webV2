@@ -42,6 +42,7 @@ export function Navbar({ onBookCall }: NavbarProps) {
                     <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-text-secondary">
                         <a href="#how-it-works" className="hover:text-white transition-colors">How it Works</a>
                         <a href="#case-studies" className="hover:text-white transition-colors">Results</a>
+                        <a href="/blog" className="hover:text-white transition-colors">Blog</a>
                     </nav>
 
                     <div className="flex items-center gap-4">
@@ -92,6 +93,13 @@ export function Navbar({ onBookCall }: NavbarProps) {
                             className="text-base font-medium text-text-secondary hover:text-white transition-colors py-2 block w-full"
                         >
                             Results
+                        </a>
+                        <a
+                            href="/blog"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="text-base font-medium text-text-secondary hover:text-white transition-colors py-2 block w-full"
+                        >
+                            Blog
                         </a>
                         <div className="pt-4 w-full border-t border-brand-500/5">
                             <Button

@@ -99,9 +99,10 @@ export function Footer({ onBookCall }: FooterProps) {
                             <h3 className="text-sm font-semibold text-white">Product</h3>
                             <ul role="list" className="mt-4 space-y-3">
                                 {[
-                                    { label: "How it Works", href: "#how-it-works" },
-                                    { label: "Results", href: "#case-studies" },
-                                    { label: "FAQ", href: "#faq" },
+                                    { label: "How it Works", href: "/#how-it-works" },
+                                    { label: "Results", href: "/#case-studies" },
+                                    { label: "FAQ", href: "/#faq" },
+                                    { label: "Blog", href: "/blog" },
                                 ].map((item) => (
                                     <li key={item.label}>
                                         <a href={item.href} className="text-sm text-text-muted hover:text-white transition-colors">
