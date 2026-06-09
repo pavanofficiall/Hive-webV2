@@ -82,7 +82,7 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
             {post.title}
           </h1>
           {post.excerpt && (
-            <p className="text-lg text-text-muted leading-relaxed border-l-2 border-brand-500/40 pl-5">
+            <p className="text-xl text-text-muted leading-relaxed border-l-2 border-brand-500/40 pl-5">
               {post.excerpt}
             </p>
           )}
@@ -96,16 +96,16 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
             rehypePlugins={[rehypeHighlight, rehypeRaw]}
             components={{
               h1: ({ children }) => (
-                <h1 className="text-3xl font-bold text-white mt-12 mb-6 leading-tight">{children}</h1>
+                <h1 className="text-4xl font-bold text-white mt-12 mb-6 leading-tight">{children}</h1>
               ),
               h2: ({ children }) => (
-                <h2 className="text-2xl font-bold text-white mt-10 mb-4 leading-tight">{children}</h2>
+                <h2 className="text-3xl font-bold text-white mt-10 mb-4 leading-tight">{children}</h2>
               ),
               h3: ({ children }) => (
-                <h3 className="text-xl font-semibold text-white/90 mt-8 mb-3">{children}</h3>
+                <h3 className="text-2xl font-semibold text-white/90 mt-8 mb-3">{children}</h3>
               ),
               p: ({ children }) => (
-                <p className="text-text-muted leading-[1.9] mb-6 text-[15px]">{children}</p>
+                <p className="text-text-muted leading-[1.9] mb-6 text-[19px]">{children}</p>
               ),
               a: ({ href, children }) => (
                 <a href={href} className="text-brand-400 hover:text-brand-300 underline underline-offset-4 transition-colors" target="_blank" rel="noopener noreferrer">
@@ -119,7 +119,7 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
                 <ol className="list-decimal pl-6 space-y-2 mb-6 text-text-muted">{children}</ol>
               ),
               li: ({ children }) => (
-                <li className="flex gap-2 items-start text-text-muted text-[15px] leading-relaxed">
+                <li className="flex gap-2 items-start text-text-muted text-[19px] leading-relaxed">
                   <span className="text-brand-400 shrink-0 mt-1.5">▸</span>
                   <span>{children}</span>
                 </li>
@@ -132,7 +132,7 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
               code: ({ className, children, ...props }) => {
                 const isInline = !className
                 return isInline ? (
-                  <code className="bg-white/[0.08] text-brand-300 rounded px-1.5 py-0.5 text-[13px] font-mono">
+                  <code className="bg-white/[0.08] text-brand-300 rounded px-1.5 py-0.5 text-[16px] font-mono">
                     {children}
                   </code>
                 ) : (
@@ -140,7 +140,7 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
                 )
               },
               pre: ({ children }) => (
-                <pre className="bg-[#0d1424] border border-white/[0.08] rounded-xl p-5 overflow-x-auto mb-6 text-sm font-mono leading-relaxed">
+                <pre className="bg-[#0d1424] border border-white/[0.08] rounded-xl p-5 overflow-x-auto mb-6 text-[16px] font-mono leading-relaxed">
                   {children}
                 </pre>
               ),
