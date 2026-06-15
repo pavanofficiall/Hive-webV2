@@ -36,7 +36,6 @@ function useCounter(target: number, duration: number = 1500, inView: boolean = f
 function MetricCard({
     icon: Icon,
     label,
-    value,
     suffix,
     prefix,
     change,
@@ -45,7 +44,6 @@ function MetricCard({
 }: {
     icon: React.ElementType
     label: string
-    value: string
     suffix?: string
     prefix?: string
     change: string
@@ -155,7 +153,6 @@ export function Results() {
                         icon={Target}
                         label="Meetings Booked"
                         targetNum={32}
-                        value="32"
                         change="+14% vs last month"
                         delay={0}
                     />
@@ -163,7 +160,6 @@ export function Results() {
                         icon={TrendingUp}
                         label="Response Rate"
                         targetNum={18}
-                        value="18.4%"
                         suffix=".4%"
                         change="+5.2% vs industry avg"
                         delay={0.1}
@@ -172,7 +168,6 @@ export function Results() {
                         icon={DollarSign}
                         label="Pipeline Created"
                         targetNum={120}
-                        value="$120k"
                         prefix="$"
                         suffix="k"
                         change="+$40k this quarter"

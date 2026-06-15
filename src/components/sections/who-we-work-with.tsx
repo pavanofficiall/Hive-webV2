@@ -68,7 +68,7 @@ export function WhoWeWorkWith() {
                             Lead gen agencies with pipelines that are ready to scale.
                         </h2>
                         <p className="text-base sm:text-lg text-text-dim leading-relaxed max-w-3xl mx-auto">
-                            We don't build your strategy or write your outreach copy. We partner with established agencies that already have validated outreach and automate all the friction slowing them down.
+                            We don&apos;t build your strategy or write your outreach copy. We partner with established agencies that already have validated outreach and automate all the friction slowing them down.
                         </p>
                     </motion.div>
                 </div>

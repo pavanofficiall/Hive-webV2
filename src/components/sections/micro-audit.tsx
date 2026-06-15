@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Play, Pause, FastForward, SkipBack, BarChart3, LineChart } from "lucide-react"
+import { Play, Pause, FastForward, SkipBack, BarChart3 } from "lucide-react"
 import { useEffect, useState } from "react"
 import Image from "next/image"
 
@@ -56,7 +56,7 @@ export function MicroAudit() {
                         Micro-audits that convert
                     </h2>
                     <p className="text-lg text-text-secondary">
-                        Instead of generic templates, we generate hyper-personalized 60-second video audits that diagnose a prospect's exact problem using live data.
+                        Instead of generic templates, we generate hyper-personalized 60-second video audits that diagnose a prospect&apos;s exact problem using live data.
                     </p>
                 </div>
 
@@ -122,7 +122,7 @@ export function MicroAudit() {
                                 </div>
 
                                 <div className="mt-4 p-3 bg-brand-500/10 border border-brand-500/20 rounded border-l-2 border-l-brand-400 backdrop-blur-md">
-                                    <p className="text-xs text-brand-100">"Notice how Initech captures 40% more of the mid-market segment due to their recent integration launch..."</p>
+                                    <p className="text-xs text-brand-100">&quot;Notice how Initech captures 40% more of the mid-market segment due to their recent integration launch...&quot;</p>
                                 </div>
                             </div>
 

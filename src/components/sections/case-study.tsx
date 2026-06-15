@@ -88,7 +88,7 @@ export function CaseStudy() {
                 <div className="mb-16 lg:mb-20">
                     <p className="text-xs font-semibold text-accent-2 uppercase tracking-widest mb-4">Case Studies</p>
                     <h2 className="text-2xl font-medium tracking-tight text-white md:text-4xl">
-                        What we've delivered.
+                        What we&apos;ve delivered.
                     </h2>
                     <p className="mt-4 text-sm text-text-dim max-w-2xl">
                         Real performance numbers and operational transformations from B2B lead generation agencies running on Hive automation.
@@ -198,7 +198,7 @@ export function CaseStudy() {
                                             <div className="relative">
                                                 <Quote className="absolute -top-1 -left-2 w-4 h-4 text-accent-1/15 rotate-180" />
                                                 <p className="text-xs text-text-dim italic leading-relaxed mb-3 pl-2.5">
-                                                    "{study.quote}"
+                                                    &quot;{study.quote}&quot;
                                                 </p>
                                             </div>
                                             <footer className="text-xs text-text-muted pl-2.5">

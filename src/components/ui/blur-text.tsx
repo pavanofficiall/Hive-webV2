@@ -19,7 +19,7 @@ type BlurTextProps = {
   rootMargin?: string;
   animationFrom?: Record<string, string | number>;
   animationTo?: Array<Record<string, string | number>>;
-  easing?: any;
+  easing?: Transition['ease'];
   onAnimationComplete?: () => void;
   stepDuration?: number;
   as?: React.ElementType;

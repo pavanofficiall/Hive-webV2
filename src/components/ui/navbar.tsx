@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "./button"
 import { GlimpseLogo } from "./glimpse-logo"
@@ -42,7 +43,7 @@ export function Navbar({ onBookCall }: NavbarProps) {
                     <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-text-secondary">
                         <a href="#how-it-works" className="hover:text-white transition-colors">How it Works</a>
                         <a href="#case-studies" className="hover:text-white transition-colors">Results</a>
-                        <a href="/blog" className="hover:text-white transition-colors">Blog</a>
+                        <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
                     </nav>
 
                     <div className="flex items-center gap-4">
@@ -94,13 +95,13 @@ export function Navbar({ onBookCall }: NavbarProps) {
                         >
                             Results
                         </a>
-                        <a
+                        <Link
                             href="/blog"
                             onClick={() => setIsMobileMenuOpen(false)}
                             className="text-base font-medium text-text-secondary hover:text-white transition-colors py-2 block w-full"
                         >
                             Blog
-                        </a>
+                        </Link>
                         <div className="pt-4 w-full border-t border-brand-500/5">
                             <Button
                                 className="group h-12 w-full px-5 text-sm font-medium shadow-[0_0_15px_rgba(59,130,246,0.25)] hover:shadow-[0_0_25px_rgba(59,130,246,0.45)]"

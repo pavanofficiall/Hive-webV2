@@ -3,7 +3,7 @@
 import * as React from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
-import { X, Calendar, Sparkles } from "lucide-react"
+import { X, Calendar } from "lucide-react"
 import { Button } from "./button"
 
 interface BookingModalProps {

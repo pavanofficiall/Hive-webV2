@@ -2,7 +2,6 @@
 
 import React from "react"
 import { motion } from "framer-motion"
-import Image from "next/image"
 
 interface ServiceRowProps {
     rowIdx: number
@@ -14,7 +13,7 @@ interface ServiceRowProps {
     isEven: boolean
 }
 
-function ServiceRow({ rowIdx, tag, title, desc, bullets, mockupType, isEven }: ServiceRowProps) {
+function ServiceRow({ rowIdx, title, desc, bullets, mockupType, isEven }: ServiceRowProps) {
     const textOrderClass = isEven ? "lg:order-last" : "lg:order-first"
     const mockupOrderClass = isEven ? "lg:order-first" : "lg:order-last"
 
@@ -197,7 +196,7 @@ function LinkedInMockup() {
                     </div>
                     <div className="min-w-0">
                         <p className="text-xs font-semibold text-gray-900 truncate">Intro message sent</p>
-                        <p className="text-[10px] text-gray-400 mt-0.5 truncate">"Thanks for connecting, Alex..."</p>
+                        <p className="text-[10px] text-gray-400 mt-0.5 truncate">&quot;Thanks for connecting, Alex...&quot;</p>
                     </div>
                 </div>
                 <span className="text-[9px] font-mono text-gray-500 bg-gray-100 border border-gray-200 px-2 py-0.5 rounded-full font-medium shrink-0">

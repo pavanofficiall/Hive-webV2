@@ -4,7 +4,6 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
 import { supabase, Post } from "@/lib/supabase"
-import { AdminGuard } from "@/components/admin/admin-guard"
 import { GlimpseLogo } from "@/components/ui/glimpse-logo"
 import {
   ArrowLeft, Save, Globe, Eye, EyeOff,

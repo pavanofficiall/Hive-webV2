@@ -45,7 +45,7 @@ const FEED_ENTRIES = [
 export function SignalRadar() {
     const [visibleBlips, setVisibleBlips] = useState<number[]>([])
     const [feedItems, setFeedItems] = useState(FEED_ENTRIES.slice(0, 4))
-    const [feedCounter, setFeedCounter] = useState(4)
+    const [, setFeedCounter] = useState(4)
 
     /* Progressively reveal blips */
     useEffect(() => {

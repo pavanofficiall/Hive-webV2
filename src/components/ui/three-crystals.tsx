@@ -488,7 +488,7 @@ export function ThreeCrystals({ layout = "hero" }: { layout?: "hero" | "who-we-w
                 }
             }
         }
-    }, [])
+    }, [layout])
 
     return (
         <div 

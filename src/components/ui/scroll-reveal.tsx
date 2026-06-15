@@ -141,7 +141,7 @@ export default function ScrollReveal({
     );
 
     // Optional blur reveal animation
-    let blurTween: any = null;
+    let blurTween: ReturnType<typeof gsap.fromTo> | null = null;
     if (enableBlur) {
       blurTween = gsap.fromTo(
         wordElements,

@@ -210,7 +210,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen relative font-sans tracking-tight">
-      <Navbar />
+      <Navbar onBookCall={openBooking} />
       <Hero />
       
       {/* Integrations Logo Loop Section */}

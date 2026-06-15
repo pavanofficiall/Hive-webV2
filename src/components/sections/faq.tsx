@@ -27,7 +27,7 @@ const faqs = [
     }
 ]
 
-function AccordionItem({ item, isOpen, onClick }: { item: any; isOpen: boolean; onClick: () => void }) {
+function AccordionItem({ item, isOpen, onClick }: { item: { question: string; answer: string }; isOpen: boolean; onClick: () => void }) {
     return (
         <div className="border-b border-surface-subtle/70 last:border-0">
             <button

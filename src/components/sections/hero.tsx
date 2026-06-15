@@ -2,38 +2,11 @@
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Radio, Zap, Target } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { useEffect, useState, useRef } from "react"
 import { ThreeCrystals } from "@/components/ui/three-crystals"
 
 import BlurText from "@/components/ui/blur-text"
-
-const AnimatedNumber = ({ value }: { value: number }) => {
-    const [displayValue, setDisplayValue] = useState(0)
-
-    useEffect(() => {
-        const duration = 1500
-        const startTime = performance.now()
-
-        const updateNumber = (currentTime: number) => {
-            const elapsed = currentTime - startTime
-            const progress = Math.min(elapsed / duration, 1)
-            const easeOutQuart = 1 - Math.pow(1 - progress, 4)
-            const current = Math.floor(easeOutQuart * value)
-            setDisplayValue(current)
-
-            if (progress < 1) {
-                requestAnimationFrame(updateNumber)
-            } else {
-                setDisplayValue(value)
-            }
-        }
-
-        requestAnimationFrame(updateNumber)
-    }, [value])
-
-    return <span>{displayValue}</span>
-}
 
 interface HeroProps {
     onBookCall?: () => void

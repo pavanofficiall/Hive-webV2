@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import type { Metadata } from "next"
 import Link from "next/link"
 import { supabase, Post } from "@/lib/supabase"
 import { BlogCard } from "@/components/blog/blog-card"
