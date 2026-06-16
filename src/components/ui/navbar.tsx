@@ -41,9 +41,10 @@ export function Navbar({ onBookCall }: NavbarProps) {
                     </div>
 
                     <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-text-secondary">
-                        <a href="#how-it-works" className="hover:text-white transition-colors">How it Works</a>
-                        <a href="#case-studies" className="hover:text-white transition-colors">Results</a>
+                        <Link href="/#how-it-works" className="hover:text-white transition-colors">How it Works</Link>
+                        <Link href="/#case-studies" className="hover:text-white transition-colors">Results</Link>
                         <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
+                        <Link href="/tools/humanize" className="hover:text-white transition-colors">Tools</Link>
                     </nav>
 
                     <div className="flex items-center gap-4">
@@ -81,26 +82,33 @@ export function Navbar({ onBookCall }: NavbarProps) {
                         transition={{ duration: 0.25, ease: "easeInOut" }}
                         className="md:hidden border-t border-brand-500/10 bg-[#030611]/95 backdrop-blur-lg px-6 py-8 space-y-6 flex flex-col items-center text-center overflow-hidden"
                     >
-                        <a
-                            href="#how-it-works"
+                        <Link
+                            href="/#how-it-works"
                             onClick={() => setIsMobileMenuOpen(false)}
                             className="text-base font-medium text-text-secondary hover:text-white transition-colors py-2 block w-full"
                         >
                             How it Works
-                        </a>
-                        <a
-                            href="#case-studies"
+                        </Link>
+                        <Link
+                            href="/#case-studies"
                             onClick={() => setIsMobileMenuOpen(false)}
                             className="text-base font-medium text-text-secondary hover:text-white transition-colors py-2 block w-full"
                         >
                             Results
-                        </a>
+                        </Link>
                         <Link
                             href="/blog"
                             onClick={() => setIsMobileMenuOpen(false)}
                             className="text-base font-medium text-text-secondary hover:text-white transition-colors py-2 block w-full"
                         >
                             Blog
+                        </Link>
+                        <Link
+                            href="/tools/humanize"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="text-base font-medium text-text-secondary hover:text-white transition-colors py-2 block w-full"
+                        >
+                            Tools
                         </Link>
                         <div className="pt-4 w-full border-t border-brand-500/5">
                             <Button

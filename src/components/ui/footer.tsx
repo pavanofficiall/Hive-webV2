@@ -113,6 +113,20 @@ export function Footer({ onBookCall }: FooterProps) {
                             </ul>
                         </div>
                         <div>
+                            <h3 className="text-sm font-semibold text-white">Free Tools</h3>
+                            <ul role="list" className="mt-4 space-y-3">
+                                {[
+                                    { label: "B2B Email Humanizer", href: "/tools/humanize" },
+                                ].map((item) => (
+                                    <li key={item.label}>
+                                        <a href={item.href} className="text-sm text-text-muted hover:text-white transition-colors">
+                                            {item.label}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div>
                             <h3 className="text-sm font-semibold text-white">Connect</h3>
                             <ul role="list" className="mt-4 space-y-3">
                                 {[
