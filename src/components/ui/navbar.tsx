@@ -33,12 +33,12 @@ export function Navbar({ onBookCall }: NavbarProps) {
         >
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="flex h-16 items-center justify-between">
-                    <div className="flex items-center gap-3">
+                    <Link href="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
                         <GlimpseLogo className="h-8 w-8" />
                         <div className="flex flex-col">
                             <span className="text-xl font-bold tracking-wider text-white leading-none uppercase">HIVE</span>
                         </div>
-                    </div>
+                    </Link>
 
                     <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-text-secondary">
                         <Link href="/#how-it-works" className="hover:text-white transition-colors">How it Works</Link>

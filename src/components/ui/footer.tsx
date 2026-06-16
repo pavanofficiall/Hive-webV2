@@ -1,6 +1,7 @@
 "use client"
 
 import { useRef, useEffect, useState } from "react"
+import Link from "next/link"
 import { Button } from "./button"
 import { GlimpseLogo } from "./glimpse-logo"
 import { gsap } from "gsap"
@@ -84,10 +85,10 @@ export function Footer({ onBookCall }: FooterProps) {
                 <div className="flex flex-col md:flex-row items-start justify-between gap-10">
                     {/* Brand */}
                     <div className="space-y-4">
-                        <div className="flex items-center gap-3">
+                        <Link href="/" className="flex items-center gap-3 inline-flex hover:opacity-90 transition-opacity">
                             <GlimpseLogo className="h-8 w-8" />
                             <span className="text-xl font-bold tracking-wider text-white leading-none uppercase">HIVE</span>
-                        </div>
+                        </Link>
                         <p className="text-sm text-text-muted leading-relaxed max-w-xs">
                             Simple, reliable lead generation automation for your agency.
                         </p>

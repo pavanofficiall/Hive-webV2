@@ -58,7 +58,7 @@ export function WaitlistForm() {
                         </div>
                         <h3 className="text-xl font-semibold text-white mb-3">Boom, you're in! 🚀</h3>
                         <p className="text-base text-text-secondary leading-relaxed">
-                            Keep an eye on your inbox—we'll be dropping your credit coupon and referral link in there soon. No spam, we promise.
+                            Keep an eye on your inbox we'll be dropping your credit coupon and referral link in there soon. No spam, we promise.
                         </p>
                     </motion.div>
                 ) : (

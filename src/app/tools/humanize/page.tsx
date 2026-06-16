@@ -78,7 +78,7 @@ export default function HumanizePage() {
                             <div className="pt-1 md:pt-3">
                                 <h3 className="text-xl md:text-2xl font-semibold mb-2">1. Ingest the AI Draft</h3>
                                 <p className="text-text-secondary leading-relaxed">
-                                    We receive your raw input—the standard AI-generated message that sounds like it was written by a machine.
+                                    We receive your raw input the standard AI-generated message that sounds like it was written by a machine.
                                 </p>
                             </div>
                         </motion.div>
