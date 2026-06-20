@@ -4,27 +4,29 @@ import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { GitBranch, Zap, Cpu } from "lucide-react"
 import { ThreeCrystals } from "@/components/ui/three-crystals"
-
-const POINTS = [
-    {
-        label: "Working Pipeline",
-        desc: "You already have ICP clarity and outreach copy that converts you just can't scale the volume manually.",
-        icon: GitBranch
-    },
-    {
-        label: "Proven Sequences",
-        desc: "Your copy works. You've booked meetings. Now you need to 10x email volume without adding operational headcount.",
-        icon: Zap
-    },
-    {
-        label: "Ready to Delegate Ops",
-        desc: "You want to fully hand off list scraping, contact enrichment, inbox monitoring, and lead routing.",
-        icon: Cpu
-    }
-]
+import { useTranslations } from "next-intl"
 
 export function WhoWeWorkWith() {
+    const t = useTranslations("WhoWeWorkWith")
     const [mounted, setMounted] = useState(false)
+
+    const POINTS = [
+        {
+            label: t('points.0.label'),
+            desc: t('points.0.desc'),
+            icon: GitBranch
+        },
+        {
+            label: t('points.1.label'),
+            desc: t('points.1.desc'),
+            icon: Zap
+        },
+        {
+            label: t('points.2.label'),
+            desc: t('points.2.desc'),
+            icon: Cpu
+        }
+    ]
 
     useEffect(() => {
         setMounted(true)
@@ -62,13 +64,13 @@ export function WhoWeWorkWith() {
                         transition={{ duration: 0.6, ease: "easeOut" }}
                     >
                         <p className="text-xs font-semibold text-accent-2 uppercase tracking-widest mb-5">
-                            Who We Work With
+                            {t('sectionLabel')}
                         </p>
                         <h2 className="text-2xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-white leading-[1.15] mb-8">
-                            Lead gen agencies with pipelines that are ready to scale.
+                            {t('headline')}
                         </h2>
                         <p className="text-base sm:text-lg text-text-dim leading-relaxed max-w-3xl mx-auto">
-                            We don&apos;t build your strategy or write your outreach copy. We partner with established agencies that already have validated outreach and automate all the friction slowing them down.
+                            {t('subhead')}
                         </p>
                     </motion.div>
                 </div>

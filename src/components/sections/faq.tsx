@@ -3,29 +3,9 @@
 import * as React from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronDown } from "lucide-react"
+import { useTranslations } from "next-intl"
 
-const faqs = [
-    {
-        question: "Who is HIVE built for?",
-        answer: "HIVE is built exclusively for lead generation and outreach agencies who already have validated campaigns and ready pipelines. If your strategy works but your team is buried under manual tasks like scraping, cleaning databases, rotating domains, and CRM entry, we automate it."
-    },
-    {
-        question: "How long does the integration process take?",
-        answer: "We deploy your entire automated engine within 30 days. Week 1 is alignment and pipeline mapping. Weeks 2-3 are dedicated to technical development, API scripting, and CRM configurations. By Week 4, your campaigns are running on 100% autopilot."
-    },
-    {
-        question: "What outreach platforms and tools do you support?",
-        answer: "We sync directly with your current stack. We regularly build integrations with Smartlead, Instantly, Lemlist, Clay, Apollo, HubSpot, Salesforce, Close, Slack, and custom webhooks."
-    },
-    {
-        question: "Do you write our outreach copy or design the strategy?",
-        answer: "No. We focus entirely on the engineering and operational systems. You keep your copy, templates, and targeting strategy. We build the technical infrastructure (enrichment, rotators, responders) underneath it to scale your volume."
-    },
-    {
-        question: "How do you protect domain health and email deliverability?",
-        answer: "We build self-healing deliverability infrastructure. Our systems continuously check cold-domain blacklists, monitor inbox health metrics, and automatically rotate flag-prone inboxes out of active sequences before they damage your overall reputation."
-    }
-]
+
 
 function AccordionItem({ item, isOpen, onClick }: { item: { question: string; answer: string }; isOpen: boolean; onClick: () => void }) {
     return (
@@ -62,16 +42,40 @@ function AccordionItem({ item, isOpen, onClick }: { item: { question: string; an
 }
 
 export function FAQ() {
+    const t = useTranslations("FAQ")
     const [openIndex, setOpenIndex] = React.useState<number | null>(0)
+
+    const faqs = [
+        {
+            question: t('faqs.0.question'),
+            answer: t('faqs.0.answer')
+        },
+        {
+            question: t('faqs.1.question'),
+            answer: t('faqs.1.answer')
+        },
+        {
+            question: t('faqs.2.question'),
+            answer: t('faqs.2.answer')
+        },
+        {
+            question: t('faqs.3.question'),
+            answer: t('faqs.3.answer')
+        },
+        {
+            question: t('faqs.4.question'),
+            answer: t('faqs.4.answer')
+        }
+    ]
 
     return (
         <section id="faq" className="py-24 lg:py-32 bg-bg">
             <div className="mx-auto max-w-4xl px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2 className="text-2xl font-medium tracking-tight text-white sm:text-3xl mb-4">
-                        Frequently Asked Questions
+                        {t('headline')}
                     </h2>
-                    <p className="text-text-secondary">Everything you need to know about our automation services.</p>
+                    <p className="text-text-secondary">{t('subhead')}</p>
                 </div>
 
                 <div className="divide-y divide-surface-subtle border-y border-surface-subtle">

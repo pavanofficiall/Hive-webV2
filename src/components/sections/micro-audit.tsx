@@ -4,8 +4,10 @@ import { motion } from "framer-motion"
 import { Play, Pause, FastForward, SkipBack, BarChart3 } from "lucide-react"
 import { useEffect, useState } from "react"
 import Image from "next/image"
+import { useTranslations } from "next-intl"
 
 export function MicroAudit() {
+    const t = useTranslations("MicroAudit")
     const [isPlaying, setIsPlaying] = useState(true)
     const [progress, setProgress] = useState(63) // start at 63% (46s / 72s)
 
@@ -50,13 +52,13 @@ export function MicroAudit() {
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
                         </span>
-                        Hyper-Personalization
+                        {t('tag')}
                     </div>
                     <h2 className="text-3xl font-medium tracking-tight text-white md:text-5xl mb-6">
-                        Micro-audits that convert
+                        {t('headline')}
                     </h2>
                     <p className="text-lg text-text-secondary">
-                        Instead of generic templates, we generate hyper-personalized 60-second video audits that diagnose a prospect&apos;s exact problem using live data.
+                        {t('subhead')}
                     </p>
                 </div>
 
@@ -79,7 +81,7 @@ export function MicroAudit() {
                                 <div className="h-8 w-8 rounded-full bg-brand-500/20 flex items-center justify-center border border-brand-500/50 shadow-[0_0_10px_var(--color-brand-glow)]">
                                     <span className="text-xs text-white">SF</span>
                                 </div>
-                                <div className="text-sm font-medium text-white shadow-sm">Audit for Michael @ Globex</div>
+                                <div className="text-sm font-medium text-white shadow-sm">{t('auditTitle')}</div>
                             </div>
                             <div className="px-3 py-1 rounded-full bg-black/50 backdrop-blur-md text-xs font-mono font-medium text-white border border-white/10">
                                 {formatTime(currentSeconds)} / {formatTime(totalSeconds)}
@@ -95,8 +97,8 @@ export function MicroAudit() {
                             <div className="relative z-10 w-[60%] space-y-6 opacity-80 backdrop-blur-sm bg-bg/80 p-6 rounded-xl border border-surface-subtle/80 shadow-2xl">
                                 <div className="flex items-center justify-between">
                                     <div className="space-y-1">
-                                        <div className="text-brand-400 font-medium text-sm drop-shadow-md">Competitor Gap Analysis</div>
-                                        <div className="text-white text-xl font-semibold opacity-90 drop-shadow-md">Globex vs Initech</div>
+                                        <div className="text-brand-400 font-medium text-sm drop-shadow-md">{t('competitorGapAnalysis')}</div>
+                                        <div className="text-white text-xl font-semibold opacity-90 drop-shadow-md">{t('globexVsInitech')}</div>
                                     </div>
                                     <BarChart3 className="text-brand-400 h-6 w-6" />
                                 </div>
@@ -122,7 +124,7 @@ export function MicroAudit() {
                                 </div>
 
                                 <div className="mt-4 p-3 bg-brand-500/10 border border-brand-500/20 rounded border-l-2 border-l-brand-400 backdrop-blur-md">
-                                    <p className="text-xs text-brand-100">&quot;Notice how Initech captures 40% more of the mid-market segment due to their recent integration launch...&quot;</p>
+                                    <p className="text-xs text-brand-100">{t('transcript')}</p>
                                 </div>
                             </div>
 

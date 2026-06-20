@@ -1,0 +1,358 @@
+{
+  "Navbar": {
+    "howItWorks": "Comment ça marche",
+    "results": "Résultats",
+    "blog": "Blog",
+    "tools": "Outils",
+    "bookDemo": "Réserver une Démo gratuite"
+  },
+  "Hero": {
+    "headlineWe": "Nous",
+    "headlineMaster": "maîtrisons",
+    "headlineMechanics": "la mécanique de la",
+    "headlineFutureAgency": "Future Agence",
+    "headlineGrowth": "croissance.",
+    "description": "Nous aidons les agences de génération de leads à gagner du temps et à évoluer efficacement grâce à des flux de travail simples et fiables et à une sensibilisation personnalisée basée sur l'IA.",
+    "bookDemo": "Réserver une Démo gratuite",
+    "learnMore": "En savoir plus"
+  },
+  "Footer": {
+    "stopWastingTime": "Arrêtez de perdre du temps sur des tâches manuelles.",
+    "startAutomating": "Commencez à automatiser votre pipeline.",
+    "bookCallToday": "Réservez votre appel aujourd'hui",
+    "simpleReliable": "Automatisation de la génération de leads simple et fiable pour votre agence.",
+    "product": "Produit",
+    "howItWorks": "Comment ça marche",
+    "results": "Résultats",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "freeTools": "Outils gratuits",
+    "b2bEmailHumanizer": "Humaniseur d'emails B2B",
+    "connect": "Connecter",
+    "linkedin": "LinkedIn",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "allRightsReserved": "Tous droits réservés."
+  },
+  "HowItWorks": {
+    "sectionLabel": "Comment ça marche",
+    "headline": "De l'audit au pilotage automatique en 30 jours.",
+    "phases": [
+      {
+        "week": "Semaine 1",
+        "title": "Découverte & Planification",
+        "body": "Nous nous asseyons avec votre équipe pour cartographier chaque étape de votre pipeline actuel. Nous auditons vos outils, sources de données, flux d'enrichissement et séquences — puis rédigeons une spécification d'automatisation complète adaptée à votre façon de travailler."
+      },
+      {
+        "week": "Semaines 2–3",
+        "title": "Développement",
+        "body": "Nos ingénieurs construisent chaque composant de votre infrastructure d'automatisation : scrapers, scripts d'enrichissement, rotation des boîtes de réception, intégrations CRM et couches de personnalisation IA. Rien n'est mis en ligne tant que chaque nœud n'est pas testé."
+      },
+      {
+        "week": "Semaine 4+",
+        "title": "En direct sur pilote automatique",
+        "body": "Nous activons l'interrupteur. Les leads arrivent tous les jours, les séquences s'exécutent automatiquement et les réunions sont réservées directement dans votre calendrier. Votre équipe ne gère que les réponses qualifiées."
+      }
+    ]
+  },
+  "Services": {
+    "sectionLabel": "Services",
+    "headline": "Ce que nous construisons pour vous.",
+    "services": [
+      {
+        "title": "Prospection par e-mail automatisée",
+        "desc": "Hive automatise l'ensemble de votre système d'e-mails froids. Nous construisons des configurations à haute délivrabilité qui surveillent les signaux en temps réel, personnalisent dynamiquement les textes et gèrent la rotation de votre boîte de réception en pilote automatique.",
+        "bullets": [
+          "Campagnes déclenchées par des signaux en pilote automatique",
+          "Configurations et rotations automatisées de boîtes aux lettres multiples",
+          "Personnalisation continue des textes par l'IA et tests A/B"
+        ]
+      },
+      {
+        "title": "Automatisation LinkedIn",
+        "desc": "Faites évoluer votre réseau professionnel et votre vente sociale. Nous automatisons vos visites de profil, demandes de connexion, suivis personnalisés et séquences de messages directement à partir de vos comptes actifs.",
+        "bullets": [
+          "Demandes de connexion intelligentes avec notes personnalisées",
+          "Séquences de messages automatisées à plusieurs étapes",
+          "Limites de sécurité intelligentes et protection des comptes actifs"
+        ]
+      },
+      {
+        "title": "Automatisation WhatsApp",
+        "desc": "Engagez les prospects instantanément avec l'automatisation WhatsApp. Lancez des suivis automatisés, des alertes de message et des réponses rapides interactives pour entretenir les prospects sans travail manuel.",
+        "bullets": [
+          "Messages WhatsApp instantanés déclenchés par des signaux",
+          "Flux de conversation et réponses rapides automatisés",
+          "Suivi des réponses en temps réel et synchronisation CRM"
+        ]
+      }
+    ]
+  },
+  "FAQ": {
+    "headline": "Questions Fréquemment Posées",
+    "subhead": "Tout ce que vous devez savoir sur nos services d'automatisation.",
+    "faqs": [
+      {
+        "question": "Pour qui HIVE est-il conçu ?",
+        "answer": "HIVE est conçu exclusivement pour les agences de génération de leads et de prospection qui ont déjà des campagnes validées et des pipelines prêts. Si votre stratégie fonctionne mais que votre équipe est submergée par des tâches manuelles telles que le scraping, le nettoyage de bases de données, la rotation de domaines et la saisie CRM, nous l'automatisons."
+      },
+      {
+        "question": "Combien de temps dure le processus d'intégration ?",
+        "answer": "Nous déployons l'ensemble de votre moteur automatisé en 30 jours. La semaine 1 est consacrée à l'alignement et à la cartographie du pipeline. Les semaines 2 et 3 sont dédiées au développement technique, aux scripts d'API et aux configurations CRM. À la semaine 4, vos campagnes fonctionnent à 100 % sur pilote automatique."
+      },
+      {
+        "question": "Quels outils et plateformes de prospection prenez-vous en charge ?",
+        "answer": "Nous nous synchronisons directement avec votre pile actuelle. Nous créons régulièrement des intégrations avec Smartlead, Instantly, Lemlist, Clay, Apollo, HubSpot, Salesforce, Close, Slack et des webhooks personnalisés."
+      },
+      {
+        "question": "Rédigez-vous nos textes de prospection ou concevez-vous la stratégie ?",
+        "answer": "Non. Nous nous concentrons entièrement sur l'ingénierie et les systèmes opérationnels. Vous conservez vos textes, vos modèles et votre stratégie de ciblage. Nous construisons l'infrastructure technique (enrichissement, rotateurs, répondeurs) en dessous pour faire évoluer votre volume."
+      },
+      {
+        "question": "Comment protégez-vous la santé du domaine et la délivrabilité des e-mails ?",
+        "answer": "Nous construisons une infrastructure de délivrabilité auto-réparatrice. Nos systèmes vérifient en permanence les listes noires de domaines froids, surveillent les mesures de santé de la boîte de réception et retirent automatiquement les boîtes de réception sujettes aux signalements des séquences actives avant qu'elles ne nuisent à votre réputation globale."
+      }
+    ]
+  },
+  "Results": {
+    "headline": "Automatisation prévisible, quantifiée.",
+    "subhead": "Faites évoluer les opérations de votre agence sans embaucher. RSI immédiat grâce à d'énormes gains de temps.",
+    "metrics": [
+      {
+        "label": "Réunions réservées",
+        "change": "+14% par rapport au mois dernier"
+      },
+      {
+        "label": "Taux de réponse",
+        "change": "+5,2% par rapport à la moyenne du secteur"
+      },
+      {
+        "label": "Pipeline créé",
+        "change": "+40k $ ce trimestre"
+      }
+    ],
+    "pipelineGrowth": {
+      "title": "Croissance du pipeline",
+      "subtitle": "Performance cumulée sur 6 mois"
+    },
+    "ourAutomation": "Notre automatisation",
+    "manualWorkflows": "Flux de travail manuels",
+    "outreachEfficiency": {
+      "title": "Efficacité de la prospection",
+      "subtitle": "Notre automatisation vs flux de travail manuels"
+    },
+    "chartRows": [
+      {
+        "label": "Réunions / 1000 Leads"
+      },
+      {
+        "label": "Taux de réponse"
+      },
+      {
+        "label": "Coût par réunion"
+      }
+    ],
+    "months": {
+      "jan": "Jan",
+      "feb": "Fév",
+      "mar": "Mar",
+      "apr": "Avr",
+      "may": "Mai",
+      "jun": "Juin"
+    }
+  },
+  "CaseStudy": {
+    "sectionLabel": "Études de cas",
+    "headline": "Ce que nous avons livré.",
+    "subhead": "Des chiffres de performance réels et des transformations opérationnelles d'agences de génération de leads B2B fonctionnant sur l'automatisation de Hive.",
+    "delivered": "Livré",
+    "theStruggle": "Le problème",
+    "theSolution": "La solution",
+    "automatedInfrastructureBuilt": "Infrastructure automatisée construite :",
+    "studies": [
+      {
+        "industry": "SAAS D'ENTREPRISE",
+        "tagline": "Recherche autonome de leads et prospection personnalisée des clients",
+        "problem": "YourCase AI passait plus de 8 heures par campagne à scraper manuellement des bases de données, à effectuer des recherches sur les prospects et à rédiger des messages personnalisés pour les clients potentiels.",
+        "solution": "Nous avons déployé des agents IA personnalisés qui analysent leur style de prospection unique. Les agents recherchent automatiquement les antécédents des prospects et rédigent des e-mails hyper-personnalisés qui sonnent exactement comme les membres de leur équipe, en conservant une touche humaine plutôt que de sonner comme un robot.",
+        "metrics": [
+          {
+            "label": "Économisé par campagne"
+          },
+          {
+            "label": "Revenus générés"
+          },
+          {
+            "label": "Taux de précision"
+          }
+        ]
+      },
+      {
+        "industry": "OUTBOUND D'ENTREPRISE",
+        "tagline": "Moteur de réengagement CRM déclenché par des signaux",
+        "problem": "Lead OS avait plus de 12 000 contacts froids, perdus et dormants dans son CRM HubSpot, mais manquait de bande passante opérationnelle pour les segmenter et les réengager.",
+        "solution": "Nous avons construit un « radar d'intention » automatisé qui surveille leur CRM à la recherche d'activités récentes (telles que des visites répétées sur la page des prix, des événements de financement par capital-risque ou des embauches de dirigeants) et déclenche des campagnes sortantes automatisées hautement contextuelles au nom des propriétaires de comptes.",
+        "metrics": [
+          {
+            "label": "Taux de réservation de réunions"
+          },
+          {
+            "label": "Saisie de données économisée"
+          },
+          {
+            "label": "Volume de réunions AE"
+          }
+        ]
+      }
+    ]
+  },
+  "MicroAudit": {
+    "tag": "Hyper-personnalisation",
+    "headline": "Des micro-audits qui convertissent",
+    "subhead": "Au lieu de modèles génériques, nous générons des audits vidéo hyper-personnalisés de 60 secondes qui diagnostiquent le problème exact d'un prospect à l'aide de données en direct.",
+    "auditTitle": "Audit pour Michael @ Globex",
+    "competitorGapAnalysis": "Analyse des écarts concurrentiels",
+    "globexVsInitech": "Globex vs Initech",
+    "transcript": "\"Remarquez comment Initech capture 40% de plus du segment de marché intermédiaire en raison du lancement récent de leur intégration...\""
+  },
+  "PilotOffer": {
+    "headline": "Programme Pilote Privé",
+    "subhead": "Nous fonctionnons sur un modèle strictement axé sur la performance avec une poignée d'entreprises à forte croissance chaque trimestre.",
+    "badge": "Cohorte pilote limitée",
+    "meetings": "3 réunions qualifiées",
+    "meetingsSub": "Réservées dans les 30 jours.",
+    "guaranteeLabel": "Garantie de performance",
+    "guaranteeText1": "Si nous échouons,",
+    "guaranteeText2": "vous payez 0 $.",
+    "features": [
+      "Définition de signal personnalisée",
+      "Accès au tableau de bord d'intelligence en direct",
+      "Micro-audits hyper-personnalisés",
+      "Stratège de compte dédié",
+      "Intégration CRM de premier ordre"
+    ],
+    "cohortLabel": "Taille de la cohorte",
+    "cohortSize": "10 entreprises",
+    "cohortSub": "acceptées par cohorte trimestrielle.",
+    "spotsRemaining": "2 places pilotes restantes pour le T2 2026",
+    "cta": "Postuler pour la cohorte pilote",
+    "disclaimer": "Nous examinons toutes les candidatures dans les 24 heures pour garantir une adéquation mutuelle."
+  },
+  "SignalRadar": {
+    "tag": "Intelligence des signaux en temps réel",
+    "headline": "Le radar des signaux",
+    "subhead": "Nous surveillons des milliers de signaux d'achat à travers le marché en temps réel. Lorsque l'intention augmente, nous frappons les premiers.",
+    "activeSignals": "Signaux actifs détectés",
+    "liveFeed": "Flux en direct",
+    "monitoring": "Surveillance de 12 847 entreprises",
+    "avgScore": "Score moyen",
+    "response": "Réponse",
+    "bookRate": "Taux de réservation"
+  },
+  "SocialProof": {
+    "title": "Conçu pour les équipes de croissance d'entreprises soutenues par"
+  },
+  "WhoWeWorkWith": {
+    "sectionLabel": "Avec qui nous travaillons",
+    "headline": "Les agences de génération de leads avec des pipelines prêts à évoluer.",
+    "subhead": "Nous ne concevons pas votre stratégie ni ne rédigeons vos messages de prospection. Nous nous associons à des agences établies qui ont déjà une prospection validée et automatisons toutes les frictions qui les ralentissent.",
+    "points": [
+      {
+        "label": "Pipeline fonctionnel",
+        "desc": "Vous avez déjà une clarté sur l'ICP et une rédaction de prospection qui convertit, vous ne pouvez tout simplement pas faire évoluer le volume manuellement."
+      },
+      {
+        "label": "Séquences éprouvées",
+        "desc": "Votre texte fonctionne. Vous avez réservé des réunions. Maintenant, vous devez multiplier le volume d'e-mails par 10 sans augmenter les effectifs opérationnels."
+      },
+      {
+        "label": "Prêt à déléguer les opérations",
+        "desc": "Vous souhaitez déléguer entièrement le scraping de listes, l'enrichissement des contacts, la surveillance des boîtes de réception et l'acheminement des leads."
+      }
+    ]
+  },
+  "HomePage": {
+    "automatedIntegrations": "Intégrations de pile automatisées",
+    "marquee1": "FAIRE ÉVOLUER LE VOLUME OUTBOUND • AUTOMATISER LA RECHERCHE DE LEADS • 10X RENDEZ-VOUS DE DÉMO • PLUS D'OPÉRATIONS MANUELLES •",
+    "marquee2": "OUTBOUND HYPER-PERSONNALISÉ • DÉCLENCHÉ PAR L'INTENTION EN TEMPS RÉEL • SYNCHRONISATION AUTOMATIQUE DES DONNÉES CRM •"
+  },
+  "BookingModal": {
+    "headlineLine1": "Arrêtez de deviner.",
+    "headlineLine2": "Commencez à automatiser.",
+    "subhead": "Réservez votre réunion de découverte gratuite dès aujourd'hui pour découvrir comment Hive peut automatiser votre pipeline, éliminer le scraping manuel de leads et faire évoluer votre volume en pilote automatique.",
+    "cta": "Réserver une réunion gratuite"
+  },
+  "WhatsApp": {
+    "message": "Bonjour ! Je suis intéressé(e) pour en savoir plus sur vos services d'automatisation de génération de leads. Veuillez me contacter dans les plus brefs délais",
+    "tooltipText1": "Arrêtez de deviner, ",
+    "tooltipText2": "MESSAGE MAINTENANT !"
+  },
+  "Blog": {
+    "tag": "Aperçus et mises à jour",
+    "headlinePart1": "Le Blog ",
+    "headlinePart2": "Hive",
+    "headlinePart3": "",
+    "subhead": "Aperçus sur l'automatisation de la prospection, la génération de leads et la mise à l'échelle du pipeline de revenus de votre agence.",
+    "noPostsTitle": "Aucun article pour le moment",
+    "noPostsSub": "Revenez bientôt — nous écrivons quelque chose de génial.",
+    "backToHome": "Retour à l'accueil"
+  },
+  "Humanize": {
+    "tag": "Présentation du B2B Email Humanizer",
+    "headlineLine1": "Arrêtez de sonner comme une IA.",
+    "headlineLine2": "Obtenez des réponses comme un cadre.",
+    "subhead": "Convertissez les brouillons LLM robotiques en e-mails de prospection B2B hautement convertissants, « explosifs » et parfaitement non polis en quelques secondes.",
+    "howItWorksTitle": "Comment ça marche",
+    "howItWorksSub": "Conçu pour contourner la reconnaissance de formes et atterrir dans la boîte de réception principale.",
+    "step1Title": "1. Ingérer le brouillon de l'IA",
+    "step1Desc": "Nous recevons votre saisie brute : le message standard généré par l'IA qui sonne comme s'il avait été écrit par une machine.",
+    "step2Title": "2. Effectuer l'humanisation",
+    "step2Desc": "Notre LLM exclusif d'humanisation se met au travail. Il élimine les marqueurs d'IA prévisibles et restructure le rythme pour le faire sonner authentiquement humain.",
+    "step3Title": "3. Pousser vers votre CRM via API",
+    "step3Desc": "L'e-mail parfaitement non poli et hautement convertissant est renvoyé directement à votre CRM, votre outil de séquençage ou partout où vous en avez besoin.",
+    "bonusTag": "Bonus",
+    "step4Title": "Tableau de bord de l'interface utilisateur inclus",
+    "step4Desc": "Pas encore prêt pour une intégration API ? Vous aurez également accès à un tableau de bord Web élégant pour des conversions manuelles rapides chaque fois que vous en avez besoin.",
+    "waitlistTitle": "Pourquoi rejoindre la liste d'attente maintenant ?",
+    "rewardTitle": "Récompense instantanée",
+    "rewardDesc": "Obtenez 500 crédits API gratuits au moment où nous lançons notre version bêta publique.",
+    "referTitle": "Moteur de parrainage et de gains",
+    "referDesc": "Invitez votre équipe. Pour chaque utilisateur B2B vérifié qui rejoint via votre lien, vous gagnez tous les deux 1 000 crédits API supplémentaires."
+  },
+  "WaitlistForm": {
+    "freeEmailError": "Bien essayé ! 🕵️‍♂️ Pas d'e-mails personnels/faux s'il vous plaît. Comment allons-nous vous envoyer votre coupon de crédit sinon ?",
+    "fallbackError": "Un problème est survenu. Veuillez réessayer.",
+    "successTitle": "Boum, vous y êtes ! 🚀",
+    "successMessage": "Gardez un œil sur votre boîte de réception, nous y déposerons bientôt votre coupon de crédit et votre lien de parrainage. Pas de spam, c'est promis.",
+    "placeholder": "Saisissez votre e-mail professionnel",
+    "buttonLoading": "En cours d'inscription...",
+    "buttonSubmit": "Obtenir un accès anticipé sécurisé"
+  },
+  "BlogCard": {
+    "minRead": "min de lecture",
+    "readArticle": "Lire l'article"
+  },
+  "BlogPostContent": {
+    "allPosts": "Tous les articles",
+    "minRead": "min de lecture",
+    "ctaHeadline": "Prêt à automatiser votre pipeline ?",
+    "ctaSub": "Découvrez comment Hive aide les agences à multiplier par 10 leur volume sortant.",
+    "ctaBtn": "Réserver un appel gratuit"
+  },
+  "ProductIntelligence": {
+    "altText": "Horizon de la ville"
+  },
+  "AdminLogin": {
+    "title": "Se connecter",
+    "subtitle": "Accéder au tableau de bord d'administration du blog Hive.",
+    "emailLabel": "E-mail",
+    "passwordLabel": "Mot de passe",
+    "emailPlaceholder": "admin@hive.com",
+    "passwordPlaceholder": "••••••••••",
+    "invalidCredentials": "Identifiants invalides. Veuillez réessayer.",
+    "submitBtn": "Se connecter au tableau de bord",
+    "adminPortal": "Portail d'administration"
+  }
+}

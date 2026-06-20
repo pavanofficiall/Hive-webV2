@@ -8,6 +8,7 @@ import ReactMarkdown from "react-markdown"
 import remarkGfm from "remark-gfm"
 import rehypeHighlight from "rehype-highlight"
 import rehypeRaw from "rehype-raw"
+import { useTranslations } from "next-intl"
 
 function readingTime(content: string): number {
   const words = content.trim().split(/\s+/).length
@@ -27,6 +28,7 @@ interface BlogPostContentProps {
 }
 
 export function BlogPostContent({ post }: BlogPostContentProps) {
+  const t = useTranslations("BlogPostContent")
   return (
     <div className="min-h-screen bg-[#030611] text-white">
       {/* Ambient glow */}
@@ -46,7 +48,7 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
             className="flex items-center gap-2 text-sm text-text-muted hover:text-white transition-colors group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-            All posts
+            {t('allPosts')}
           </Link>
         </div>
       </header>
@@ -75,7 +77,7 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
             </span>
             <span className="flex items-center gap-1.5">
               <Clock className="w-3.5 h-3.5 text-brand-400" />
-              {readingTime(post.content)} min read
+              {readingTime(post.content)} {t('minRead')}
             </span>
           </div>
           <h1 className="text-4xl md:text-5xl font-black tracking-tight text-white leading-[1.1] mb-6">
@@ -160,15 +162,15 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
         {/* Footer CTA */}
         <div className="mx-auto max-w-3xl px-6 mt-20">
           <div className="rounded-3xl border border-brand-500/20 bg-brand-500/5 p-8 text-center">
-            <h3 className="text-xl font-bold text-white mb-2">Ready to automate your pipeline?</h3>
-            <p className="text-sm text-text-muted mb-6">See how Hive helps agencies 10x their outbound volume.</p>
+            <h3 className="text-xl font-bold text-white mb-2">{t('ctaHeadline')}</h3>
+            <p className="text-sm text-text-muted mb-6">{t('ctaSub')}</p>
             <a
               href="https://calendly.com/nexawork/hive"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-400 text-white font-semibold px-6 py-3 rounded-xl transition-colors text-sm"
             >
-              Book a Free Call
+              {t('ctaBtn')}
             </a>
           </div>
         </div>

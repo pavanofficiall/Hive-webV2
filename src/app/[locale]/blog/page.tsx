@@ -6,8 +6,10 @@ import { supabase, Post } from "@/lib/supabase"
 import { BlogCard } from "@/components/blog/blog-card"
 import { GlimpseLogo } from "@/components/ui/glimpse-logo"
 import { ArrowLeft, Rss } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 export default function BlogPage() {
+  const t = useTranslations("Blog")
   const [posts, setPosts] = useState<Post[]>([])
   const [loading, setLoading] = useState(true)
 
@@ -51,17 +53,17 @@ export default function BlogPage() {
         <div className="mx-auto max-w-3xl">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-500/30 bg-brand-500/10 text-xs font-mono text-brand-300 tracking-widest uppercase mb-6">
             <Rss className="w-3 h-3" />
-            Insights &amp; Updates
+            {t('tag')}
           </div>
           <h1 className="text-5xl md:text-6xl font-black tracking-tight text-white mb-6 leading-[1.05]">
-            The{" "}
+            {t('headlinePart1')}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-blue-300 to-brand-400">
-              Hive
-            </span>{" "}
-            Blog
+              {t('headlinePart2')}
+            </span>
+            {t('headlinePart3')}
           </h1>
           <p className="text-lg text-text-muted max-w-xl mx-auto leading-relaxed">
-            Insights on outbound automation, lead generation, and scaling your agency&apos;s revenue pipeline.
+            {t('subhead')}
           </p>
         </div>
       </section>
@@ -84,8 +86,8 @@ export default function BlogPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 12h6m-6-4h2" />
               </svg>
             </div>
-            <h2 className="text-xl font-semibold text-white/60 mb-2">No posts yet</h2>
-            <p className="text-sm text-text-muted">Check back soon — we&apos;re writing something great.</p>
+            <h2 className="text-xl font-semibold text-white/60 mb-2">{t('noPostsTitle')}</h2>
+            <p className="text-sm text-text-muted">{t('noPostsSub')}</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -102,7 +104,7 @@ export default function BlogPage() {
             className="inline-flex items-center gap-2 text-sm text-text-muted hover:text-white transition-colors group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-            Back to home
+            {t('backToHome')}
           </Link>
         </div>
       </main>

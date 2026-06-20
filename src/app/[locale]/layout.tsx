@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import { Sora } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import { SmoothScroll } from "@/components/ui/smooth-scroll";
 import { WhatsAppButton } from "@/components/ui/whatsapp-button";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import {NextIntlClientProvider} from 'next-intl';
+import {getMessages} from 'next-intl/server';
 
 const sora = Sora({ subsets: ["latin"], variable: "--font-sans" });
 
-const BASE_URL = "https://hive.nexaworks.tech";
+const BASE_URL = "https://usehive.tech";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -68,6 +70,13 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: BASE_URL,
+    languages: {
+      "en": `${BASE_URL}/en`,
+      "de": `${BASE_URL}/de`,
+      "fr": `${BASE_URL}/fr`,
+      "ar": `${BASE_URL}/ar`,
+      "x-default": `${BASE_URL}/en`,
+    },
   },
   icons: {
     icon: "/icon.png",
@@ -108,13 +117,18 @@ const websiteSchema = {
   description: "Outbound Automation for Lead Gen Agencies",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
+  const messages = await getMessages();
+
   return (
-    <html lang="en" className="dark">
+    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} className="dark">
       <head>
         {/* Preconnect to Supabase for faster data fetching */}
         <link rel="preconnect" href="https://hftctbmruaepokrokdwv.supabase.co" />
@@ -135,13 +149,15 @@ export default function RootLayout({
         />
       </head>
       <body className={`${sora.variable} font-sans antialiased bg-bg text-text-primary`}>
-        {/* Aurora gradient background — fixed, behind everything */}
-        <div aria-hidden="true" className="aurora-bg" />
-        <SmoothScroll>
-          {children}
-        </SmoothScroll>
-        <WhatsAppButton />
-        <GoogleAnalytics gaId="G-YD34N1NRVL" />
+        <NextIntlClientProvider messages={messages}>
+          {/* Aurora gradient background — fixed, behind everything */}
+          <div aria-hidden="true" className="aurora-bg" />
+          <SmoothScroll>
+            {children}
+          </SmoothScroll>
+          <WhatsAppButton />
+          <GoogleAnalytics gaId="G-YD34N1NRVL" />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

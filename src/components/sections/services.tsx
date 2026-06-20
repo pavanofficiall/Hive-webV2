@@ -2,6 +2,7 @@
 
 import React from "react"
 import { motion } from "framer-motion"
+import { useTranslations } from "next-intl"
 
 interface ServiceRowProps {
     rowIdx: number
@@ -279,51 +280,52 @@ function WhatsAppMockup() {
     )
 }
 
-const SERVICES_DATA = [
-    {
-        tag: "Services",
-        title: "Automated Email Outreach",
-        desc: "Hive automates your entire cold email system. We build high-deliverability setups that monitor real-time signals, dynamically personalize copy, and manage your inbox rotation on autopilot.",
-        bullets: [
-            "Signal-triggered campaigns on autopilot",
-            "Automated multi-mailbox setups & rotation",
-            "Continuous AI copy personalization & A/B testing"
-        ],
-        mockupType: "signals" as const
-    },
-    {
-        tag: "Services",
-        title: "LinkedIn Automation",
-        desc: "Scale your professional networking and social selling. We automate your profile visits, connection requests, personalized follow-ups, and message sequences directly from your active accounts.",
-        bullets: [
-            "Smart connection requests with personalized notes",
-            "Automated multi-step message sequences",
-            "Smart safety limits & active account protection"
-        ],
-        mockupType: "linkedin" as const
-    },
-    {
-        tag: "Services",
-        title: "WhatsApp Automation",
-        desc: "Engage leads instantly with WhatsApp automation. Launch automated follow-ups, message alerts, and interactive quick-replies to keep prospects nurtured without manual work.",
-        bullets: [
-            "Instant signal-triggered WhatsApp messages",
-            "Automated conversation flows & quick-replies",
-            "Real-time reply tracking & CRM synchronization"
-        ],
-        mockupType: "whatsapp" as const
-    }
-]
-
 export function Services() {
+    const t = useTranslations("Services")
+
+    const SERVICES_DATA = [
+        {
+            tag: t('sectionLabel'),
+            title: t('services.0.title'),
+            desc: t('services.0.desc'),
+            bullets: [
+                t('services.0.bullets.0'),
+                t('services.0.bullets.1'),
+                t('services.0.bullets.2')
+            ],
+            mockupType: "signals" as const
+        },
+        {
+            tag: t('sectionLabel'),
+            title: t('services.1.title'),
+            desc: t('services.1.desc'),
+            bullets: [
+                t('services.1.bullets.0'),
+                t('services.1.bullets.1'),
+                t('services.1.bullets.2')
+            ],
+            mockupType: "linkedin" as const
+        },
+        {
+            tag: t('sectionLabel'),
+            title: t('services.2.title'),
+            desc: t('services.2.desc'),
+            bullets: [
+                t('services.2.bullets.0'),
+                t('services.2.bullets.1'),
+                t('services.2.bullets.2')
+            ],
+            mockupType: "whatsapp" as const
+        }
+    ]
     return (
         <section id="services" className="pt-4 pb-8 lg:pt-6 lg:pb-12 bg-[#030611] border-t border-surface-2">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center max-w-3xl mx-auto mb-8 lg:mb-12">
-                    <p className="text-xs font-semibold text-accent-2 uppercase tracking-widest mb-4">Services</p>
+                    <p className="text-xs font-semibold text-accent-2 uppercase tracking-widest mb-4">{t('sectionLabel')}</p>
                     <h2 className="text-2xl font-medium tracking-tight text-white md:text-4xl">
-                        What we build for you.
+                        {t('headline')}
                     </h2>
                 </div>
 

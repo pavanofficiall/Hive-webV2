@@ -5,8 +5,10 @@ import { Footer } from "@/components/ui/footer"
 import { WaitlistForm } from "@/components/tools/waitlist-form"
 import { motion } from "framer-motion"
 import { Zap, ShieldCheck, Sparkles, MessageSquare, LayoutDashboard } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 export default function HumanizePage() {
+    const t = useTranslations("Humanize")
     const fadeIn = {
         hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
@@ -37,14 +39,14 @@ export default function HumanizePage() {
                     >
                         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-500/20 bg-brand-500/10 text-brand-300 text-sm font-medium mb-8">
                             <Sparkles className="w-4 h-4" />
-                            <span>Introducing B2B Email Humanizer</span>
+                            <span>{t('tag')}</span>
                         </div>
                         <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 leading-[1.2]">
-                            Stop Sounding Like an AI. <br className="hidden md:block" />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-blue-200">Get Replies Like an Executive.</span>
+                            {t('headlineLine1')} <br className="hidden md:block" />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-blue-200">{t('headlineLine2')}</span>
                         </h1>
                         <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-8 max-w-2xl mx-auto">
-                            Convert robotic LLM drafts into high-converting, "bursty," and perfectly unpolished B2B outbound emails in seconds.
+                            {t('subhead')}
                         </p>
                         
                         <div id="waitlist-form-top">
@@ -56,8 +58,8 @@ export default function HumanizePage() {
                 {/* How It Works Section */}
                 <section className="relative px-6 lg:px-8 py-24 max-w-7xl mx-auto border-t border-brand-500/10">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4">How it works</h2>
-                        <p className="text-text-secondary max-w-2xl mx-auto">Engineered to bypass pattern-recognition and land in the primary inbox.</p>
+                        <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('howItWorksTitle')}</h2>
+                        <p className="text-text-secondary max-w-2xl mx-auto">{t('howItWorksSub')}</p>
                     </div>
 
                     <motion.div 
@@ -76,9 +78,9 @@ export default function HumanizePage() {
                                 <MessageSquare className="w-6 h-6 md:w-7 md:h-7" />
                             </div>
                             <div className="pt-1 md:pt-3">
-                                <h3 className="text-xl md:text-2xl font-semibold mb-2">1. Ingest the AI Draft</h3>
+                                <h3 className="text-xl md:text-2xl font-semibold mb-2">{t('step1Title')}</h3>
                                 <p className="text-text-secondary leading-relaxed">
-                                    We receive your raw input the standard AI-generated message that sounds like it was written by a machine.
+                                    {t('step1Desc')}
                                 </p>
                             </div>
                         </motion.div>
@@ -89,9 +91,9 @@ export default function HumanizePage() {
                                 <Sparkles className="w-6 h-6 md:w-7 md:h-7" />
                             </div>
                             <div className="pt-1 md:pt-3">
-                                <h3 className="text-xl md:text-2xl font-semibold mb-2">2. Perform Humanization</h3>
+                                <h3 className="text-xl md:text-2xl font-semibold mb-2">{t('step2Title')}</h3>
                                 <p className="text-text-secondary leading-relaxed">
-                                    Our proprietary humanization LLM goes to work. It scrubs out predictable AI markers and restructures the pacing to make it sound authentically human.
+                                    {t('step2Desc')}
                                 </p>
                             </div>
                         </motion.div>
@@ -102,9 +104,9 @@ export default function HumanizePage() {
                                 <Zap className="w-6 h-6 md:w-7 md:h-7" />
                             </div>
                             <div className="pt-1 md:pt-3">
-                                <h3 className="text-xl md:text-2xl font-semibold mb-2">3. Push to your CRM via API</h3>
+                                <h3 className="text-xl md:text-2xl font-semibold mb-2">{t('step3Title')}</h3>
                                 <p className="text-text-secondary leading-relaxed">
-                                    The perfectly unpolished, high-converting email is pushed straight back to your CRM, sequencing tool, or wherever you need it.
+                                    {t('step3Desc')}
                                 </p>
                             </div>
                         </motion.div>
@@ -116,11 +118,11 @@ export default function HumanizePage() {
                             </div>
                             <div className="pt-1 md:pt-3">
                                 <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-brand-500/10 text-brand-300 text-xs font-semibold mb-2 uppercase tracking-wider">
-                                    Bonus
+                                    {t('bonusTag')}
                                 </div>
-                                <h3 className="text-xl md:text-2xl font-semibold mb-2">UI Dashboard Included</h3>
+                                <h3 className="text-xl md:text-2xl font-semibold mb-2">{t('step4Title')}</h3>
                                 <p className="text-text-secondary leading-relaxed">
-                                    Not ready for an API integration? You'll also get access to a sleek web dashboard for quick, manual conversions whenever you need them.
+                                    {t('step4Desc')}
                                 </p>
                             </div>
                         </motion.div>
@@ -131,15 +133,15 @@ export default function HumanizePage() {
                 <section className="relative px-6 lg:px-8 py-24 max-w-4xl mx-auto text-center">
                     <div className="absolute inset-0 bg-brand-500/5 rounded-3xl" />
                     <div className="relative z-10 py-16 px-6">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-6">Why join the waitlist now?</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('waitlistTitle')}</h2>
                         <div className="flex flex-col sm:flex-row justify-center gap-8 text-left max-w-2xl mx-auto mb-12">
                             <div className="flex-1">
-                                <h4 className="text-lg font-semibold text-brand-300 mb-2">Instant Reward</h4>
-                                <p className="text-text-secondary">Get 500 free API credits the moment we launch our public beta.</p>
+                                <h4 className="text-lg font-semibold text-brand-300 mb-2">{t('rewardTitle')}</h4>
+                                <p className="text-text-secondary">{t('rewardDesc')}</p>
                             </div>
                             <div className="flex-1">
-                                <h4 className="text-lg font-semibold text-brand-300 mb-2">Refer & Earn Engine</h4>
-                                <p className="text-text-secondary">Invite your team. For every verified B2B user who joins via your link, you both earn an extra 1,000 API credits.</p>
+                                <h4 className="text-lg font-semibold text-brand-300 mb-2">{t('referTitle')}</h4>
+                                <p className="text-text-secondary">{t('referDesc')}</p>
                             </div>
                         </div>
                         

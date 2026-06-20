@@ -9,12 +9,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useGSAP } from "@gsap/react"
 import ScrollReveal from "./scroll-reveal"
 import { ThreeCrystals } from "./three-crystals"
+import { useTranslations } from "next-intl"
 
 interface FooterProps {
     onBookCall?: () => void
 }
 
 export function Footer({ onBookCall }: FooterProps) {
+    const t = useTranslations("Footer")
     const containerRef = useRef<HTMLDivElement>(null)
     const [mounted, setMounted] = useState(false)
 
@@ -67,14 +69,14 @@ export function Footer({ onBookCall }: FooterProps) {
                         containerClassName="mb-6"
                         textClassName="text-2xl md:text-4xl font-medium tracking-tight text-white leading-[1.2]"
                         segments={[
-                            "Stop wasting time on manual tasks.",
+                            t('stopWastingTime'),
                             { br: true, className: "hidden sm:block" },
-                            { text: "Start automating your pipeline.", className: "text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-blue-200" }
+                            { text: t('startAutomating'), className: "text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-blue-200" }
                         ]}
                     />
                     <div className="mt-10 flex justify-center">
                         <Button size="lg" className="w-full sm:w-auto h-14 px-8 text-base shadow-[0_0_30px_rgba(59,130,246,0.2)] hover:shadow-[0_0_40px_rgba(59,130,246,0.4)]" onClick={onBookCall || (() => window.open('https://calendly.com/nexawork/hive', '_blank'))}>
-                            Book your call today
+                            {t('bookCallToday')}
                         </Button>
                     </div>
                 </div>
@@ -90,20 +92,20 @@ export function Footer({ onBookCall }: FooterProps) {
                             <span className="text-xl font-bold tracking-wider text-white leading-none uppercase">HIVE</span>
                         </Link>
                         <p className="text-sm text-text-muted leading-relaxed max-w-xs">
-                            Simple, reliable lead generation automation for your agency.
+                            {t('simpleReliable')}
                         </p>
                     </div>
 
                     {/* Links — only real sections */}
                     <div className="flex gap-12 sm:gap-16">
                         <div>
-                            <h3 className="text-sm font-semibold text-white">Product</h3>
+                            <h3 className="text-sm font-semibold text-white">{t('product')}</h3>
                             <ul role="list" className="mt-4 space-y-3">
                                 {[
-                                    { label: "How it Works", href: "/#how-it-works" },
-                                    { label: "Results", href: "/#case-studies" },
-                                    { label: "FAQ", href: "/#faq" },
-                                    { label: "Blog", href: "/blog" },
+                                    { label: t('howItWorks'), href: "/#how-it-works" },
+                                    { label: t('results'), href: "/#case-studies" },
+                                    { label: t('faq'), href: "/#faq" },
+                                    { label: t('blog'), href: "/blog" },
                                 ].map((item) => (
                                     <li key={item.label}>
                                         <a href={item.href} className="text-sm text-text-muted hover:text-white transition-colors">
@@ -114,10 +116,10 @@ export function Footer({ onBookCall }: FooterProps) {
                             </ul>
                         </div>
                         <div>
-                            <h3 className="text-sm font-semibold text-white">Free Tools</h3>
+                            <h3 className="text-sm font-semibold text-white">{t('freeTools')}</h3>
                             <ul role="list" className="mt-4 space-y-3">
                                 {[
-                                    { label: "B2B Email Humanizer", href: "/tools/humanize" },
+                                    { label: t('b2bEmailHumanizer'), href: "/tools/humanize" },
                                 ].map((item) => (
                                     <li key={item.label}>
                                         <a href={item.href} className="text-sm text-text-muted hover:text-white transition-colors">
@@ -128,11 +130,11 @@ export function Footer({ onBookCall }: FooterProps) {
                             </ul>
                         </div>
                         <div>
-                            <h3 className="text-sm font-semibold text-white">Connect</h3>
+                            <h3 className="text-sm font-semibold text-white">{t('connect')}</h3>
                             <ul role="list" className="mt-4 space-y-3">
                                 {[
                                     { 
-                                        label: "LinkedIn", 
+                                        label: t('linkedin'), 
                                         href: "https://linkedin.com/in/pavanbabar",
                                         icon: (
                                             <svg className="w-4 h-4 shrink-0 text-text-muted group-hover/link:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
@@ -141,7 +143,7 @@ export function Footer({ onBookCall }: FooterProps) {
                                         )
                                     },
                                     { 
-                                        label: "Email", 
+                                        label: t('email'), 
                                         href: "mailto:pavan@nexaworks.tech",
                                         icon: (
                                             <svg className="w-4 h-4 shrink-0 text-text-muted group-hover/link:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -150,7 +152,7 @@ export function Footer({ onBookCall }: FooterProps) {
                                         )
                                     },
                                     { 
-                                        label: "WhatsApp", 
+                                        label: t('whatsapp'), 
                                         href: "https://wa.me/917304631029?text=Hi!%20I'm%20interested%20in%20learning%20more%20about%20your%20lead%20generation%20automation%20services.%20kindly%20reach%20out%20to%20me%20at%20earlisest",
                                         icon: (
                                             <svg className="w-4 h-4 shrink-0 text-text-muted group-hover/link:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
@@ -162,8 +164,8 @@ export function Footer({ onBookCall }: FooterProps) {
                                     <li key={item.label}>
                                         <a 
                                             href={item.href} 
-                                            target={item.label !== "Email" ? "_blank" : undefined}
-                                            rel={item.label !== "Email" ? "noopener noreferrer" : undefined}
+                                            target={item.label !== t('email') ? "_blank" : undefined}
+                                            rel={item.label !== t('email') ? "noopener noreferrer" : undefined}
                                             className="group/link flex items-center gap-2.5 text-sm text-text-muted hover:text-white transition-colors"
                                         >
                                             {item.icon}
@@ -198,11 +200,11 @@ export function Footer({ onBookCall }: FooterProps) {
                         Copyright {new Date().getFullYear()} © HIVE by Nexaworks.
                     </div>
                     <div className="flex gap-8">
-                        <a href="#" className="hover:text-white transition-colors">Privacy</a>
-                        <a href="#" className="hover:text-white transition-colors">Terms</a>
+                        <a href="#" className="hover:text-white transition-colors">{t('privacy')}</a>
+                        <a href="#" className="hover:text-white transition-colors">{t('terms')}</a>
                     </div>
                     <div>
-                        All rights reserved.
+                        {t('allRightsReserved')}
                     </div>
                 </div>
             </div>

@@ -1,16 +1,19 @@
 "use client"
 
+import { useTranslations } from "next-intl"
+
 export function WhatsAppButton() {
+    const t = useTranslations("WhatsApp")
     // Replace this with the actual phone number (include country code without + or 00)
     const phoneNumber = "917304631029" 
-    const message = "Hi! I'm interested in learning more about your lead generation automation services. kindly reach out to me at earlisest"
+    const message = t('message')
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
 
     return (
         <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3 group">
             {/* Speech Bubble (visible on hover) */}
             <div className="relative hidden sm:block rounded-lg bg-white border border-gray-200 px-3 py-1.5 text-xs font-semibold text-gray-900 shadow-xl leading-tight opacity-0 translate-x-2 pointer-events-none group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 select-none">
-                Stop guessing, <span className="font-bold text-[#25D366]">MSG NOW!</span>
+                {t('tooltipText1')}<span className="font-bold text-[#25D366]">{t('tooltipText2')}</span>
                 {/* Right Arrow/Triangle pointing to the button */}
                 <div className="absolute top-1/2 -right-[4.5px] h-2 w-2 -translate-y-1/2 rotate-45 border-t border-r border-gray-200 bg-white" />
             </div>

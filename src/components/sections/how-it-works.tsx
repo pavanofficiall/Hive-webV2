@@ -3,25 +3,29 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
 
-const PHASES = [
-    {
-        week: "Week 1",
-        title: "Discovery & Planning",
-        body: "We sit down with your team to map every step of your current pipeline. We audit your tools, data sources, enrichment flow, and sequences — then draft a full automation specification tailored to how you work.",
-    },
-    {
-        week: "Weeks 2–3",
-        title: "Development",
-        body: "Our engineers build every component of your automation infrastructure — scrapers, enrichment scripts, inbox rotation, CRM integrations, and AI personalization layers. Nothing goes live until every node is tested.",
-    },
-    {
-        week: "Week 4+",
-        title: "Live on Autopilot",
-        body: "We flip the switch. Leads come in daily, sequences run automatically, and meetings book straight to your calendar. Your team only handles qualified replies.",
-    },
-]
+import { useTranslations } from "next-intl"
 
 export function HowItWorks() {
+    const t = useTranslations("HowItWorks")
+    
+    const PHASES = [
+        {
+            week: t('phases.0.week'),
+            title: t('phases.0.title'),
+            body: t('phases.0.body'),
+        },
+        {
+            week: t('phases.1.week'),
+            title: t('phases.1.title'),
+            body: t('phases.1.body'),
+        },
+        {
+            week: t('phases.2.week'),
+            title: t('phases.2.title'),
+            body: t('phases.2.body'),
+        },
+    ]
+
     const [activeIndex, setActiveIndex] = useState(0)
     const cardRefs = useRef<(HTMLDivElement | null)[]>([])
 
@@ -52,9 +56,9 @@ export function HowItWorks() {
 
                 {/* Heading */}
                 <div className="mb-16 lg:mb-20">
-                    <p className="text-xs font-semibold text-accent-2 uppercase tracking-widest mb-4">How It Works</p>
+                    <p className="text-xs font-semibold text-accent-2 uppercase tracking-widest mb-4">{t('sectionLabel')}</p>
                     <h2 className="text-2xl font-medium tracking-tight text-white md:text-4xl">
-                        From audit to autopilot in 30 days.
+                        {t('headline')}
                     </h2>
                 </div>
 

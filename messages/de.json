@@ -1,0 +1,358 @@
+{
+  "Navbar": {
+    "howItWorks": "Wie es funktioniert",
+    "results": "Ergebnisse",
+    "blog": "Blog",
+    "tools": "Werkzeuge",
+    "bookDemo": "Kostenlose Demo buchen"
+  },
+  "Hero": {
+    "headlineWe": "Wir",
+    "headlineMaster": "beherrschen",
+    "headlineMechanics": "die Mechanik des",
+    "headlineFutureAgency": "Zukunftsagentur",
+    "headlineGrowth": "wachstums.",
+    "description": "Wir helfen Lead-Generierungs-Agenturen, Zeit zu sparen und effizient zu skalieren, mit einfachen, zuverlässigen Workflows und KI-gesteuerter, personalisierter Ansprache.",
+    "bookDemo": "Kostenlose Demo buchen",
+    "learnMore": "Mehr erfahren"
+  },
+  "Footer": {
+    "stopWastingTime": "Hören Sie auf, Zeit mit manuellen Aufgaben zu verschwenden.",
+    "startAutomating": "Beginnen Sie mit der Automatisierung Ihrer Pipeline.",
+    "bookCallToday": "Buchen Sie heute Ihren Termin",
+    "simpleReliable": "Einfache, zuverlässige Lead-Generierungs-Automatisierung für Ihre Agentur.",
+    "product": "Produkt",
+    "howItWorks": "Wie es funktioniert",
+    "results": "Ergebnisse",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "freeTools": "Kostenlose Tools",
+    "b2bEmailHumanizer": "B2B E-Mail Humanizer",
+    "connect": "Verbinden",
+    "linkedin": "LinkedIn",
+    "email": "E-Mail",
+    "whatsapp": "WhatsApp",
+    "privacy": "Datenschutz",
+    "terms": "Bedingungen",
+    "allRightsReserved": "Alle Rechte vorbehalten."
+  },
+  "HowItWorks": {
+    "sectionLabel": "Wie es funktioniert",
+    "headline": "Von Audit zu Autopilot in 30 Tagen.",
+    "phases": [
+      {
+        "week": "Woche 1",
+        "title": "Entdeckung & Planung",
+        "body": "Wir setzen uns mit Ihrem Team zusammen, um jeden Schritt Ihrer aktuellen Pipeline zu kartieren. Wir überprüfen Ihre Werkzeuge, Datenquellen, den Anreicherungsablauf und die Sequenzen — dann entwerfen wir eine vollständige Automatisierungsspezifikation, die auf Ihre Arbeitsweise zugeschnitten ist."
+      },
+      {
+        "week": "Wochen 2–3",
+        "title": "Entwicklung",
+        "body": "Unsere Ingenieure bauen jeden Bestandteil Ihrer Automatisierungsinfrastruktur – Scraper, Anreicherungsskripte, Posteingangsrotation, CRM-Integrationen und KI-Personalisierungsschichten. Nichts geht live, bevor nicht jeder Knotenpunkt getestet wurde."
+      },
+      {
+        "week": "Woche 4+",
+        "title": "Live auf Autopilot",
+        "body": "Wir legen den Schalter um. Leads kommen täglich herein, Sequenzen laufen automatisch ab, und Meetings werden direkt in Ihren Kalender gebucht. Ihr Team kümmert sich nur um qualifizierte Antworten."
+      }
+    ]
+  },
+  "Services": {
+    "sectionLabel": "Dienstleistungen",
+    "headline": "Was wir für Sie aufbauen.",
+    "services": [
+      {
+        "title": "Automatisierte E-Mail-Ansprache",
+        "desc": "Hive automatisiert Ihr gesamtes Cold-E-Mail-System. Wir bauen Setups mit hoher Zustellbarkeit, die Echtzeit-Signale überwachen, Texte dynamisch personalisieren und die Rotation Ihres Posteingangs auf Autopilot verwalten.",
+        "bullets": [
+          "Signalgesteuerte Kampagnen auf Autopilot",
+          "Automatisierte Setups & Rotation für mehrere Postfächer",
+          "Kontinuierliche KI-Textpersonalisierung & A/B-Tests"
+        ]
+      },
+      {
+        "title": "LinkedIn Automatisierung",
+        "desc": "Skalieren Sie Ihr professionelles Networking und Social Selling. Wir automatisieren Ihre Profilbesuche, Kontaktanfragen, personalisierten Follow-ups und Nachrichten-Sequenzen direkt von Ihren aktiven Konten aus.",
+        "bullets": [
+          "Smarte Kontaktanfragen mit personalisierten Notizen",
+          "Automatisierte mehrstufige Nachrichten-Sequenzen",
+          "Smarte Sicherheitslimits & Schutz aktiver Konten"
+        ]
+      },
+      {
+        "title": "WhatsApp Automatisierung",
+        "desc": "Binden Sie Leads sofort mit WhatsApp-Automatisierung ein. Starten Sie automatisierte Follow-ups, Nachrichtenalarme und interaktive Schnellantworten, um Interessenten ohne manuelle Arbeit zu pflegen.",
+        "bullets": [
+          "Sofortige signalgesteuerte WhatsApp-Nachrichten",
+          "Automatisierte Gesprächsabläufe & Schnellantworten",
+          "Echtzeit-Antwortverfolgung & CRM-Synchronisation"
+        ]
+      }
+    ]
+  },
+  "FAQ": {
+    "headline": "Häufig gestellte Fragen",
+    "subhead": "Alles, was Sie über unsere Automatisierungsdienste wissen müssen.",
+    "faqs": [
+      {
+        "question": "Für wen ist HIVE gedacht?",
+        "answer": "HIVE ist exklusiv für Lead-Generierungs- und Outreach-Agenturen konzipiert, die bereits über validierte Kampagnen und fertige Pipelines verfügen. Wenn Ihre Strategie funktioniert, Ihr Team aber unter manuellen Aufgaben wie Scraping, Datenbankbereinigung, Domain-Rotation und CRM-Eingabe begraben ist, automatisieren wir dies."
+      },
+      {
+        "question": "Wie lange dauert der Integrationsprozess?",
+        "answer": "Wir stellen Ihre gesamte automatisierte Engine innerhalb von 30 Tagen bereit. Woche 1 dient der Abstimmung und dem Pipeline-Mapping. Die Wochen 2-3 sind der technischen Entwicklung, dem API-Scripting und den CRM-Konfigurationen gewidmet. Ab Woche 4 laufen Ihre Kampagnen zu 100% auf Autopilot."
+      },
+      {
+        "question": "Welche Outreach-Plattformen und Tools unterstützen Sie?",
+        "answer": "Wir synchronisieren direkt mit Ihrem aktuellen Tech-Stack. Wir erstellen regelmäßig Integrationen mit Smartlead, Instantly, Lemlist, Clay, Apollo, HubSpot, Salesforce, Close, Slack und benutzerdefinierten Webhooks."
+      },
+      {
+        "question": "Schreiben Sie unsere Outreach-Texte oder entwerfen die Strategie?",
+        "answer": "Nein. Wir konzentrieren uns vollständig auf die technischen und operativen Systeme. Sie behalten Ihre Texte, Vorlagen und Zielgruppenstrategie. Wir bauen die technische Infrastruktur (Anreicherung, Rotatoren, Responder) darunter, um Ihr Volumen zu skalieren."
+      },
+      {
+        "question": "Wie schützen Sie die Domain-Gesundheit und die E-Mail-Zustellbarkeit?",
+        "answer": "Wir bauen eine selbstheilende Zustellbarkeitsinfrastruktur auf. Unsere Systeme prüfen kontinuierlich Blacklists von Cold-Domains, überwachen Kennzahlen zur Postfach-Gesundheit und rotieren flaggenanfällige Postfächer automatisch aus aktiven Sequenzen heraus, bevor sie Ihre Gesamtreputation schädigen."
+      }
+    ]
+  },
+  "Results": {
+    "headline": "Vorhersehbare Automatisierung, quantifiziert.",
+    "subhead": "Skalieren Sie den Betrieb Ihrer Agentur ohne zusätzliche Mitarbeiter. Sofortiger ROI durch massive Zeitersparnis.",
+    "metrics": [
+      {
+        "label": "Gebuchte Termine",
+        "change": "+14% im Vgl. zum Vormonat"
+      },
+      {
+        "label": "Rücklaufquote",
+        "change": "+5,2% im Vgl. zum Branchendurchschnitt"
+      },
+      {
+        "label": "Geschaffene Pipeline",
+        "change": "+40k $ in diesem Quartal"
+      }
+    ],
+    "pipelineGrowth": {
+      "title": "Pipeline-Wachstum",
+      "subtitle": "Kumulierte Leistung über 6 Monate"
+    },
+    "ourAutomation": "Unsere Automatisierung",
+    "manualWorkflows": "Manuelle Workflows",
+    "outreachEfficiency": {
+      "title": "Effizienz der Ansprache",
+      "subtitle": "Unsere Automatisierung vs. manuelle Workflows"
+    },
+    "chartRows": [
+      {
+        "label": "Termine / 1000 Leads"
+      },
+      {
+        "label": "Rücklaufquote"
+      },
+      {
+        "label": "Kosten pro Termin"
+      }
+    ],
+    "months": {
+      "jan": "Jan",
+      "feb": "Feb",
+      "mar": "Mär",
+      "apr": "Apr",
+      "may": "Mai",
+      "jun": "Jun"
+    }
+  },
+  "CaseStudy": {
+    "sectionLabel": "Fallstudien",
+    "headline": "Was wir geliefert haben.",
+    "subhead": "Reale Leistungszahlen und operative Transformationen von B2B-Leadgenerierungs-Agenturen, die mit Hive-Automatisierung arbeiten.",
+    "delivered": "Geliefert",
+    "theStruggle": "Das Problem",
+    "theSolution": "Die Lösung",
+    "automatedInfrastructureBuilt": "Aufgebaute automatisierte Infrastruktur:",
+    "studies": [
+      {
+        "industry": "ENTERPRISE SAAS",
+        "tagline": "Autonome Lead-Recherche & Personalisierte Kundenansprache",
+        "problem": "YourCase AI verbrachte über 8 Stunden pro Kampagne mit dem manuellen Scrapen von Datenbanken, der Recherche von Interessenten und dem Entwerfen maßgeschneiderter Ansprachen an potenzielle Kunden.",
+        "solution": "Wir haben maßgeschneiderte KI-Agenten eingesetzt, die ihren einzigartigen Outreach-Stil analysieren. Die Agenten recherchieren automatisch die Hintergründe der Interessenten und schreiben hyperpersonalisierte E-Mails, die genau wie ihre Teammitglieder klingen und eine menschliche Note bewahren, anstatt wie ein Roboter zu klingen.",
+        "metrics": [
+          {
+            "label": "Gespart pro Kampagne"
+          },
+          {
+            "label": "Generierter Umsatz"
+          },
+          {
+            "label": "Genauigkeitsrate"
+          }
+        ]
+      },
+      {
+        "industry": "ENTERPRISE OUTBOUND",
+        "tagline": "Signalgesteuerte CRM-Re-Engagement-Engine",
+        "problem": "Lead OS hatte über 12.000 kalte, als geschlossen-verloren markierte und inaktive Kontakte in ihrem HubSpot CRM, verfügte jedoch nicht über die operativen Kapazitäten, um diese zu segmentieren und erneut anzusprechen.",
+        "solution": "Wir haben ein automatisiertes 'Intent-Radar' gebaut, das ihr CRM auf neue Aktivitäten überwacht (wie z.B. wiederholte Besuche der Preisseite, VC-Finanzierungsereignisse oder Einstellungen von Führungskräften) und hochgradig kontextbezogene, automatisierte Outbound-Kampagnen im Namen der Account-Inhaber auslöst.",
+        "metrics": [
+          {
+            "label": "Meeting-Buchungsrate"
+          },
+          {
+            "label": "Gesparte Dateneingabe"
+          },
+          {
+            "label": "AE-Meeting-Volumen"
+          }
+        ]
+      }
+    ]
+  },
+  "MicroAudit": {
+    "tag": "Hyper-Personalisierung",
+    "headline": "Mikro-Audits, die konvertieren",
+    "subhead": "Anstatt generischer Vorlagen erstellen wir hyperpersonalisierte 60-Sekunden-Video-Audits, die das genaue Problem eines potenziellen Kunden anhand von Live-Daten diagnostizieren.",
+    "auditTitle": "Audit für Michael @ Globex",
+    "competitorGapAnalysis": "Wettbewerber-Lückenanalyse",
+    "globexVsInitech": "Globex vs. Initech",
+    "transcript": "\"Beachten Sie, wie Initech 40% mehr vom mittleren Marktsegment aufgrund ihrer kürzlichen Integrationsveröffentlichung erfasst...\""
+  },
+  "PilotOffer": {
+    "headline": "Privates Pilotprogramm",
+    "subhead": "Wir arbeiten mit einem streng leistungsorientierten Modell mit einer Handvoll wachstumsstarker Unternehmen in jedem Quartal.",
+    "badge": "Limitierte Pilotkohorte",
+    "meetings": "3 Qualifizierte Termine",
+    "meetingsSub": "Gebucht innerhalb von 30 Tagen.",
+    "guaranteeLabel": "Leistungsgarantie",
+    "guaranteeText1": "Wenn wir versagen,",
+    "guaranteeText2": "zahlen Sie $0.",
+    "features": [
+      "Benutzerdefinierte Signaldefinition",
+      "Zugriff auf das Live-Intelligence-Dashboard",
+      "Hyperpersonalisierte Mikro-Audits",
+      "Dedizierter Account-Stratege",
+      "White-Glove CRM-Integration"
+    ],
+    "cohortLabel": "Kohortengröße",
+    "cohortSize": "10 Unternehmen",
+    "cohortSub": "werden pro vierteljährlicher Kohorte akzeptiert.",
+    "spotsRemaining": "2 Pilotplätze verbleiben für Q2 2026",
+    "cta": "Für Pilotkohorte bewerben",
+    "disclaimer": "Wir prüfen alle Bewerbungen innerhalb von 24 Stunden, um eine beidseitige Eignung sicherzustellen."
+  },
+  "SignalRadar": {
+    "tag": "Echtzeit-Signal-Intelligenz",
+    "headline": "Das Signal-Radar",
+    "subhead": "Wir überwachen Tausende von Kaufsignalen auf dem gesamten Markt in Echtzeit. Wenn die Absicht ansteigt, schlagen wir zuerst zu.",
+    "activeSignals": "Aktive Signale erkannt",
+    "liveFeed": "Live-Feed",
+    "monitoring": "Überwachung von 12.847 Unternehmen",
+    "avgScore": "Durchschn. Punktzahl",
+    "response": "Antwort",
+    "bookRate": "Buchungsrate"
+  },
+  "SocialProof": {
+    "title": "Entwickelt für Wachstumsteams in Unternehmen, unterstützt von"
+  },
+  "WhoWeWorkWith": {
+    "sectionLabel": "Mit wem wir arbeiten",
+    "headline": "Lead-Gen-Agenturen mit Pipelines, die bereit zur Skalierung sind.",
+    "subhead": "Wir entwickeln nicht Ihre Strategie oder schreiben Ihren Outreach-Copy. Wir arbeiten mit etablierten Agenturen zusammen, die bereits validierten Outreach haben, und automatisieren die gesamte Reibung, die sie bremst.",
+    "points": [
+      {
+        "label": "Funktionierende Pipeline",
+        "desc": "Sie haben bereits Klarheit über das ICP und Outreach-Texte, die konvertieren – Sie können das Volumen nur nicht manuell skalieren."
+      },
+      {
+        "label": "Bewährte Sequenzen",
+        "desc": "Ihr Text funktioniert. Sie haben Termine gebucht. Jetzt müssen Sie das E-Mail-Volumen verzehnfachen, ohne operatives Personal aufzubauen."
+      },
+      {
+        "label": "Bereit zur Ops-Delegation",
+        "desc": "Sie möchten List-Scraping, Kontaktanreicherung, Posteingangsüberwachung und Lead-Routing vollständig abgeben."
+      }
+    ]
+  },
+  "HomePage": {
+    "automatedIntegrations": "Automatisierte Stack-Integrationen",
+    "marquee1": "OUTBOUND-VOLUMEN SKALIEREN • LEAD-RECHERCHE AUTOMATISIEREN • 10X DEMO-TERMINE • KEINE MANUELLEN OPS MEHR •",
+    "marquee2": "HYPER-PERSONALISIERTER OUTBOUND • DURCH ECHTZEIT-INTENT AUSGELÖST • AUTOMATISCHER SYNC VON CRM-DATEN •"
+  },
+  "BookingModal": {
+    "headlineLine1": "Hören Sie auf zu raten.",
+    "headlineLine2": "Beginnen Sie zu automatisieren.",
+    "subhead": "Buchen Sie noch heute Ihr kostenloses Discovery-Meeting, um zu erfahren, wie Hive Ihre Pipeline automatisieren, manuelles Lead-Scraping eliminieren und Ihr Volumen auf Autopilot skalieren kann.",
+    "cta": "Kostenloses Meeting buchen"
+  },
+  "WhatsApp": {
+    "message": "Hallo! Ich bin daran interessiert, mehr über Ihre Dienstleistungen zur Automatisierung der Lead-Generierung zu erfahren. Bitte kontaktieren Sie mich schnellstmöglich",
+    "tooltipText1": "Hören Sie auf zu raten, ",
+    "tooltipText2": "JETZT SCHREIBEN!"
+  },
+  "Blog": {
+    "tag": "Einblicke & Updates",
+    "headlinePart1": "Der ",
+    "headlinePart2": "Hive",
+    "headlinePart3": " Blog",
+    "subhead": "Einblicke in Outbound-Automatisierung, Lead-Generierung und die Skalierung der Umsatz-Pipeline Ihrer Agentur.",
+    "noPostsTitle": "Noch keine Beiträge",
+    "noPostsSub": "Schauen Sie bald wieder vorbei – wir schreiben an etwas Großartigem.",
+    "backToHome": "Zurück zur Startseite"
+  },
+  "Humanize": {
+    "tag": "Wir stellen vor: B2B Email Humanizer",
+    "headlineLine1": "Hören Sie auf, wie eine KI zu klingen.",
+    "headlineLine2": "Erhalten Sie Antworten wie ein Manager.",
+    "subhead": "Verwandeln Sie roboterhafte LLM-Entwürfe in Sekunden in hochkonvertierende, 'sprunghafte' und perfekt unpolierte B2B-Outbound-E-Mails.",
+    "howItWorksTitle": "Wie es funktioniert",
+    "howItWorksSub": "Entwickelt, um Mustererkennung zu umgehen und im primären Posteingang zu landen.",
+    "step1Title": "1. Den KI-Entwurf aufnehmen",
+    "step1Desc": "Wir erhalten Ihre rohe Eingabe – die standardmäßige KI-generierte Nachricht, die klingt, als wäre sie von einer Maschine geschrieben worden.",
+    "step2Title": "2. Humanisierung durchführen",
+    "step2Desc": "Unser proprietäres Humanisierungs-LLM macht sich an die Arbeit. Es entfernt vorhersehbare KI-Marker und strukturiert das Tempo um, damit es authentisch menschlich klingt.",
+    "step3Title": "3. Über API an Ihr CRM senden",
+    "step3Desc": "Die perfekt unpolierte, hochkonvertierende E-Mail wird direkt in Ihr CRM, Sequenzierungs-Tool oder dorthin zurückgesendet, wo Sie sie benötigen.",
+    "bonusTag": "Bonus",
+    "step4Title": "UI-Dashboard inklusive",
+    "step4Desc": "Noch nicht bereit für eine API-Integration? Sie erhalten auch Zugriff auf ein schlankes Web-Dashboard für schnelle, manuelle Konvertierungen, wann immer Sie sie benötigen.",
+    "waitlistTitle": "Warum jetzt in die Warteliste eintragen?",
+    "rewardTitle": "Sofortige Belohnung",
+    "rewardDesc": "Erhalten Sie 500 kostenlose API-Credits in dem Moment, in dem wir unsere öffentliche Beta starten.",
+    "referTitle": "Empfehlen & Verdienen Engine",
+    "referDesc": "Laden Sie Ihr Team ein. Für jeden verifizierten B2B-Benutzer, der über Ihren Link beitritt, erhalten Sie beide zusätzlich 1.000 API-Credits."
+  },
+  "WaitlistForm": {
+    "freeEmailError": "Guter Versuch! 🕵️‍♂️ Bitte keine persönlichen/gefälschten E-Mails. Wie sollen wir Ihnen sonst Ihren Kredit-Gutschein senden?",
+    "fallbackError": "Etwas ist schief gelaufen. Bitte versuchen Sie es erneut.",
+    "successTitle": "Bumm, Sie sind dabei! 🚀",
+    "successMessage": "Behalten Sie Ihren Posteingang im Auge, wir werden Ihnen bald Ihren Kredit-Gutschein und Empfehlungslink dorthin senden. Kein Spam, versprochen.",
+    "placeholder": "Geben Sie Ihre geschäftliche E-Mail-Adresse ein",
+    "buttonLoading": "Beitreten...",
+    "buttonSubmit": "Sicheren Frühzugang sichern"
+  },
+  "BlogCard": {
+    "minRead": "Min Lesezeit",
+    "readArticle": "Artikel lesen"
+  },
+  "BlogPostContent": {
+    "allPosts": "Alle Beiträge",
+    "minRead": "Min Lesezeit",
+    "ctaHeadline": "Bereit, Ihre Pipeline zu automatisieren?",
+    "ctaSub": "Sehen Sie, wie Hive Agenturen hilft, ihr Outbound-Volumen zu verzehnfachen.",
+    "ctaBtn": "Kostenlosen Anruf buchen"
+  },
+  "ProductIntelligence": {
+    "altText": "Skyline der Stadt"
+  },
+  "AdminLogin": {
+    "title": "Anmelden",
+    "subtitle": "Zugang zum Hive-Blog-Admin-Dashboard.",
+    "emailLabel": "E-Mail",
+    "passwordLabel": "Passwort",
+    "emailPlaceholder": "admin@hive.com",
+    "passwordPlaceholder": "••••••••••",
+    "invalidCredentials": "Ungültige Anmeldedaten. Bitte versuchen Sie es erneut.",
+    "submitBtn": "Im Dashboard anmelden",
+    "adminPortal": "Admin-Portal"
+  }
+}

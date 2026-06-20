@@ -4,8 +4,10 @@ import { motion } from "framer-motion"
 import { Check, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { useTranslations } from "next-intl"
 
 export function PilotOffer() {
+    const t = useTranslations("PilotOffer")
     return (
         <section id="pricing" className="py-24 lg:py-32 relative bg-bg overflow-hidden">
             {/* Background image layer */}
@@ -25,10 +27,10 @@ export function PilotOffer() {
             <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-3xl font-semibold tracking-tight text-white md:text-5xl mb-6">
-                        Private Pilot Program
+                        {t('headline')}
                     </h2>
                     <p className="text-lg text-text-dim">
-                        We operate on a strictly performance-driven model with a handful of high-growth companies each quarter.
+                        {t('subhead')}
                     </p>
                 </div>
 
@@ -49,26 +51,26 @@ export function PilotOffer() {
                             <div>
                                 <div className="inline-flex items-center gap-2 rounded-full border border-accent-1/30 bg-accent-1/10 px-3 py-1 text-xs font-semibold text-accent-1 mb-6">
                                     <Sparkles className="h-3.5 w-3.5" />
-                                    Limited Pilot Cohort
+                                    {t('badge')}
                                 </div>
-                                <h3 className="text-4xl font-bold text-white mb-2 tracking-tight">3 Qualified Meetings</h3>
-                                <p className="text-xl text-text-dim">Booked within 30 days.</p>
+                                <h3 className="text-4xl font-bold text-white mb-2 tracking-tight">{t('meetings')}</h3>
+                                <p className="text-xl text-text-dim">{t('meetingsSub')}</p>
                             </div>
 
                             <div className="text-left md:text-right">
-                                <p className="text-sm font-medium text-text-dim uppercase tracking-wider mb-2">Performance Guarantee</p>
-                                <p className="text-2xl font-bold text-white">If we fail, <br className="hidden md:block" /> you pay $0.</p>
+                                <p className="text-sm font-medium text-text-dim uppercase tracking-wider mb-2">{t('guaranteeLabel')}</p>
+                                <p className="text-2xl font-bold text-white">{t('guaranteeText1')} <br className="hidden md:block" /> {t('guaranteeText2')}</p>
                             </div>
                         </div>
 
                         <div className="grid md:grid-cols-2 gap-8 mb-10">
                             <ul className="space-y-4">
                                 {[
-                                    "Custom Signal Definition",
-                                    "Access to Live Intelligence Dashboard",
-                                    "Hyper-Personalized Micro-Audits",
-                                    "Dedicated Account Strategist",
-                                    "White-glove CRM Integration"
+                                    t('features.0'),
+                                    t('features.1'),
+                                    t('features.2'),
+                                    t('features.3'),
+                                    t('features.4')
                                 ].map((feature, i) => (
                                     <li key={i} className="flex items-center gap-3">
                                         <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent-1/20 text-accent-1">
@@ -82,9 +84,9 @@ export function PilotOffer() {
                             {/* Scarcity indicator — clean, text-based */}
                             <div className="bg-surface-2/30 rounded-xl p-6 border border-surface-2 flex flex-col justify-center">
                                 <div className="mb-5">
-                                    <span className="text-sm text-text-muted font-medium uppercase tracking-wide">Cohort Size</span>
-                                    <div className="text-3xl font-bold text-white mt-1">10 companies</div>
-                                    <p className="text-sm text-text-dim mt-1">accepted per quarterly cohort.</p>
+                                    <span className="text-sm text-text-muted font-medium uppercase tracking-wide">{t('cohortLabel')}</span>
+                                    <div className="text-3xl font-bold text-white mt-1">{t('cohortSize')}</div>
+                                    <p className="text-sm text-text-dim mt-1">{t('cohortSub')}</p>
                                 </div>
 
                                 <div className="border-t border-surface-2/50 pt-4">
@@ -93,17 +95,17 @@ export function PilotOffer() {
                                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-warning opacity-75"></span>
                                             <span className="relative inline-flex rounded-full h-2 w-2 bg-warning"></span>
                                         </span>
-                                        2 pilot spots remaining for Q2 2026
+                                        {t('spotsRemaining')}
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <Button size="lg" className="w-full text-lg font-bold h-16">
-                            Apply for Pilot Cohort
+                            {t('cta')}
                         </Button>
                         <p className="text-center text-xs text-text-dim mt-4">
-                            We review all applications within 24 hours to ensure mutual fit.
+                            {t('disclaimer')}
                         </p>
                     </div>
                 </motion.div>

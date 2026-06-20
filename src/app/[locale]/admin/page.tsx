@@ -5,11 +5,13 @@ import { useRouter } from "next/navigation"
 import { GlimpseLogo } from "@/components/ui/glimpse-logo"
 import { loginAdmin } from "@/components/admin/admin-guard"
 import { Eye, EyeOff, Lock, Mail, AlertCircle } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 const ADMIN_EMAIL = "pavan@hive.com"
 const ADMIN_PASSWORD = "Pvn@77HivegoO"
 
 export default function AdminLoginPage() {
+  const t = useTranslations("AdminLogin")
   const router = useRouter()
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -28,7 +30,7 @@ export default function AdminLoginPage() {
       loginAdmin()
       router.push("/admin/dashboard")
     } else {
-      setError("Invalid credentials. Please try again.")
+      setError(t('invalidCredentials'))
       setLoading(false)
     }
   }
@@ -58,20 +60,20 @@ export default function AdminLoginPage() {
           </div>
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/[0.04] text-xs font-mono text-text-muted tracking-widest uppercase">
             <Lock className="w-3 h-3 text-brand-400" />
-            Admin Portal
+            {t('adminPortal')}
           </div>
         </div>
 
         {/* Card */}
         <div className="bg-[#080e1f] border border-white/[0.08] rounded-3xl p-8 shadow-[0_0_80px_rgba(59,130,246,0.06)]">
-          <h1 className="text-xl font-bold text-white mb-2">Sign in</h1>
-          <p className="text-sm text-text-muted mb-8">Access the Hive blog admin dashboard.</p>
+          <h1 className="text-xl font-bold text-white mb-2">{t('title')}</h1>
+          <p className="text-sm text-text-muted mb-8">{t('subtitle')}</p>
 
           <form onSubmit={handleSubmit} className="space-y-5">
             {/* Email */}
             <div>
               <label className="block text-xs font-medium text-text-muted mb-2 uppercase tracking-widest">
-                Email
+                {t('emailLabel')}
               </label>
               <div className="relative">
                 <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted" />
@@ -81,7 +83,7 @@ export default function AdminLoginPage() {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   autoComplete="email"
-                  placeholder="admin@hive.com"
+                  placeholder={t('emailPlaceholder')}
                   className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl pl-11 pr-4 py-3.5 text-sm text-white placeholder:text-text-muted/40 focus:outline-none focus:border-brand-500/50 focus:ring-1 focus:ring-brand-500/20 transition-all"
                 />
               </div>
@@ -90,7 +92,7 @@ export default function AdminLoginPage() {
             {/* Password */}
             <div>
               <label className="block text-xs font-medium text-text-muted mb-2 uppercase tracking-widest">
-                Password
+                {t('passwordLabel')}
               </label>
               <div className="relative">
                 <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted" />
@@ -100,7 +102,7 @@ export default function AdminLoginPage() {
                   onChange={(e) => setPassword(e.target.value)}
                   required
                   autoComplete="current-password"
-                  placeholder="••••••••••"
+                  placeholder={t('passwordPlaceholder')}
                   className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl pl-11 pr-12 py-3.5 text-sm text-white placeholder:text-text-muted/40 focus:outline-none focus:border-brand-500/50 focus:ring-1 focus:ring-brand-500/20 transition-all"
                 />
                 <button
@@ -130,7 +132,7 @@ export default function AdminLoginPage() {
               {loading ? (
                 <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
               ) : (
-                "Sign in to Dashboard"
+                t('submitBtn')
               )}
             </button>
           </form>

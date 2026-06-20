@@ -12,6 +12,7 @@ import { Footer } from "@/components/ui/footer";
 import { LogoLoop } from "@/components/ui/logo-loop";
 import { ScrollVelocity } from "@/components/ui/scroll-velocity";
 import { BookingModal } from "@/components/ui/booking-modal";
+import { useTranslations } from "next-intl";
 
 // FAQ structured data for Google rich results
 const faqSchema = {
@@ -177,6 +178,7 @@ const INTEGRATION_LOGOS = [
 ];
 
 export default function Home() {
+  const t = useTranslations("HomePage");
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const openBooking = () => setIsBookingOpen(true);
 
@@ -217,7 +219,7 @@ export default function Home() {
       <div className="w-full bg-[#030611] border-y border-surface-2/40 py-8 relative z-20 overflow-hidden">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="text-[10px] font-mono text-text-muted tracking-widest uppercase shrink-0">
-            Automated Stack Integrations
+            {t('automatedIntegrations')}
           </div>
           <div className="flex-1 w-full overflow-hidden">
             <LogoLoop
@@ -242,8 +244,8 @@ export default function Home() {
       <div className="w-full bg-[#030611] py-8 lg:py-12 border-y border-surface-2/40 overflow-hidden relative z-20">
         <ScrollVelocity
           texts={[
-            "SCALE OUTBOUND VOLUME • AUTOMATE LEAD RESEARCH • 10X DEMO APPOINTMENTS • NO MORE MANUAL OPS •",
-            "HYPER-PERSONALIZED OUTBOUND • REAL-TIME INTENT TRIGGERED • AUTO SYNC CRM FIELD DATA •"
+            t('marquee1'),
+            t('marquee2')
           ]}
           velocity={40}
           className="text-4xl md:text-[5rem] font-black tracking-tighter uppercase text-white/[0.04] md:text-white/[0.03] font-sans selection:bg-transparent"

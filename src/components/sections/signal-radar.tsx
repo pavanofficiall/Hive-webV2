@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { useState, useEffect, useCallback } from "react"
 import { Radio, TrendingUp, UserPlus, Code2, DollarSign, Building2 } from "lucide-react"
 import Image from "next/image"
+import { useTranslations } from "next-intl"
 
 /* ───────────────────────────────────────────
    Signal blip data — positioned in polar coords
@@ -43,6 +44,7 @@ const FEED_ENTRIES = [
 ]
 
 export function SignalRadar() {
+    const t = useTranslations("SignalRadar")
     const [visibleBlips, setVisibleBlips] = useState<number[]>([])
     const [feedItems, setFeedItems] = useState(FEED_ENTRIES.slice(0, 4))
     const [, setFeedCounter] = useState(4)
@@ -103,7 +105,7 @@ export function SignalRadar() {
                         className="inline-flex items-center gap-2 rounded-full border border-accent-1/30 bg-accent-1/10 px-3 py-1 text-xs font-semibold text-accent-1 mb-6"
                     >
                         <Radio className="h-3.5 w-3.5" />
-                        Real-Time Signal Intelligence
+                        {t('tag')}
                     </motion.div>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
@@ -112,7 +114,7 @@ export function SignalRadar() {
                         transition={{ duration: 0.5, delay: 0.1 }}
                         className="text-3xl font-semibold tracking-tight text-white md:text-5xl mb-4"
                     >
-                        The Signal Radar
+                        {t('headline')}
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -121,8 +123,7 @@ export function SignalRadar() {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="text-lg text-text-dim"
                     >
-                        We monitor thousands of buying signals across the market in real-time.
-                        When intent spikes, we strike first.
+                        {t('subhead')}
                     </motion.p>
                 </div>
 
@@ -240,7 +241,7 @@ export function SignalRadar() {
 
                         {/* Radar label — bottom */}
                         <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-[10px] font-mono text-text-muted tracking-widest uppercase">
-                            {SIGNALS.length} Active Signals Detected
+                            {SIGNALS.length} {t('activeSignals')}
                         </div>
                     </div>
 
@@ -251,13 +252,13 @@ export function SignalRadar() {
                                 <Radio className="h-4 w-4 text-accent-1" />
                             </div>
                             <div>
-                                <h3 className="text-sm font-medium text-white">Live Feed</h3>
+                                <h3 className="text-sm font-medium text-white">{t('liveFeed')}</h3>
                                 <div className="flex items-center gap-1.5">
                                     <span className="relative flex h-1.5 w-1.5">
                                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-success opacity-75" />
                                         <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-success" />
                                     </span>
-                                    <span className="text-[10px] text-text-muted">Monitoring 12,847 companies</span>
+                                    <span className="text-[10px] text-text-muted">{t('monitoring')}</span>
                                 </div>
                             </div>
                         </div>
@@ -295,15 +296,15 @@ export function SignalRadar() {
                         <div className="grid grid-cols-3 gap-2 mt-6 pt-5 border-t border-surface-2/50">
                             <div className="text-center">
                                 <div className="text-lg font-semibold text-white">94</div>
-                                <div className="text-[9px] text-text-muted">Avg Score</div>
+                                <div className="text-[9px] text-text-muted">{t('avgScore')}</div>
                             </div>
                             <div className="text-center">
                                 <div className="text-lg font-semibold text-white">2.4s</div>
-                                <div className="text-[9px] text-text-muted">Response</div>
+                                <div className="text-[9px] text-text-muted">{t('response')}</div>
                             </div>
                             <div className="text-center">
                                 <div className="text-lg font-semibold text-white">12.8%</div>
-                                <div className="text-[9px] text-text-muted">Book Rate</div>
+                                <div className="text-[9px] text-text-muted">{t('bookRate')}</div>
                             </div>
                         </div>
                     </div>

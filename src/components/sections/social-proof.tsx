@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { useTranslations } from "next-intl"
 
 // Inline SVG logo marks for each VC
 const vcLogos = [
@@ -45,6 +46,7 @@ const vcLogos = [
 ]
 
 export function SocialProof() {
+    const t = useTranslations("SocialProof")
     return (
         <section className="py-16 border-b border-surface-2 bg-bg relative overflow-hidden">
             <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10 text-center">
@@ -55,7 +57,7 @@ export function SocialProof() {
                     transition={{ duration: 0.8 }}
                     className="text-xs font-medium tracking-widest text-text-muted uppercase mb-12"
                 >
-                    Built for growth teams at companies backed by
+                    {t('title')}
                 </motion.p>
 
                 <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-60">

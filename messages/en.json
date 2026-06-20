@@ -1,0 +1,358 @@
+{
+  "Navbar": {
+    "howItWorks": "How it Works",
+    "results": "Results",
+    "blog": "Blog",
+    "tools": "Tools",
+    "bookDemo": "Book free Demo"
+  },
+  "Hero": {
+    "headlineWe": "We",
+    "headlineMaster": "Master",
+    "headlineMechanics": "the mechanics of",
+    "headlineFutureAgency": "Future Agency",
+    "headlineGrowth": "growth.",
+    "description": "We help lead generation agencies save time and scale efficiently with simple, reliable workflows and AI-driven personalized outreach.",
+    "bookDemo": "Book free Demo",
+    "learnMore": "Learn More"
+  },
+  "Footer": {
+    "stopWastingTime": "Stop wasting time on manual tasks.",
+    "startAutomating": "Start automating your pipeline.",
+    "bookCallToday": "Book your call today",
+    "simpleReliable": "Simple, reliable lead generation automation for your agency.",
+    "product": "Product",
+    "howItWorks": "How it Works",
+    "results": "Results",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "freeTools": "Free Tools",
+    "b2bEmailHumanizer": "B2B Email Humanizer",
+    "connect": "Connect",
+    "linkedin": "LinkedIn",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "allRightsReserved": "All rights reserved."
+  },
+  "HowItWorks": {
+    "sectionLabel": "How It Works",
+    "headline": "From audit to autopilot in 30 days.",
+    "phases": [
+      {
+        "week": "Week 1",
+        "title": "Discovery & Planning",
+        "body": "We sit down with your team to map every step of your current pipeline. We audit your tools, data sources, enrichment flow, and sequences — then draft a full automation specification tailored to how you work."
+      },
+      {
+        "week": "Weeks 2–3",
+        "title": "Development",
+        "body": "Our engineers build every component of your automation infrastructure — scrapers, enrichment scripts, inbox rotation, CRM integrations, and AI personalization layers. Nothing goes live until every node is tested."
+      },
+      {
+        "week": "Week 4+",
+        "title": "Live on Autopilot",
+        "body": "We flip the switch. Leads come in daily, sequences run automatically, and meetings book straight to your calendar. Your team only handles qualified replies."
+      }
+    ]
+  },
+  "Services": {
+    "sectionLabel": "Services",
+    "headline": "What we build for you.",
+    "services": [
+      {
+        "title": "Automated Email Outreach",
+        "desc": "Hive automates your entire cold email system. We build high-deliverability setups that monitor real-time signals, dynamically personalize copy, and manage your inbox rotation on autopilot.",
+        "bullets": [
+          "Signal-triggered campaigns on autopilot",
+          "Automated multi-mailbox setups & rotation",
+          "Continuous AI copy personalization & A/B testing"
+        ]
+      },
+      {
+        "title": "LinkedIn Automation",
+        "desc": "Scale your professional networking and social selling. We automate your profile visits, connection requests, personalized follow-ups, and message sequences directly from your active accounts.",
+        "bullets": [
+          "Smart connection requests with personalized notes",
+          "Automated multi-step message sequences",
+          "Smart safety limits & active account protection"
+        ]
+      },
+      {
+        "title": "WhatsApp Automation",
+        "desc": "Engage leads instantly with WhatsApp automation. Launch automated follow-ups, message alerts, and interactive quick-replies to keep prospects nurtured without manual work.",
+        "bullets": [
+          "Instant signal-triggered WhatsApp messages",
+          "Automated conversation flows & quick-replies",
+          "Real-time reply tracking & CRM synchronization"
+        ]
+      }
+    ]
+  },
+  "FAQ": {
+    "headline": "Frequently Asked Questions",
+    "subhead": "Everything you need to know about our automation services.",
+    "faqs": [
+      {
+        "question": "Who is HIVE built for?",
+        "answer": "HIVE is built exclusively for lead generation and outreach agencies who already have validated campaigns and ready pipelines. If your strategy works but your team is buried under manual tasks like scraping, cleaning databases, rotating domains, and CRM entry, we automate it."
+      },
+      {
+        "question": "How long does the integration process take?",
+        "answer": "We deploy your entire automated engine within 30 days. Week 1 is alignment and pipeline mapping. Weeks 2-3 are dedicated to technical development, API scripting, and CRM configurations. By Week 4, your campaigns are running on 100% autopilot."
+      },
+      {
+        "question": "What outreach platforms and tools do you support?",
+        "answer": "We sync directly with your current stack. We regularly build integrations with Smartlead, Instantly, Lemlist, Clay, Apollo, HubSpot, Salesforce, Close, Slack, and custom webhooks."
+      },
+      {
+        "question": "Do you write our outreach copy or design the strategy?",
+        "answer": "No. We focus entirely on the engineering and operational systems. You keep your copy, templates, and targeting strategy. We build the technical infrastructure (enrichment, rotators, responders) underneath it to scale your volume."
+      },
+      {
+        "question": "How do you protect domain health and email deliverability?",
+        "answer": "We build self-healing deliverability infrastructure. Our systems continuously check cold-domain blacklists, monitor inbox health metrics, and automatically rotate flag-prone inboxes out of active sequences before they damage your overall reputation."
+      }
+    ]
+  },
+  "Results": {
+    "headline": "Predictable automation, quantified.",
+    "subhead": "Scale your agency operations without adding headcount. Immediate ROI through massive time savings.",
+    "metrics": [
+      {
+        "label": "Meetings Booked",
+        "change": "+14% vs last month"
+      },
+      {
+        "label": "Response Rate",
+        "change": "+5.2% vs industry avg"
+      },
+      {
+        "label": "Pipeline Created",
+        "change": "+$40k this quarter"
+      }
+    ],
+    "pipelineGrowth": {
+      "title": "Pipeline Growth",
+      "subtitle": "6-month cumulative performance"
+    },
+    "ourAutomation": "Our Automation",
+    "manualWorkflows": "Manual Workflows",
+    "outreachEfficiency": {
+      "title": "Outreach Efficiency",
+      "subtitle": "Our Automation vs Manual Workflows"
+    },
+    "chartRows": [
+      {
+        "label": "Meetings / 1000 Leads"
+      },
+      {
+        "label": "Response Rate"
+      },
+      {
+        "label": "Cost per Meeting"
+      }
+    ],
+    "months": {
+      "jan": "Jan",
+      "feb": "Feb",
+      "mar": "Mar",
+      "apr": "Apr",
+      "may": "May",
+      "jun": "Jun"
+    }
+  },
+  "CaseStudy": {
+    "sectionLabel": "Case Studies",
+    "headline": "What we've delivered.",
+    "subhead": "Real performance numbers and operational transformations from B2B lead generation agencies running on Hive automation.",
+    "delivered": "Delivered",
+    "theStruggle": "The Struggle",
+    "theSolution": "The Solution",
+    "automatedInfrastructureBuilt": "Automated Infrastructure Built:",
+    "studies": [
+      {
+        "industry": "ENTERPRISE SAAS",
+        "tagline": "Autonomous Lead Research & Personalized Client Outreach",
+        "problem": "YourCase AI was spending over 8 hours per campaign manually scraping databases, conducting prospect research, and drafting custom outreach to potential clients.",
+        "solution": "We deployed custom AI agents that analyze their unique outreach style. The agents automatically research prospect backgrounds and write hyper-personalized emails that sound exactly like their team members, maintaining a human touch rather than sounding like a robot.",
+        "metrics": [
+          {
+            "label": "Saved Per Campaign"
+          },
+          {
+            "label": "Revenue Generated"
+          },
+          {
+            "label": "Accuracy Rate"
+          }
+        ]
+      },
+      {
+        "industry": "ENTERPRISE OUTBOUND",
+        "tagline": "Signal-Triggered CRM Re-engagement Engine",
+        "problem": "Lead OS had over 12,000 cold, closed-lost, and dormant contacts sitting in their HubSpot CRM, but lacked the operational bandwidth to segment and re-engage them.",
+        "solution": "We built an automated 'intent radar' that monitors their CRM for fresh activities (such as repeat pricing page visits, VC funding events, or leadership hires) and triggers highly contextual, automated outbound campaigns on behalf of the account owners.",
+        "metrics": [
+          {
+            "label": "Meeting Book Rate"
+          },
+          {
+            "label": "Data Entry Saved"
+          },
+          {
+            "label": "AE Meeting Volume"
+          }
+        ]
+      }
+    ]
+  },
+  "MicroAudit": {
+    "tag": "Hyper-Personalization",
+    "headline": "Micro-audits that convert",
+    "subhead": "Instead of generic templates, we generate hyper-personalized 60-second video audits that diagnose a prospect's exact problem using live data.",
+    "auditTitle": "Audit for Michael @ Globex",
+    "competitorGapAnalysis": "Competitor Gap Analysis",
+    "globexVsInitech": "Globex vs Initech",
+    "transcript": "\"Notice how Initech captures 40% more of the mid-market segment due to their recent integration launch...\""
+  },
+  "PilotOffer": {
+    "headline": "Private Pilot Program",
+    "subhead": "We operate on a strictly performance-driven model with a handful of high-growth companies each quarter.",
+    "badge": "Limited Pilot Cohort",
+    "meetings": "3 Qualified Meetings",
+    "meetingsSub": "Booked within 30 days.",
+    "guaranteeLabel": "Performance Guarantee",
+    "guaranteeText1": "If we fail,",
+    "guaranteeText2": "you pay $0.",
+    "features": [
+      "Custom Signal Definition",
+      "Access to Live Intelligence Dashboard",
+      "Hyper-Personalized Micro-Audits",
+      "Dedicated Account Strategist",
+      "White-glove CRM Integration"
+    ],
+    "cohortLabel": "Cohort Size",
+    "cohortSize": "10 companies",
+    "cohortSub": "accepted per quarterly cohort.",
+    "spotsRemaining": "2 pilot spots remaining for Q2 2026",
+    "cta": "Apply for Pilot Cohort",
+    "disclaimer": "We review all applications within 24 hours to ensure mutual fit."
+  },
+  "SignalRadar": {
+    "tag": "Real-Time Signal Intelligence",
+    "headline": "The Signal Radar",
+    "subhead": "We monitor thousands of buying signals across the market in real-time. When intent spikes, we strike first.",
+    "activeSignals": "Active Signals Detected",
+    "liveFeed": "Live Feed",
+    "monitoring": "Monitoring 12,847 companies",
+    "avgScore": "Avg Score",
+    "response": "Response",
+    "bookRate": "Book Rate"
+  },
+  "SocialProof": {
+    "title": "Built for growth teams at companies backed by"
+  },
+  "WhoWeWorkWith": {
+    "sectionLabel": "Who We Work With",
+    "headline": "Lead gen agencies with pipelines that are ready to scale.",
+    "subhead": "We don't build your strategy or write your outreach copy. We partner with established agencies that already have validated outreach and automate all the friction slowing them down.",
+    "points": [
+      {
+        "label": "Working Pipeline",
+        "desc": "You already have ICP clarity and outreach copy that converts you just can't scale the volume manually."
+      },
+      {
+        "label": "Proven Sequences",
+        "desc": "Your copy works. You've booked meetings. Now you need to 10x email volume without adding operational headcount."
+      },
+      {
+        "label": "Ready to Delegate Ops",
+        "desc": "You want to fully hand off list scraping, contact enrichment, inbox monitoring, and lead routing."
+      }
+    ]
+  },
+  "HomePage": {
+    "automatedIntegrations": "Automated Stack Integrations",
+    "marquee1": "SCALE OUTBOUND VOLUME • AUTOMATE LEAD RESEARCH • 10X DEMO APPOINTMENTS • NO MORE MANUAL OPS •",
+    "marquee2": "HYPER-PERSONALIZED OUTBOUND • REAL-TIME INTENT TRIGGERED • AUTO SYNC CRM FIELD DATA •"
+  },
+  "BookingModal": {
+    "headlineLine1": "Stop Guessing.",
+    "headlineLine2": "Start Automating.",
+    "subhead": "Book your free discovery meeting today to learn how Hive can automate your pipeline, eliminate manual lead scraping, and scale your volume on autopilot.",
+    "cta": "Book Free Meeting"
+  },
+  "WhatsApp": {
+    "message": "Hi! I'm interested in learning more about your lead generation automation services. kindly reach out to me at earlisest",
+    "tooltipText1": "Stop guessing, ",
+    "tooltipText2": "MSG NOW!"
+  },
+  "Blog": {
+    "tag": "Insights & Updates",
+    "headlinePart1": "The ",
+    "headlinePart2": "Hive",
+    "headlinePart3": " Blog",
+    "subhead": "Insights on outbound automation, lead generation, and scaling your agency's revenue pipeline.",
+    "noPostsTitle": "No posts yet",
+    "noPostsSub": "Check back soon — we're writing something great.",
+    "backToHome": "Back to home"
+  },
+  "Humanize": {
+    "tag": "Introducing B2B Email Humanizer",
+    "headlineLine1": "Stop Sounding Like an AI.",
+    "headlineLine2": "Get Replies Like an Executive.",
+    "subhead": "Convert robotic LLM drafts into high-converting, 'bursty,' and perfectly unpolished B2B outbound emails in seconds.",
+    "howItWorksTitle": "How it works",
+    "howItWorksSub": "Engineered to bypass pattern-recognition and land in the primary inbox.",
+    "step1Title": "1. Ingest the AI Draft",
+    "step1Desc": "We receive your raw input the standard AI-generated message that sounds like it was written by a machine.",
+    "step2Title": "2. Perform Humanization",
+    "step2Desc": "Our proprietary humanization LLM goes to work. It scrubs out predictable AI markers and restructures the pacing to make it sound authentically human.",
+    "step3Title": "3. Push to your CRM via API",
+    "step3Desc": "The perfectly unpolished, high-converting email is pushed straight back to your CRM, sequencing tool, or wherever you need it.",
+    "bonusTag": "Bonus",
+    "step4Title": "UI Dashboard Included",
+    "step4Desc": "Not ready for an API integration? You'll also get access to a sleek web dashboard for quick, manual conversions whenever you need them.",
+    "waitlistTitle": "Why join the waitlist now?",
+    "rewardTitle": "Instant Reward",
+    "rewardDesc": "Get 500 free API credits the moment we launch our public beta.",
+    "referTitle": "Refer & Earn Engine",
+    "referDesc": "Invite your team. For every verified B2B user who joins via your link, you both earn an extra 1,000 API credits."
+  },
+  "WaitlistForm": {
+    "freeEmailError": "Nice try! 🕵️‍♂️ No personal/fake emails please. How else are we gonna send you your credit coupon?",
+    "fallbackError": "Something went wrong. Please try again.",
+    "successTitle": "Boom, you're in! 🚀",
+    "successMessage": "Keep an eye on your inbox we'll be dropping your credit coupon and referral link in there soon. No spam, we promise.",
+    "placeholder": "Enter your work email",
+    "buttonLoading": "Joining...",
+    "buttonSubmit": "Secure Early Access"
+  },
+  "BlogCard": {
+    "minRead": "min read",
+    "readArticle": "Read article"
+  },
+  "BlogPostContent": {
+    "allPosts": "All posts",
+    "minRead": "min read",
+    "ctaHeadline": "Ready to automate your pipeline?",
+    "ctaSub": "See how Hive helps agencies 10x their outbound volume.",
+    "ctaBtn": "Book a Free Call"
+  },
+  "ProductIntelligence": {
+    "altText": "City skyline"
+  },
+  "AdminLogin": {
+    "title": "Sign in",
+    "subtitle": "Access the Hive blog admin dashboard.",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "emailPlaceholder": "admin@hive.com",
+    "passwordPlaceholder": "••••••••••",
+    "invalidCredentials": "Invalid credentials. Please try again.",
+    "submitBtn": "Sign in to Dashboard",
+    "adminPortal": "Admin Portal"
+  }
+}

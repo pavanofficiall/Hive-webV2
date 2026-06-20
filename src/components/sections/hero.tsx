@@ -2,8 +2,9 @@
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
+import { ArrowUpRight } from "lucide-react"
 import { useEffect, useState, useRef } from "react"
+import { useTranslations } from "next-intl"
 import { ThreeCrystals } from "@/components/ui/three-crystals"
 
 import BlurText from "@/components/ui/blur-text"
@@ -13,6 +14,7 @@ interface HeroProps {
 }
 
 export function Hero({ onBookCall }: HeroProps) {
+    const t = useTranslations("Hero")
     const [mounted, setMounted] = useState(false)
     const containerRef = useRef<HTMLDivElement>(null)
 
@@ -45,12 +47,12 @@ export function Hero({ onBookCall }: HeroProps) {
                         direction="bottom"
                         className="mx-auto max-w-5xl font-sans text-4xl sm:text-[68px] font-semibold tracking-tight text-white leading-[1.12] justify-center"
                         segments={[
-                            "We",
-                            { text: "Master", className: "italic font-serif font-medium text-blue-200" },
-                            "the mechanics of",
+                            t('headlineWe'),
+                            { text: t('headlineMaster'), className: "italic font-serif font-medium text-blue-200" },
+                            t('headlineMechanics'),
                             { br: true, className: "hidden sm:block" },
-                            { text: "Future Agency", className: "italic font-serif font-medium text-blue-200" },
-                            "growth."
+                            { text: t('headlineFutureAgency'), className: "italic font-serif font-medium text-blue-200" },
+                            t('headlineGrowth')
                         ]}
                     />
 
@@ -60,7 +62,7 @@ export function Hero({ onBookCall }: HeroProps) {
                         transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
                         className="mx-auto mt-8 max-w-2xl text-lg text-text-dim leading-relaxed"
                     >
-                        We help lead generation agencies save time and scale efficiently with simple, reliable workflows and AI-driven personalized outreach.
+                        {t('description')}
                     </motion.p>
 
                     <motion.div
@@ -70,8 +72,8 @@ export function Hero({ onBookCall }: HeroProps) {
                         className="mt-8 flex items-center justify-center gap-4"
                     >
                         <Button size="lg" className="group h-12 px-7 text-base font-medium shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]" onClick={onBookCall || (() => window.open('https://calendly.com/nexawork/hive', '_blank'))}>
-                            Book a Call
-                            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                            {t('bookDemo')}
+                            <ArrowUpRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                         </Button>
                         <Button 
                             variant="outline" 
@@ -79,7 +81,7 @@ export function Hero({ onBookCall }: HeroProps) {
                             className="h-12 px-7 text-base font-medium border-brand-500/20 bg-transparent text-white hover:bg-surface-1/50 hover:border-brand-400/50"
                             onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
                         >
-                            Learn More
+                            {t('learnMore')}
                         </Button>
                     </motion.div>
                 </div>

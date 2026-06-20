@@ -1,15 +1,17 @@
 "use client"
 
 import Image from "next/image"
+import { useTranslations } from "next-intl"
 
 export function ProductIntelligence() {
+    const t = useTranslations("ProductIntelligence")
     return (
         <section id="intelligence" className="py-24 lg:py-32 bg-surface-1 border-t border-surface-2 relative overflow-hidden">
             {/* Background image layer */}
             <div className="absolute inset-0 z-0 select-none pointer-events-none">
                 <Image
                     src="/images/hero4.jpg"
-                    alt="City skyline"
+                    alt={t('altText')}
                     fill
                     className="object-cover object-center opacity-[0.07] mix-blend-screen grayscale"
                 />

@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import { CheckCircle2, TrendingUp, Sparkles, Zap, Quote } from "lucide-react"
 import { ThreeCrystals } from "@/components/ui/three-crystals"
+import { useTranslations } from "next-intl"
 
 interface CaseStudyItem {
     industry: string
@@ -27,36 +28,37 @@ interface CaseStudyItem {
     }
 }
 
-const CASE_STUDIES: CaseStudyItem[] = [
-    {
-        industry: "ENTERPRISE SAAS",
-        clientName: "YourCase AI",
-        tagline: "Autonomous Lead Research & Personalized Client Outreach",
-        logo: "/yourcase-logo.png",
-        metrics: [
-            { value: "8 hrs", label: "Saved Per Campaign", icon: Zap },
-            { value: "3.5x", label: "Revenue Generated", icon: TrendingUp },
-            { value: "99%", label: "Accuracy Rate", icon: Sparkles }
-        ],
-        problem: "YourCase AI was spending over 8 hours per campaign manually scraping databases, conducting prospect research, and drafting custom outreach to potential clients.",
-        solution: "We deployed custom AI agents that analyze their unique outreach style. The agents automatically research prospect backgrounds and write hyper-personalized emails that sound exactly like their team members, maintaining a human touch rather than sounding like a robot.",
-    },
-    {
-        industry: "ENTERPRISE OUTBOUND",
-        clientName: "Lead OS",
-        tagline: "Signal-Triggered CRM Re-engagement Engine",
-        metrics: [
-            { value: "34%", label: "Meeting Book Rate", icon: Zap },
-            { value: "82%", label: "Data Entry Saved", icon: TrendingUp },
-            { value: "4.2x", label: "AE Meeting Volume", icon: Sparkles }
-        ],
-        problem: "Lead OS had over 12,000 cold, closed-lost, and dormant contacts sitting in their HubSpot CRM, but lacked the operational bandwidth to segment and re-engage them.",
-        solution: "We built an automated 'intent radar' that monitors their CRM for fresh activities (such as repeat pricing page visits, VC funding events, or leadership hires) and triggers highly contextual, automated outbound campaigns on behalf of the account owners."
-    }
-]
-
 export function CaseStudy() {
+    const t = useTranslations("CaseStudy")
     const [mounted, setMounted] = useState(false)
+
+    const CASE_STUDIES: CaseStudyItem[] = [
+        {
+            industry: t('studies.0.industry'),
+            clientName: "YourCase AI",
+            tagline: t('studies.0.tagline'),
+            logo: "/yourcase-logo.png",
+            metrics: [
+                { value: "8 hrs", label: t('studies.0.metrics.0.label'), icon: Zap },
+                { value: "3.5x", label: t('studies.0.metrics.1.label'), icon: TrendingUp },
+                { value: "99%", label: t('studies.0.metrics.2.label'), icon: Sparkles }
+            ],
+            problem: t('studies.0.problem'),
+            solution: t('studies.0.solution'),
+        },
+        {
+            industry: t('studies.1.industry'),
+            clientName: "Lead OS",
+            tagline: t('studies.1.tagline'),
+            metrics: [
+                { value: "34%", label: t('studies.1.metrics.0.label'), icon: Zap },
+                { value: "82%", label: t('studies.1.metrics.1.label'), icon: TrendingUp },
+                { value: "4.2x", label: t('studies.1.metrics.2.label'), icon: Sparkles }
+            ],
+            problem: t('studies.1.problem'),
+            solution: t('studies.1.solution')
+        }
+    ]
 
     useEffect(() => {
         setMounted(true)
@@ -86,12 +88,12 @@ export function CaseStudy() {
             <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
                 {/* Header */}
                 <div className="mb-16 lg:mb-20">
-                    <p className="text-xs font-semibold text-accent-2 uppercase tracking-widest mb-4">Case Studies</p>
+                    <p className="text-xs font-semibold text-accent-2 uppercase tracking-widest mb-4">{t('sectionLabel')}</p>
                     <h2 className="text-2xl font-medium tracking-tight text-white md:text-4xl">
-                        What we&apos;ve delivered.
+                        {t('headline')}
                     </h2>
                     <p className="mt-4 text-sm text-text-dim max-w-2xl">
-                        Real performance numbers and operational transformations from B2B lead generation agencies running on Hive automation.
+                        {t('subhead')}
                     </p>
                 </div>
 
@@ -126,7 +128,7 @@ export function CaseStudy() {
                                         />
                                     ) : (
                                         <span className="text-[10px] text-success bg-success/10 border border-success/20 px-2 py-0.5 rounded-full font-medium">
-                                            Delivered
+                                            {t('delivered')}
                                         </span>
                                     )}
                                 </div>
@@ -157,13 +159,13 @@ export function CaseStudy() {
                             {/* Details (Problem & Solution) */}
                             <div className="space-y-4 mb-8 relative z-10 flex-1">
                                 <div>
-                                    <h4 className="text-xs font-mono text-text-muted uppercase tracking-wider mb-1">The Struggle</h4>
+                                    <h4 className="text-xs font-mono text-text-muted uppercase tracking-wider mb-1">{t('theStruggle')}</h4>
                                     <p className="text-xs text-text-dim leading-relaxed">
                                         {study.problem}
                                     </p>
                                 </div>
                                 <div>
-                                    <h4 className="text-xs font-mono text-text-muted uppercase tracking-wider mb-1">The Solution</h4>
+                                    <h4 className="text-xs font-mono text-text-muted uppercase tracking-wider mb-1">{t('theSolution')}</h4>
                                     <p className="text-xs text-text-dim leading-relaxed">
                                         {study.solution}
                                     </p>
@@ -174,7 +176,7 @@ export function CaseStudy() {
                             {study.delivered && study.delivered.length > 0 && (
                                 <div className="mb-8 p-4 sm:p-5 rounded-xl bg-surface-1/45 border border-surface-subtle/30 relative z-10">
                                     <h4 className="text-[10px] font-mono text-white uppercase tracking-widest font-semibold mb-3">
-                                        Automated Infrastructure Built:
+                                        {t('automatedInfrastructureBuilt')}
                                     </h4>
                                     <ul className="space-y-2">
                                         {study.delivered.map((item, dIdx) => (

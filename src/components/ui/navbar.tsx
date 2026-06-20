@@ -3,15 +3,17 @@
 import * as React from "react"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
+import { useTranslations } from "next-intl"
 import { Button } from "./button"
 import { GlimpseLogo } from "./glimpse-logo"
-import { ArrowRight, Menu, X } from "lucide-react"
+import { ArrowUpRight, Menu, X } from "lucide-react"
 
 interface NavbarProps {
     onBookCall?: () => void
 }
 
 export function Navbar({ onBookCall }: NavbarProps) {
+    const t = useTranslations("Navbar")
     const [scrolled, setScrolled] = React.useState(false)
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
 
@@ -41,10 +43,10 @@ export function Navbar({ onBookCall }: NavbarProps) {
                     </Link>
 
                     <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-text-secondary">
-                        <Link href="/#how-it-works" className="hover:text-white transition-colors">How it Works</Link>
-                        <Link href="/#case-studies" className="hover:text-white transition-colors">Results</Link>
-                        <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
-                        <Link href="/tools/humanize" className="hover:text-white transition-colors">Tools</Link>
+                        <Link href="/#how-it-works" className="hover:text-white transition-colors">{t('howItWorks')}</Link>
+                        <Link href="/#case-studies" className="hover:text-white transition-colors">{t('results')}</Link>
+                        <Link href="/blog" className="hover:text-white transition-colors">{t('blog')}</Link>
+                        <Link href="/tools/humanize" className="hover:text-white transition-colors">{t('tools')}</Link>
                     </nav>
 
                     <div className="flex items-center gap-4">
@@ -52,8 +54,8 @@ export function Navbar({ onBookCall }: NavbarProps) {
                             className="hidden sm:flex group h-10 px-5 text-sm font-medium shadow-[0_0_15px_rgba(59,130,246,0.25)] hover:shadow-[0_0_25px_rgba(59,130,246,0.45)]"
                             onClick={onBookCall || (() => window.open('https://calendly.com/nexawork/hive', '_blank'))}
                         >
-                            Book a Call
-                            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                            {t('bookDemo')}
+                            <ArrowUpRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                         </Button>
 
                         {/* Hamburger Button */}
@@ -87,28 +89,28 @@ export function Navbar({ onBookCall }: NavbarProps) {
                             onClick={() => setIsMobileMenuOpen(false)}
                             className="text-base font-medium text-text-secondary hover:text-white transition-colors py-2 block w-full"
                         >
-                            How it Works
+                            {t('howItWorks')}
                         </Link>
                         <Link
                             href="/#case-studies"
                             onClick={() => setIsMobileMenuOpen(false)}
                             className="text-base font-medium text-text-secondary hover:text-white transition-colors py-2 block w-full"
                         >
-                            Results
+                            {t('results')}
                         </Link>
                         <Link
                             href="/blog"
                             onClick={() => setIsMobileMenuOpen(false)}
                             className="text-base font-medium text-text-secondary hover:text-white transition-colors py-2 block w-full"
                         >
-                            Blog
+                            {t('blog')}
                         </Link>
                         <Link
                             href="/tools/humanize"
                             onClick={() => setIsMobileMenuOpen(false)}
                             className="text-base font-medium text-text-secondary hover:text-white transition-colors py-2 block w-full"
                         >
-                            Tools
+                            {t('tools')}
                         </Link>
                         <div className="pt-4 w-full border-t border-brand-500/5">
                             <Button
@@ -119,8 +121,8 @@ export function Navbar({ onBookCall }: NavbarProps) {
                                     else window.open('https://calendly.com/nexawork/hive', '_blank');
                                 }}
                             >
-                                Book a Call
-                                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                                {t('bookDemo')}
+                                <ArrowUpRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                             </Button>
                         </div>
                     </motion.div>

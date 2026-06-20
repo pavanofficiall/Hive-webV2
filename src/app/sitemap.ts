@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next"
 import { createClient } from "@supabase/supabase-js"
 
-const BASE_URL = "https://hive.nexaworks.tech"
+const BASE_URL = "https://usehive.tech"
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Static pages

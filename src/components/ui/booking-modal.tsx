@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 import { X, Calendar } from "lucide-react"
 import { Button } from "./button"
+import { useTranslations } from "next-intl"
 
 interface BookingModalProps {
     isOpen: boolean
@@ -12,6 +13,7 @@ interface BookingModalProps {
 }
 
 export function BookingModal({ isOpen, onClose }: BookingModalProps) {
+    const t = useTranslations("BookingModal")
     // Prevent scroll when modal is open
     React.useEffect(() => {
         if (isOpen) {
@@ -69,12 +71,12 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
                         {/* Right Side: Text details + CTA */}
                         <div className="w-full md:w-[58%] p-6 sm:p-8 flex flex-col justify-center relative bg-gradient-to-br from-[#050818] to-[#030611]">
                             <h3 className="text-xl sm:text-2xl font-semibold text-white tracking-tight leading-tight">
-                                Stop Guessing. <br />
-                                Start Automating.
+                                {t('headlineLine1')} <br />
+                                {t('headlineLine2')}
                             </h3>
 
                             <p className="text-sm text-text-dim mt-3 leading-relaxed font-normal">
-                                Book your free discovery meeting today to learn how Hive can automate your pipeline, eliminate manual lead scraping, and scale your volume on autopilot.
+                                {t('subhead')}
                             </p>
 
                             <div className="mt-6 flex flex-col sm:flex-row gap-3">
@@ -86,7 +88,7 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
                                     }}
                                 >
                                     <Calendar className="mr-2 h-4 w-4" />
-                                    Book Free Meeting
+                                    {t('cta')}
                                 </Button>
                             </div>
                         </div>

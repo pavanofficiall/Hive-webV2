@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { Post } from "@/lib/supabase"
 import { ArrowRight, Calendar, Clock } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 interface BlogCardProps {
   post: Post
@@ -22,6 +23,7 @@ function formatDate(dateStr: string): string {
 }
 
 export function BlogCard({ post }: BlogCardProps) {
+  const t = useTranslations("BlogCard")
   const mins = readingTime(post.content)
   const date = post.published_at || post.created_at
 
@@ -61,7 +63,7 @@ export function BlogCard({ post }: BlogCardProps) {
           </span>
           <span className="flex items-center gap-1.5">
             <Clock className="w-3 h-3" />
-            {mins} min read
+            {mins} {t('minRead')}
           </span>
         </div>
 
@@ -79,7 +81,7 @@ export function BlogCard({ post }: BlogCardProps) {
 
         {/* Read more */}
         <div className="mt-auto pt-4 flex items-center gap-2 text-sm font-medium text-brand-400 group-hover:text-brand-300 transition-colors">
-          Read article
+          {t('readArticle')}
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
         </div>
       </div>

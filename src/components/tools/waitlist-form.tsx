@@ -5,8 +5,10 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "../ui/button"
 import { ArrowRight, CheckCircle2, AlertCircle } from "lucide-react"
 import { supabase } from "@/lib/supabase"
+import { useTranslations } from "next-intl"
 
 export function WaitlistForm() {
+    const t = useTranslations("WaitlistForm")
     const [email, setEmail] = React.useState("")
     const [status, setStatus] = React.useState<"idle" | "loading" | "success" | "error">("idle")
     const [errorMessage, setErrorMessage] = React.useState("")
@@ -22,7 +24,7 @@ export function WaitlistForm() {
         
         if (isFreeEmail) {
             setStatus("error")
-            setErrorMessage("Nice try! 🕵️‍♂️ No personal/fake emails please. How else are we gonna send you your credit coupon?")
+            setErrorMessage(t('freeEmailError'))
             return
         }
 
@@ -39,7 +41,7 @@ export function WaitlistForm() {
         } catch (err: any) {
             console.error("Waitlist error:", err)
             setStatus("error")
-            setErrorMessage(err.message || "Something went wrong. Please try again.")
+            setErrorMessage(err.message || t('fallbackError'))
         }
     }
 
@@ -56,9 +58,9 @@ export function WaitlistForm() {
                         <div className="flex justify-center mb-5">
                             <CheckCircle2 className="h-12 w-12 text-green-400" />
                         </div>
-                        <h3 className="text-xl font-semibold text-white mb-3">Boom, you're in! 🚀</h3>
+                        <h3 className="text-xl font-semibold text-white mb-3">{t('successTitle')}</h3>
                         <p className="text-base text-text-secondary leading-relaxed">
-                            Keep an eye on your inbox we'll be dropping your credit coupon and referral link in there soon. No spam, we promise.
+                            {t('successMessage')}
                         </p>
                     </motion.div>
                 ) : (
@@ -79,7 +81,7 @@ export function WaitlistForm() {
                                         setEmail(e.target.value)
                                         if (status === "error") setStatus("idle")
                                     }}
-                                    placeholder="Enter your work email"
+                                    placeholder={t('placeholder')}
                                     className={`w-full h-12 md:h-14 bg-[#0a0f1c] border ${status === "error" ? "border-red-500/50 focus:border-red-500" : "border-brand-500/20 focus:border-brand-500/50"} rounded-xl px-5 text-white placeholder:text-text-muted outline-none transition-all duration-300 shadow-inner`}
                                     disabled={status === "loading"}
                                     required
@@ -90,7 +92,7 @@ export function WaitlistForm() {
                                 disabled={status === "loading"}
                                 className="h-12 md:h-14 px-8 whitespace-nowrap shadow-[0_0_20px_rgba(59,130,246,0.2)] hover:shadow-[0_0_30px_rgba(59,130,246,0.4)]"
                             >
-                                {status === "loading" ? "Joining..." : "Secure Early Access"}
+                                {status === "loading" ? t('buttonLoading') : t('buttonSubmit')}
                                 {!status.includes("loading") && <ArrowRight className="ml-2 h-4 w-4" />}
                             </Button>
                         </div>

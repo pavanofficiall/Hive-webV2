@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion"
 import { useEffect, useState, useRef } from "react"
 import { TrendingUp, Target, DollarSign } from "lucide-react"
 import Image from "next/image"
+import { useTranslations } from "next-intl"
 
 // ─── Animated Counter Hook ───
 function useCounter(target: number, duration: number = 1500, inView: boolean = false) {
@@ -120,6 +121,7 @@ function MetricCard({
 }
 
 export function Results() {
+    const t = useTranslations("Results")
     return (
         <section id="results" className="py-24 lg:py-32 bg-bg border-y border-surface-2 relative overflow-hidden">
             {/* Background image layer */}
@@ -139,10 +141,10 @@ export function Results() {
                 <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-16">
                     <div>
                         <h2 className="text-3xl font-medium tracking-tight text-white mb-2">
-                            Predictable automation, quantified.
+                            {t('headline')}
                         </h2>
                         <p className="text-text-dim">
-                            Scale your agency operations without adding headcount. Immediate ROI through massive time savings.
+                            {t('subhead')}
                         </p>
                     </div>
                 </div>
@@ -151,26 +153,26 @@ export function Results() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
                     <MetricCard
                         icon={Target}
-                        label="Meetings Booked"
+                        label={t('metrics.0.label')}
                         targetNum={32}
-                        change="+14% vs last month"
+                        change={t('metrics.0.change')}
                         delay={0}
                     />
                     <MetricCard
                         icon={TrendingUp}
-                        label="Response Rate"
+                        label={t('metrics.1.label')}
                         targetNum={18}
                         suffix=".4%"
-                        change="+5.2% vs industry avg"
+                        change={t('metrics.1.change')}
                         delay={0.1}
                     />
                     <MetricCard
                         icon={DollarSign}
-                        label="Pipeline Created"
+                        label={t('metrics.2.label')}
                         targetNum={120}
                         prefix="$"
                         suffix="k"
-                        change="+$40k this quarter"
+                        change={t('metrics.2.change')}
                         delay={0.2}
                     />
                 </div>
@@ -189,17 +191,17 @@ export function Results() {
                         <div className="p-8 lg:p-10 border-b lg:border-b-0 lg:border-r border-surface-2 relative bg-surface-1/30">
                             <div className="flex items-center justify-between mb-6">
                                 <div>
-                                    <h3 className="text-base font-medium text-white">Pipeline Growth</h3>
-                                    <p className="text-xs text-text-muted">6-month cumulative performance</p>
+                                    <h3 className="text-base font-medium text-white">{t('pipelineGrowth.title')}</h3>
+                                    <p className="text-xs text-text-muted">{t('pipelineGrowth.subtitle')}</p>
                                 </div>
                                 <div className="flex items-center gap-4 text-[11px] text-text-muted">
                                     <div className="flex items-center gap-1.5">
                                         <div className="h-1.5 w-1.5 rounded-full bg-accent-1" />
-                                        <span>Our Automation</span>
+                                        <span>{t('ourAutomation')}</span>
                                     </div>
                                     <div className="flex items-center gap-1.5">
                                         <div className="h-1.5 w-1.5 rounded-full bg-surface-2" />
-                                        <span>Manual Workflows</span>
+                                        <span>{t('manualWorkflows')}</span>
                                     </div>
                                 </div>
                             </div>
@@ -279,7 +281,7 @@ export function Results() {
                             </div>
 
                             <div className="flex justify-between mt-3 text-[10px] font-mono text-text-muted">
-                                {['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'].map(month => (
+                                {[t('months.jan'), t('months.feb'), t('months.mar'), t('months.apr'), t('months.may'), t('months.jun')].map(month => (
                                     <span key={month}>{month}</span>
                                 ))}
                             </div>
@@ -290,14 +292,14 @@ export function Results() {
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-accent-1/10 rounded-full blur-[80px] pointer-events-none" />
 
                             <div className="relative z-10 h-full flex flex-col">
-                                <h3 className="text-base font-medium text-white mb-1">Outreach Efficiency</h3>
-                                <p className="text-xs text-text-muted mb-8">Our Automation vs Manual Workflows</p>
+                                <h3 className="text-base font-medium text-white mb-1">{t('outreachEfficiency.title')}</h3>
+                                <p className="text-xs text-text-muted mb-8">{t('outreachEfficiency.subtitle')}</p>
 
                                 <div className="flex-1 space-y-6">
                                     {[
-                                        { label: "Meetings / 1000 Leads", sf: 32, trad: 4, sfLabel: "32", tradLabel: "4" },
-                                        { label: "Response Rate", sf: 92, trad: 18, sfLabel: "18.4%", tradLabel: "2.1%" },
-                                        { label: "Cost per Meeting", sf: 75, trad: 30, sfLabel: "$38", tradLabel: "$420", invert: true },
+                                        { label: t('chartRows.0.label'), sf: 32, trad: 4, sfLabel: "32", tradLabel: "4" },
+                                        { label: t('chartRows.1.label'), sf: 92, trad: 18, sfLabel: "18.4%", tradLabel: "2.1%" },
+                                        { label: t('chartRows.2.label'), sf: 75, trad: 30, sfLabel: "$38", tradLabel: "$420", invert: true },
                                     ].map((row, i) => (
                                         <div key={i} className="space-y-2">
                                             <div className="flex items-center justify-between text-xs">
@@ -331,11 +333,11 @@ export function Results() {
                                 <div className="mt-6 pt-4 border-t border-surface-2/30 flex items-center gap-4 text-[10px] text-text-muted">
                                     <div className="flex items-center gap-1.5">
                                         <div className="h-2 w-4 rounded bg-accent-1" />
-                                        <span>Our Automation</span>
+                                        <span>{t('ourAutomation')}</span>
                                     </div>
                                     <div className="flex items-center gap-1.5">
                                         <div className="h-2 w-4 rounded bg-surface-2/50" />
-                                        <span>Manual Workflows</span>
+                                        <span>{t('manualWorkflows')}</span>
                                     </div>
                                 </div>
                             </div>
