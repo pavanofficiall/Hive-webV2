@@ -103,7 +103,7 @@ export function Footer({ onBookCall }: FooterProps) {
                             <ul role="list" className="mt-4 space-y-3">
                                 {[
                                     { label: t('howItWorks'), href: "/#how-it-works" },
-                                    { label: t('results'), href: "/#case-studies" },
+                                    { label: "Case Studies", href: "/case-studies" },
                                     { label: t('faq'), href: "/#faq" },
                                     { label: t('blog'), href: "/blog" },
                                 ].map((item) => (

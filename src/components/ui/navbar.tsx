@@ -44,7 +44,7 @@ export function Navbar({ onBookCall }: NavbarProps) {
 
                     <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-text-secondary">
                         <Link href="/#how-it-works" className="hover:text-white transition-colors">{t('howItWorks')}</Link>
-                        <Link href="/#case-studies" className="hover:text-white transition-colors">{t('results')}</Link>
+                        <Link href="/case-studies" className="hover:text-white transition-colors">Case Studies</Link>
                         <Link href="/blog" className="hover:text-white transition-colors">{t('blog')}</Link>
                         <Link href="/tools/humanize" className="hover:text-white transition-colors">{t('tools')}</Link>
                     </nav>
@@ -92,11 +92,11 @@ export function Navbar({ onBookCall }: NavbarProps) {
                             {t('howItWorks')}
                         </Link>
                         <Link
-                            href="/#case-studies"
+                            href="/case-studies"
                             onClick={() => setIsMobileMenuOpen(false)}
                             className="text-base font-medium text-text-secondary hover:text-white transition-colors py-2 block w-full"
                         >
-                            {t('results')}
+                            Case Studies
                         </Link>
                         <Link
                             href="/blog"
